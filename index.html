@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="avatar.jpg">
+    <title>Iván - Links</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #e0e0e0;
+            color: #333;
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            padding: 20px;
+        }
+
+        .card {
+            background: #e0e0e0;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 
+                20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
+            min-height: calc(100vh - 40px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-inner {
+            max-width: 40rem;
+            width: 100%;
+        }
+
+        .avatar-wrapper {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: #e0e0e0;
+            box-shadow: 
+                8px 8px 16px #bebebe,
+                -8px -8px 16px #ffffff;
+            padding: 8px;
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .tagline {
+            text-align: center;
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 30px;
+        }
+
+        .section-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #999;
+            margin: 25px 0 15px;
+            padding-left: 5px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link {
+            display: block;
+            padding: 18px 25px;
+            background: #e0e0e0;
+            border-radius: 15px;
+            text-decoration: none;
+            color: #444;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 
+                6px 6px 12px #bebebe,
+                -6px -6px 12px #ffffff;
+        }
+
+        .link:hover {
+            box-shadow: 
+                inset 6px 6px 12px #bebebe,
+                inset -6px -6px 12px #ffffff;
+            color: #666;
+        }
+
+        .link-icon {
+            display: inline-block;
+            width: 20px;
+            text-align: center;
+            margin-right: 12px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .project-card {
+            background: #e0e0e0;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 
+                6px 6px 12px #bebebe,
+                -6px -6px 12px #ffffff;
+        }
+
+        .project-card h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #444;
+        }
+
+        .project-card p {
+            font-size: 12px;
+            color: #777;
+            line-height: 1.5;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
+            background: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #666;
+            font-size: 18px;
+            box-shadow: 
+                5px 5px 10px #bebebe,
+                -5px -5px 10px #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            box-shadow: 
+                inset 5px 5px 10px #bebebe,
+                inset -5px -5px 10px #ffffff;
+        }
+
+        /* Responsive for larger screens */
+        @media (min-width: 768px) {
+            .container {
+                padding: 30px;
+            }
+            
+            .card {
+                padding: 50px 40px;
+                min-height: calc(100vh - 60px);
+            }
+            
+            .card-inner {
+                max-width: 40rem;
+            }
+            
+            h1 {
+                font-size: 32px;
+            }
+            
+            .tagline {
+                font-size: 15px;
+            }
+            
+            .link {
+                padding: 20px 30px;
+                font-size: 16px;
+            }
+            
+            .projects {
+                gap: 20px;
+            }
+            
+            .project-card {
+                padding: 25px;
+            }
+            
+            .project-card h3 {
+                font-size: 15px;
+            }
+            
+            .project-card p {
+                font-size: 13px;
+            }
+            
+            .social-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding: 40px;
+            }
+            
+            .card {
+                padding: 60px 50px;
+                box-shadow: 
+                    25px 25px 70px #bebebe,
+                    -25px -25px 70px #ffffff;
+                min-height: calc(100vh - 80px);
+            }
+            
+            .card-inner {
+                max-width: 40rem;
+            }
+            
+            .avatar-wrapper {
+                width: 140px;
+                height: 140px;
+            }
+            
+            h1 {
+                font-size: 36px;
+            }
+            
+            .tagline {
+                font-size: 16px;
+                margin-bottom: 40px;
+            }
+            
+            .section-label {
+                font-size: 12px;
+                margin: 30px 0 18px;
+            }
+            
+            .links {
+                gap: 18px;
+            }
+            
+            .link {
+                padding: 22px 35px;
+                font-size: 17px;
+            }
+            
+            .project-card {
+                padding: 30px;
+            }
+            
+            .project-card h3 {
+                font-size: 16px;
+            }
+            
+            .project-card p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-inner">
+            <div class="avatar-wrapper">
+                <img src="avatar.jpg" alt="Avatar" class="avatar">
+            </div>
+            
+            <h1>Iván</h1>
+            <div class="tagline">Técnico Superior en Desarrollo de Aplicaciones Web | Técnico Superior en Administración de Sistemas Informáticos y Redes | Técnico en Sistemas Microinformáticos y Redes</div>
+
+            <div class="section-label">Conectar</div>
+            <div class="links">
+                <a href="https://instagram.com/influclaw" class="link" target="_blank" rel="noopener">
+                    <span class="link-icon">📷</span>Instagram
+                </a>
+                <a href="https://tiktok.com/@influclaw" class="link" target="_blank" rel="noopener">
+                    <span class="link-icon">🎵</span>TikTok
+                </a>
+                <a href="https://threads.net/@influclaw" class="link" target="_blank" rel="noopener">
+                    <span class="link-icon">🧵</span>Threads
+                </a>
+                <a href="https://youtube.com/@influclaw" class="link" target="_blank" rel="noopener">
+                    <span class="link-icon">▶</span>YouTube
+                </a>
+                <a href="https://www.linkedin.com/in/ivan-saez-rodrigo/" class="link" target="_blank" rel="noopener">
+                    <span class="link-icon">in</span>LinkedIn
+                </a>
+                <a href="https://beehiiv.com/@influclaw" class="link" target="_blank" rel="noopener">
+                    <span class="link-icon">📰</span>Newsletter
+                </a>
+            </div>
+
+            <div class="section-label">Proyectos</div>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>OpenClaw</h3>
+                    <p>Asistente digital personal</p>
+                </div>
+                <div class="project-card">
+                    <h3>Hermes</h3>
+                    <p>Asistente inteligente</p>
+                </div>
+            </div>
+
+            <div class="section-label">Contacto</div>
+            <div class="links" style="text-align: center;">
+                <a href="mailto:influclaw@gmail.com" class="link">
+                    <span class="link-icon">📧</span>influclaw@gmail.com
+                </a>
+            </div>
+
+            <div class="footer">
+                <script>document.write(new Date().getFullYear())</script> • Hecho con ❤
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
