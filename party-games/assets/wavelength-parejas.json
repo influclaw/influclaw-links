@@ -1,0 +1,2002 @@
+[
+  {
+    "id": 1,
+    "archivo": "001.png",
+    "izquierda": "For kids",
+    "derecha": "For adults",
+    "izquierda_es": "para niños",
+    "derecha_es": "Para adultos"
+  },
+  {
+    "id": 2,
+    "archivo": "002.png",
+    "izquierda": "80s",
+    "derecha": "a 90s",
+    "izquierda_es": "años 80",
+    "derecha_es": "unos 90"
+  },
+  {
+    "id": 3,
+    "archivo": "003.png",
+    "izquierda": "Action movie",
+    "derecha": "Adventure movie",
+    "izquierda_es": "pelicula de accion",
+    "derecha_es": "pelicula de aventuras"
+  },
+  {
+    "id": 4,
+    "archivo": "004.png",
+    "izquierda": "Art",
+    "derecha": "Commerce",
+    "izquierda_es": "arte",
+    "derecha_es": "Comercio"
+  },
+  {
+    "id": 5,
+    "archivo": "005.png",
+    "izquierda": "Artisanal",
+    "derecha": "Mass produced",
+    "izquierda_es": "Artesanal",
+    "derecha_es": "Producido en masa"
+  },
+  {
+    "id": 6,
+    "archivo": "006.png",
+    "izquierda": "Bad",
+    "derecha": "Good",
+    "izquierda_es": "malo",
+    "derecha_es": "bueno"
+  },
+  {
+    "id": 7,
+    "archivo": "007.png",
+    "izquierda": "Bad actor",
+    "derecha": "Good actor",
+    "izquierda_es": "Mal actor",
+    "derecha_es": "buen actor"
+  },
+  {
+    "id": 8,
+    "archivo": "008.png",
+    "izquierda": "Bad advice",
+    "derecha": "Good advice",
+    "izquierda_es": "Mal consejo",
+    "derecha_es": "Buen consejo"
+  },
+  {
+    "id": 9,
+    "archivo": "009.png",
+    "izquierda": "Bad candy",
+    "derecha": "Good candy",
+    "izquierda_es": "caramelo malo",
+    "derecha_es": "buenos dulces"
+  },
+  {
+    "id": 10,
+    "archivo": "010.png",
+    "izquierda": "Bad Disney character",
+    "derecha": "Good Disney character",
+    "izquierda_es": "Mal personaje de Disney",
+    "derecha_es": "Buen personaje de Disney"
+  },
+  {
+    "id": 11,
+    "archivo": "011.png",
+    "izquierda": "Bad dog (breed)",
+    "derecha": "Good dog (breed)",
+    "izquierda_es": "Perro malo (raza)",
+    "derecha_es": "Buen perro (raza)"
+  },
+  {
+    "id": 12,
+    "archivo": "012.png",
+    "izquierda": "Bad for you",
+    "derecha": "Good for you",
+    "izquierda_es": "Malo para ti",
+    "derecha_es": "bien por ti"
+  },
+  {
+    "id": 13,
+    "archivo": "013.png",
+    "izquierda": "Bad habit",
+    "derecha": "Good habit",
+    "izquierda_es": "Mal hábito",
+    "derecha_es": "Buen hábito"
+  },
+  {
+    "id": 14,
+    "archivo": "014.png",
+    "izquierda": "Bad investment",
+    "derecha": "Good investment",
+    "izquierda_es": "Mala inversión",
+    "derecha_es": "Buena inversión"
+  },
+  {
+    "id": 15,
+    "archivo": "015.png",
+    "izquierda": "Bad man",
+    "derecha": "Good man",
+    "izquierda_es": "mal hombre",
+    "derecha_es": "buen hombre"
+  },
+  {
+    "id": 16,
+    "archivo": "016.png",
+    "izquierda": "Bad mouthfeel",
+    "derecha": "Good mouthfeel",
+    "izquierda_es": "Mala sensación en boca",
+    "derecha_es": "Buena sensación en boca"
+  },
+  {
+    "id": 17,
+    "archivo": "017.png",
+    "izquierda": "Bad movie",
+    "derecha": "Good movie",
+    "izquierda_es": "Mala película",
+    "derecha_es": "buena pelicula"
+  },
+  {
+    "id": 18,
+    "archivo": "018.png",
+    "izquierda": "Bad music",
+    "derecha": "Good music",
+    "izquierda_es": "mala musica",
+    "derecha_es": "buena musica"
+  },
+  {
+    "id": 19,
+    "archivo": "019.png",
+    "izquierda": "Bad person",
+    "derecha": "Good person",
+    "izquierda_es": "mala persona",
+    "derecha_es": "buena persona"
+  },
+  {
+    "id": 20,
+    "archivo": "020.png",
+    "izquierda": "Bad pizza topping",
+    "derecha": "Good pizza topping",
+    "izquierda_es": "Mala cobertura de pizza",
+    "derecha_es": "Buen aderezo para pizza"
+  },
+  {
+    "id": 21,
+    "archivo": "021.png",
+    "izquierda": "Bad president",
+    "derecha": "Good president",
+    "izquierda_es": "Mal presidente",
+    "derecha_es": "Buen presidente"
+  },
+  {
+    "id": 22,
+    "archivo": "022.png",
+    "izquierda": "Bad school",
+    "derecha": "Good school",
+    "izquierda_es": "mala escuela",
+    "derecha_es": "buena escuela"
+  },
+  {
+    "id": 23,
+    "archivo": "023.png",
+    "izquierda": "Bad superpower",
+    "derecha": "Good superpower",
+    "izquierda_es": "Mala superpotencia",
+    "derecha_es": "Buen superpoder"
+  },
+  {
+    "id": 24,
+    "archivo": "024.png",
+    "izquierda": "Bad TV show",
+    "derecha": "Good TV show,",
+    "izquierda_es": "Mal programa de televisión",
+    "derecha_es": "Buen programa de televisión,"
+  },
+  {
+    "id": 25,
+    "archivo": "025.png",
+    "izquierda": "Basic",
+    "derecha": "Hipster",
+    "izquierda_es": "Básico",
+    "derecha_es": "inconformista"
+  },
+  {
+    "id": 26,
+    "archivo": "026.png",
+    "izquierda": "Benefits you",
+    "derecha": "Benefits everyone",
+    "izquierda_es": "Te beneficia",
+    "derecha_es": "Beneficia a todos"
+  },
+  {
+    "id": 27,
+    "archivo": "027.png",
+    "izquierda": "Better hot",
+    "derecha": "Better cold",
+    "izquierda_es": "mejor caliente",
+    "derecha_es": "Mejor frio"
+  },
+  {
+    "id": 28,
+    "archivo": "028.png",
+    "izquierda": "Blue",
+    "derecha": "Green",
+    "izquierda_es": "azul",
+    "derecha_es": "Verde"
+  },
+  {
+    "id": 29,
+    "archivo": "029.png",
+    "izquierda": "Book was better",
+    "derecha": "Movie was better",
+    "izquierda_es": "el libro fue mejor",
+    "derecha_es": "la pelicula fue mejor"
+  },
+  {
+    "id": 30,
+    "archivo": "030.png",
+    "izquierda": "Boring",
+    "derecha": "Exciting",
+    "izquierda_es": "Aburrido",
+    "derecha_es": "emocionante"
+  },
+  {
+    "id": 31,
+    "archivo": "031.png",
+    "izquierda": "Boring hobby",
+    "derecha": "Interesting hobby",
+    "izquierda_es": "pasatiempo aburrido",
+    "derecha_es": "pasatiempo interesante"
+  },
+  {
+    "id": 32,
+    "archivo": "032.png",
+    "izquierda": "Boring person",
+    "derecha": "Fun person",
+    "izquierda_es": "persona aburrida",
+    "derecha_es": "persona divertida"
+  },
+  {
+    "id": 33,
+    "archivo": "033.png",
+    "izquierda": "Boring topic",
+    "derecha": "Fascinating topic",
+    "izquierda_es": "Tema aburrido",
+    "derecha_es": "Tema fascinante"
+  },
+  {
+    "id": 34,
+    "archivo": "034.png",
+    "izquierda": "Casual",
+    "derecha": "Formal",
+    "izquierda_es": "Informal",
+    "derecha_es": "formales"
+  },
+  {
+    "id": 35,
+    "archivo": "035.png",
+    "izquierda": "Casual event",
+    "derecha": "Formal event",
+    "izquierda_es": "Evento informal",
+    "derecha_es": "Evento formal"
+  },
+  {
+    "id": 36,
+    "archivo": "036.png",
+    "izquierda": "Cat person",
+    "derecha": "Dog person",
+    "izquierda_es": "persona gato",
+    "derecha_es": "persona perro"
+  },
+  {
+    "id": 37,
+    "archivo": "037.png",
+    "izquierda": "Cheap",
+    "derecha": "Expensive",
+    "izquierda_es": "Barato",
+    "derecha_es": "Caro"
+  },
+  {
+    "id": 38,
+    "archivo": "038.png",
+    "izquierda": "Colorless",
+    "derecha": "Colorful",
+    "izquierda_es": "Incoloro",
+    "derecha_es": "colorido"
+  },
+  {
+    "id": 39,
+    "archivo": "039.png",
+    "izquierda": "Comedy",
+    "derecha": "Drama",
+    "izquierda_es": "Comedia",
+    "derecha_es": "Drama"
+  },
+  {
+    "id": 40,
+    "archivo": "040.png",
+    "izquierda": "Conventional wisdom",
+    "derecha": "Fringe belief",
+    "izquierda_es": "Sabiduría convencional",
+    "derecha_es": "creencia marginal"
+  },
+  {
+    "id": 41,
+    "archivo": "041.png",
+    "izquierda": "Culturally significant",
+    "derecha": "Culturally insignificant",
+    "izquierda_es": "Culturalmente significativo",
+    "derecha_es": "Culturalmente insignificante"
+  },
+  {
+    "id": 42,
+    "archivo": "042.png",
+    "izquierda": "Dangerous",
+    "derecha": "Safe",
+    "izquierda_es": "Peligroso",
+    "derecha_es": "Seguro"
+  },
+  {
+    "id": 43,
+    "archivo": "043.png",
+    "izquierda": "Dangerous job",
+    "derecha": "Safe job",
+    "izquierda_es": "Trabajo peligroso",
+    "derecha_es": "Trabajo seguro"
+  },
+  {
+    "id": 44,
+    "archivo": "044.png",
+    "izquierda": "Dark",
+    "derecha": "Light",
+    "izquierda_es": "oscuro",
+    "derecha_es": "Luz"
+  },
+  {
+    "id": 45,
+    "archivo": "045.png",
+    "izquierda": "Deep thought",
+    "derecha": "Shallow thought",
+    "izquierda_es": "pensamiento profundo",
+    "derecha_es": "pensamiento superficial"
+  },
+  {
+    "id": 46,
+    "archivo": "046.png",
+    "izquierda": "Derivative",
+    "derecha": "Original",
+    "izquierda_es": "Derivado",
+    "derecha_es": "Originales"
+  },
+  {
+    "id": 47,
+    "archivo": "047.png",
+    "izquierda": "Dictatorship",
+    "derecha": "Democracy",
+    "izquierda_es": "dictadura",
+    "derecha_es": "democracia"
+  },
+  {
+    "id": 48,
+    "archivo": "048.png",
+    "izquierda": "Difficult to use",
+    "derecha": "Easy to use",
+    "izquierda_es": "Difícil de usar",
+    "derecha_es": "Fácil de usar"
+  },
+  {
+    "id": 49,
+    "archivo": "049.png",
+    "izquierda": "Dirty",
+    "derecha": "Clean",
+    "izquierda_es": "sucio",
+    "derecha_es": "limpio"
+  },
+  {
+    "id": 50,
+    "archivo": "050.png",
+    "izquierda": "Disgusting cerea",
+    "derecha": "Delicious cereal",
+    "izquierda_es": "Cerea repugnante",
+    "derecha_es": "Delicioso cereal"
+  },
+  {
+    "id": 51,
+    "archivo": "051.png",
+    "izquierda": "Divided",
+    "derecha": "Whole",
+    "izquierda_es": "dividido",
+    "derecha_es": "entero"
+  },
+  {
+    "id": 52,
+    "archivo": "052.png",
+    "izquierda": "Dog name",
+    "derecha": "Cat name",
+    "izquierda_es": "nombre del perro",
+    "derecha_es": "nombre del gato"
+  },
+  {
+    "id": 53,
+    "archivo": "053.png",
+    "izquierda": "Dry",
+    "derecha": "Wet",
+    "izquierda_es": "seco",
+    "derecha_es": "mojado"
+  },
+  {
+    "id": 54,
+    "archivo": "054.png",
+    "izquierda": "Dry food",
+    "derecha": "Wet food",
+    "izquierda_es": "comida seca",
+    "derecha_es": "comida humeda"
+  },
+  {
+    "id": 55,
+    "archivo": "055.png",
+    "izquierda": "Dystopia",
+    "derecha": "Utopia",
+    "izquierda_es": "distopía",
+    "derecha_es": "utopía"
+  },
+  {
+    "id": 56,
+    "archivo": "056.png",
+    "izquierda": "Easy subject",
+    "derecha": "Hard subject",
+    "izquierda_es": "Tema fácil",
+    "derecha_es": "Tema difícil"
+  },
+  {
+    "id": 57,
+    "archivo": "057.png",
+    "izquierda": "Easy to kill",
+    "derecha": "Hard to kill",
+    "izquierda_es": "fácil de matar",
+    "derecha_es": "Difícil de matar"
+  },
+  {
+    "id": 58,
+    "archivo": "058.png",
+    "izquierda": "Easy to spell",
+    "derecha": "Hard to spell",
+    "izquierda_es": "fácil de deletrear",
+    "derecha_es": "Difícil de deletrear"
+  },
+  {
+    "id": 59,
+    "archivo": "059.png",
+    "izquierda": "Endangered species",
+    "derecha": "Overpopulated species",
+    "izquierda_es": "Especies en peligro de extinción",
+    "derecha_es": "Especies superpobladas"
+  },
+  {
+    "id": 60,
+    "archivo": "060.png",
+    "izquierda": "Ethical to eat",
+    "derecha": "Unethical to eat",
+    "izquierda_es": "Ético para comer",
+    "derecha_es": "No es ético comer"
+  },
+  {
+    "id": 61,
+    "archivo": "061.png",
+    "izquierda": "Etiquette",
+    "derecha": "Manners",
+    "izquierda_es": "Etiqueta",
+    "derecha_es": "modales"
+  },
+  {
+    "id": 62,
+    "archivo": "062.png",
+    "izquierda": "Expected",
+    "derecha": "Unexpected",
+    "izquierda_es": "esperado",
+    "derecha_es": "inesperado"
+  },
+  {
+    "id": 63,
+    "archivo": "063.png",
+    "izquierda": "Fad",
+    "derecha": "Classic",
+    "izquierda_es": "moda pasajera",
+    "derecha_es": "Clásico"
+  },
+  {
+    "id": 64,
+    "archivo": "064.png",
+    "izquierda": "Failure",
+    "derecha": "Masterpiece",
+    "izquierda_es": "fracaso",
+    "derecha_es": "obra maestra"
+  },
+  {
+    "id": 65,
+    "archivo": "065.png",
+    "izquierda": "Famous",
+    "derecha": "Infamous",
+    "izquierda_es": "Famoso",
+    "derecha_es": "infame"
+  },
+  {
+    "id": 66,
+    "archivo": "066.png",
+    "izquierda": "Fantasy",
+    "derecha": "Sci-Fi",
+    "izquierda_es": "fantasía",
+    "derecha_es": "Ciencia ficción"
+  },
+  {
+    "id": 67,
+    "archivo": "067.png",
+    "izquierda": "Feels bad",
+    "derecha": "Feels good",
+    "izquierda_es": "se siente mal",
+    "derecha_es": "se siente bien"
+  },
+  {
+    "id": 68,
+    "archivo": "068.png",
+    "izquierda": "Flavorless",
+    "derecha": "Flavorful",
+    "izquierda_es": "Sin sabor",
+    "derecha_es": "Sabroso"
+  },
+  {
+    "id": 69,
+    "archivo": "069.png",
+    "izquierda": "Forbidden",
+    "derecha": "Encouraged",
+    "izquierda_es": "prohibido",
+    "derecha_es": "alentado"
+  },
+  {
+    "id": 70,
+    "archivo": "070.png",
+    "izquierda": "Fragile",
+    "derecha": "Durable",
+    "izquierda_es": "frágil",
+    "derecha_es": "Durable"
+  },
+  {
+    "id": 71,
+    "archivo": "071.png",
+    "izquierda": "Ordinary",
+    "derecha": "Extraordinary",
+    "izquierda_es": "ordinario",
+    "derecha_es": "extraordinario"
+  },
+  {
+    "id": 72,
+    "archivo": "072.png",
+    "izquierda": "Freedom fighter",
+    "derecha": "ee Terrorist",
+    "izquierda_es": "luchador por la libertad",
+    "derecha_es": "ee terrorista"
+  },
+  {
+    "id": 73,
+    "archivo": "073.png",
+    "izquierda": "Friend",
+    "derecha": "Enemy",
+    "izquierda_es": "amigo",
+    "derecha_es": "enemigo"
+  },
+  {
+    "id": 74,
+    "archivo": "074.png",
+    "izquierda": "Fruit",
+    "derecha": "Vegetable",
+    "izquierda_es": "fruta",
+    "derecha_es": "vegetal"
+  },
+  {
+    "id": 75,
+    "archivo": "075.png",
+    "izquierda": "Funny topic",
+    "derecha": "Serious topic",
+    "izquierda_es": "Tema divertido",
+    "derecha_es": "tema serio"
+  },
+  {
+    "id": 76,
+    "archivo": "076.png",
+    "izquierda": "Geek",
+    "derecha": "Dork",
+    "izquierda_es": "friki",
+    "derecha_es": "idiota"
+  },
+  {
+    "id": 77,
+    "archivo": "077.png",
+    "izquierda": "Genuine person",
+    "derecha": "Phony person",
+    "izquierda_es": "persona genuina",
+    "derecha_es": "persona falsa"
+  },
+  {
+    "id": 78,
+    "archivo": "078.png",
+    "izquierda": "Good",
+    "derecha": "Evil",
+    "izquierda_es": "bueno",
+    "derecha_es": "mal"
+  },
+  {
+    "id": 79,
+    "archivo": "079.png",
+    "izquierda": "Gossip",
+    "derecha": "News",
+    "izquierda_es": "chismes",
+    "derecha_es": "Noticias"
+  },
+  {
+    "id": 80,
+    "archivo": "080.png",
+    "izquierda": "Gryffindor",
+    "derecha": "Slytherin",
+    "izquierda_es": "gryffindor",
+    "derecha_es": "Slytherin"
+  },
+  {
+    "id": 81,
+    "archivo": "081.png",
+    "izquierda": "Guilty pleasure",
+    "derecha": "Openly love",
+    "izquierda_es": "placer culpable",
+    "derecha_es": "amor abiertamente"
+  },
+  {
+    "id": 82,
+    "archivo": "082.png",
+    "izquierda": "Hairless",
+    "derecha": "Hairy",
+    "izquierda_es": "sin pelo",
+    "derecha_es": "peludo"
+  },
+  {
+    "id": 83,
+    "archivo": "083.png",
+    "izquierda": "Happens slowly",
+    "derecha": "Happens suddenly",
+    "izquierda_es": "Sucede lentamente",
+    "derecha_es": "Sucede de repente"
+  },
+  {
+    "id": 84,
+    "archivo": "084.png",
+    "izquierda": "Hard to do",
+    "derecha": "Easy to do",
+    "izquierda_es": "Difícil de hacer",
+    "derecha_es": "fácil de hacer"
+  },
+  {
+    "id": 85,
+    "archivo": "085.png",
+    "izquierda": "Hard to find",
+    "derecha": "Easy to find",
+    "izquierda_es": "Difícil de encontrar",
+    "derecha_es": "Fácil de encontrar"
+  },
+  {
+    "id": 86,
+    "archivo": "086.png",
+    "izquierda": "Hard to pronounce",
+    "derecha": "Easy to pronounce",
+    "izquierda_es": "Difícil de pronunciar",
+    "derecha_es": "Fácil de pronunciar"
+  },
+  {
+    "id": 87,
+    "archivo": "087.png",
+    "izquierda": "Hard to remember",
+    "derecha": "Easy to remember",
+    "izquierda_es": "Difícil de recordar",
+    "derecha_es": "fácil de recordar"
+  },
+  {
+    "id": 88,
+    "archivo": "088.png",
+    "izquierda": "Hard to sit on",
+    "derecha": "Easy to sit on",
+    "izquierda_es": "Difícil sentarse",
+    "derecha_es": "Fácil de sentarse"
+  },
+  {
+    "id": 89,
+    "archivo": "089.png",
+    "izquierda": "Harmless",
+    "derecha": "Harmful",
+    "izquierda_es": "Inofensivo",
+    "derecha_es": "Nocivo"
+  },
+  {
+    "id": 90,
+    "archivo": "090.png",
+    "izquierda": "Has a bad reputation",
+    "derecha": "Has a good reputation",
+    "izquierda_es": "Tiene mala reputacion",
+    "derecha_es": "Tiene buena reputación"
+  },
+  {
+    "id": 91,
+    "archivo": "091.png",
+    "izquierda": "Ss, Hetrogeneous",
+    "derecha": "Homogenous",
+    "izquierda_es": "Ss, heterogéneo",
+    "derecha_es": "homogéneo"
+  },
+  {
+    "id": 92,
+    "archivo": "092.png",
+    "izquierda": "Historically important",
+    "derecha": "Historically irrelevant",
+    "izquierda_es": "Históricamente importante",
+    "derecha_es": "Históricamente irrelevante"
+  },
+  {
+    "id": 93,
+    "archivo": "093.png",
+    "izquierda": "Horizontal",
+    "derecha": "Vertical",
+    "izquierda_es": "Horizontales",
+    "derecha_es": "verticales"
+  },
+  {
+    "id": 94,
+    "archivo": "094.png",
+    "izquierda": "Hot",
+    "derecha": "Cold",
+    "izquierda_es": "Caliente",
+    "derecha_es": "frio"
+  },
+  {
+    "id": 95,
+    "archivo": "095.png",
+    "izquierda": "Illegal",
+    "derecha": "Legal",
+    "izquierda_es": "ilegal",
+    "derecha_es": "Legales"
+  },
+  {
+    "id": 96,
+    "archivo": "096.png",
+    "izquierda": "Inclusive",
+    "derecha": "Exclusive",
+    "izquierda_es": "inclusivo",
+    "derecha_es": "Exclusivo"
+  },
+  {
+    "id": 97,
+    "archivo": "097.png",
+    "izquierda": "Ineffective",
+    "derecha": "Effective",
+    "izquierda_es": "Ineficaz",
+    "derecha_es": "Efectivo"
+  },
+  {
+    "id": 98,
+    "archivo": "098.png",
+    "izquierda": "Inessential",
+    "derecha": "Essential",
+    "izquierda_es": "No esencial",
+    "derecha_es": "Esencial"
+  },
+  {
+    "id": 99,
+    "archivo": "099.png",
+    "izquierda": "Inflexible",
+    "derecha": "Flexible",
+    "izquierda_es": "Inflexible",
+    "derecha_es": "Flexibles"
+  },
+  {
+    "id": 100,
+    "archivo": "100.png",
+    "izquierda": "Introvert",
+    "derecha": "Extrovert",
+    "izquierda_es": "introvertido",
+    "derecha_es": "extrovertido"
+  },
+  {
+    "id": 101,
+    "archivo": "101.png",
+    "izquierda": "Job",
+    "derecha": "Career",
+    "izquierda_es": "Trabajo",
+    "derecha_es": "carrera"
+  },
+  {
+    "id": 102,
+    "archivo": "102.png",
+    "izquierda": "Least evil company",
+    "derecha": "Most evil company",
+    "izquierda_es": "La compañía menos malvada",
+    "derecha_es": "La compañía más malvada."
+  },
+  {
+    "id": 103,
+    "archivo": "103.png",
+    "izquierda": "Least powerful god",
+    "derecha": "Most powerful god",
+    "izquierda_es": "dios menos poderoso",
+    "derecha_es": "dios mas poderoso"
+  },
+  {
+    "id": 104,
+    "archivo": "104.png",
+    "izquierda": "Liberal",
+    "derecha": "Conservative",
+    "izquierda_es": "liberales",
+    "derecha_es": "conservador"
+  },
+  {
+    "id": 105,
+    "archivo": "105.png",
+    "izquierda": "Limited",
+    "derecha": "Infinite",
+    "izquierda_es": "Limitado",
+    "derecha_es": "infinito"
+  },
+  {
+    "id": 106,
+    "archivo": "106.png",
+    "izquierda": "Limp",
+    "derecha": "Firm",
+    "izquierda_es": "Cojear",
+    "derecha_es": "firme"
+  },
+  {
+    "id": 107,
+    "archivo": "107.png",
+    "izquierda": "Little known fact",
+    "derecha": "Well known fact",
+    "izquierda_es": "hecho poco conocido",
+    "derecha_es": "hecho bien conocido"
+  },
+  {
+    "id": 108,
+    "archivo": "108.png",
+    "izquierda": "Local issue",
+    "derecha": "Global issue",
+    "izquierda_es": "Problema local",
+    "derecha_es": "Problema global"
+  },
+  {
+    "id": 109,
+    "archivo": "109.png",
+    "izquierda": "Looks like a person",
+    "derecha": "Doesn't look like a person",
+    "izquierda_es": "Parece una persona",
+    "derecha_es": "No parece una persona"
+  },
+  {
+    "id": 110,
+    "archivo": "110.png",
+    "izquierda": "Loved",
+    "derecha": "Hated",
+    "izquierda_es": "Amado",
+    "derecha_es": "Odiado"
+  },
+  {
+    "id": 111,
+    "archivo": "111.png",
+    "izquierda": "Lowbrow",
+    "derecha": "Highbrow",
+    "izquierda_es": "De poca cultura",
+    "derecha_es": "intelectual"
+  },
+  {
+    "id": 112,
+    "archivo": "112.png",
+    "izquierda": "Low calorie",
+    "derecha": "High calorie",
+    "izquierda_es": "Bajo en calorias",
+    "derecha_es": "alto en calorias"
+  },
+  {
+    "id": 113,
+    "archivo": "113.png",
+    "izquierda": "Low quality",
+    "derecha": "High quality",
+    "izquierda_es": "Baja calidad",
+    "derecha_es": "Alta calidad"
+  },
+  {
+    "id": 114,
+    "archivo": "114.png",
+    "izquierda": "Mainstream",
+    "derecha": "Niche",
+    "izquierda_es": "corriente principal",
+    "derecha_es": "nicho"
+  },
+  {
+    "id": 115,
+    "archivo": "115.png",
+    "izquierda": "Mature person",
+    "derecha": "Immature person",
+    "izquierda_es": "persona madura",
+    "derecha_es": "persona inmadura"
+  },
+  {
+    "id": 116,
+    "archivo": "116.png",
+    "izquierda": "Mean person",
+    "derecha": "Nice person",
+    "izquierda_es": "persona mala",
+    "derecha_es": "Buena persona"
+  },
+  {
+    "id": 117,
+    "archivo": "117.png",
+    "izquierda": "Mental activity",
+    "derecha": "Physical activity",
+    "izquierda_es": "Actividad mental",
+    "derecha_es": "Actividad fisica"
+  },
+  {
+    "id": 118,
+    "archivo": "118.png",
+    "izquierda": "Messy food",
+    "derecha": "Clean food",
+    "izquierda_es": "comida desordenada",
+    "derecha_es": "comida limpia"
+  },
+  {
+    "id": 119,
+    "archivo": "119.png",
+    "izquierda": "Mild",
+    "derecha": "Spicy",
+    "izquierda_es": "leve",
+    "derecha_es": "picante"
+  },
+  {
+    "id": 120,
+    "archivo": "120.png",
+    "izquierda": "Mildly addictive",
+    "derecha": "addictive",
+    "izquierda_es": "Ligeramente adictivo",
+    "derecha_es": "adictivo"
+  },
+  {
+    "id": 121,
+    "archivo": "121.png",
+    "izquierda": "Movie",
+    "derecha": "Film",
+    "izquierda_es": "Película",
+    "derecha_es": "película"
+  },
+  {
+    "id": 122,
+    "archivo": "122.png",
+    "izquierda": "Movie that Godzilla would ruin",
+    "derecha": "Movie that Godzilla would improve",
+    "izquierda_es": "Película que Godzilla arruinaría",
+    "derecha_es": "Película que Godzilla mejoraría"
+  },
+  {
+    "id": 123,
+    "archivo": "123.png",
+    "izquierda": "Nature",
+    "derecha": "Nurture",
+    "izquierda_es": "naturaleza",
+    "derecha_es": "nutrir"
+  },
+  {
+    "id": 124,
+    "archivo": "124.png",
+    "izquierda": "Need",
+    "derecha": "Want",
+    "izquierda_es": "necesidad",
+    "derecha_es": "querer"
+  },
+  {
+    "id": 125,
+    "archivo": "125.png",
+    "izquierda": "Nerd",
+    "derecha": "Jock",
+    "izquierda_es": "empollón",
+    "derecha_es": "atleta"
+  },
+  {
+    "id": 126,
+    "archivo": "126.png",
+    "izquierda": "Never on time",
+    "derecha": "Always on time",
+    "izquierda_es": "Nunca a tiempo",
+    "derecha_es": "Siempre a tiempo"
+  },
+  {
+    "id": 127,
+    "archivo": "127.png",
+    "izquierda": "Nobody does it",
+    "derecha": "Everybody does it",
+    "izquierda_es": "nadie lo hace",
+    "derecha_es": "todo el mundo lo hace"
+  },
+  {
+    "id": 128,
+    "archivo": "128.png",
+    "izquierda": "Non-partisan",
+    "derecha": "Partisan",
+    "izquierda_es": "No partidista",
+    "derecha_es": "partidista"
+  },
+  {
+    "id": 129,
+    "archivo": "129.png",
+    "izquierda": "Normal",
+    "derecha": "Weird",
+    "izquierda_es": "normales",
+    "derecha_es": "raro"
+  },
+  {
+    "id": 130,
+    "archivo": "130.png",
+    "izquierda": "Normal greeting",
+    "derecha": "Weird greeting",
+    "izquierda_es": "saludo normal",
+    "derecha_es": "saludo raro"
+  },
+  {
+    "id": 131,
+    "archivo": "131.png",
+    "izquierda": "Normal pet",
+    "derecha": "Exotic pet",
+    "izquierda_es": "mascota normal",
+    "derecha_es": "mascota exótica"
+  },
+  {
+    "id": 132,
+    "archivo": "132.png",
+    "izquierda": "Normal thing to own",
+    "derecha": "Weird thing to own",
+    "izquierda_es": "Algo normal de poseer",
+    "derecha_es": "Algo extraño de poseer"
+  },
+  {
+    "id": 133,
+    "archivo": "133.png",
+    "izquierda": "Not art",
+    "derecha": "Art",
+    "izquierda_es": "No arte",
+    "derecha_es": "arte"
+  },
+  {
+    "id": 134,
+    "archivo": "134.png",
+    "izquierda": "Not a sandwich",
+    "derecha": "A sandwich",
+    "izquierda_es": "no es un sándwich",
+    "derecha_es": "un sándwich"
+  },
+  {
+    "id": 135,
+    "archivo": "135.png",
+    "izquierda": "Not enough",
+    "derecha": "Too much",
+    "izquierda_es": "No es suficiente",
+    "derecha_es": "demasiado"
+  },
+  {
+    "id": 136,
+    "archivo": "136.png",
+    "izquierda": "Not huggable",
+    "derecha": "Huggable",
+    "izquierda_es": "no abrazable",
+    "derecha_es": "abrazable"
+  },
+  {
+    "id": 137,
+    "archivo": "137.png",
+    "izquierda": "Old fashioned",
+    "derecha": "Avant garde",
+    "izquierda_es": "pasado de moda",
+    "derecha_es": "vanguardia"
+  },
+  {
+    "id": 138,
+    "archivo": "138.png",
+    "izquierda": "One hit wonder",
+    "derecha": "Pop icon",
+    "izquierda_es": "Una maravilla de golpe",
+    "derecha_es": "icono pop"
+  },
+  {
+    "id": 139,
+    "archivo": "139.png",
+    "izquierda": "Optional",
+    "derecha": "Mandatory",
+    "izquierda_es": "Opcional",
+    "derecha_es": "Obligatorio"
+  },
+  {
+    "id": 140,
+    "archivo": "140.png",
+    "izquierda": "Out of control",
+    "derecha": "In control",
+    "izquierda_es": "fuera de control",
+    "derecha_es": "en control"
+  },
+  {
+    "id": 141,
+    "archivo": "141.png",
+    "izquierda": "Underrated thing todo",
+    "derecha": "Overrated thing todo",
+    "izquierda_es": "Algo subestimado",
+    "derecha_es": "cosa sobrevalorada"
+  },
+  {
+    "id": 142,
+    "archivo": "142.png",
+    "izquierda": "Peaceful",
+    "derecha": "Warlike",
+    "izquierda_es": "pacífico",
+    "derecha_es": "guerrero"
+  },
+  {
+    "id": 143,
+    "archivo": "143.png",
+    "izquierda": "Person you could beat up",
+    "derecha": "Person who'd beat you up",
+    "izquierda_es": "Persona a la que podrías golpear",
+    "derecha_es": "Persona que te golpearía"
+  },
+  {
+    "id": 144,
+    "archivo": "144.png",
+    "izquierda": "Plain",
+    "derecha": "Fancy",
+    "izquierda_es": "Llano",
+    "derecha_es": "fantasía"
+  },
+  {
+    "id": 145,
+    "archivo": "145.png",
+    "izquierda": "Poorly made",
+    "derecha": "Well made",
+    "izquierda_es": "mal hecho",
+    "derecha_es": "bien hecho"
+  },
+  {
+    "id": 146,
+    "archivo": "146.png",
+    "izquierda": "Popular",
+    "derecha": "Elitist",
+    "izquierda_es": "populares",
+    "derecha_es": "elitista"
+  },
+  {
+    "id": 147,
+    "archivo": "147.png",
+    "izquierda": "Powerless",
+    "derecha": "Powerful",
+    "izquierda_es": "impotente",
+    "derecha_es": "Potente"
+  },
+  {
+    "id": 148,
+    "archivo": "148.png",
+    "izquierda": "Proof that god exists",
+    "derecha": "Proof that god doesn't exist",
+    "izquierda_es": "Prueba de que dios existe",
+    "derecha_es": "Prueba de que dios no existe"
+  },
+  {
+    "id": 149,
+    "archivo": "149.png",
+    "izquierda": "Quiet",
+    "derecha": "Loud",
+    "izquierda_es": "Tranquilo",
+    "derecha_es": "ruidoso"
+  },
+  {
+    "id": 150,
+    "archivo": "150.png",
+    "izquierda": "Quiet place",
+    "derecha": "Loud place",
+    "izquierda_es": "lugar tranquilo",
+    "derecha_es": "lugar ruidoso"
+  },
+  {
+    "id": 151,
+    "archivo": "151.png",
+    "izquierda": "Rare",
+    "derecha": "Common",
+    "izquierda_es": "raro",
+    "derecha_es": "común"
+  },
+  {
+    "id": 152,
+    "archivo": "152.png",
+    "izquierda": "Religious",
+    "derecha": "Sacrilegious",
+    "izquierda_es": "Religioso",
+    "derecha_es": "sacrílego"
+  },
+  {
+    "id": 153,
+    "archivo": "153.png",
+    "izquierda": "Replaceable",
+    "derecha": "e Irreplaceable",
+    "izquierda_es": "Reemplazable",
+    "derecha_es": "e irremplazable"
+  },
+  {
+    "id": 154,
+    "archivo": "154.png",
+    "izquierda": "Requires luck",
+    "derecha": "Requires skill",
+    "izquierda_es": "requiere suerte",
+    "derecha_es": "Requiere habilidad"
+  },
+  {
+    "id": 155,
+    "archivo": "155.png",
+    "izquierda": "Role model",
+    "derecha": "Bad influence",
+    "izquierda_es": "Modelo a seguir",
+    "derecha_es": "Mala influencia"
+  },
+  {
+    "id": 156,
+    "archivo": "156.png",
+    "izquierda": "Rough",
+    "derecha": "Smooth",
+    "izquierda_es": "áspero",
+    "derecha_es": "Suave"
+  },
+  {
+    "id": 157,
+    "archivo": "157.png",
+    "izquierda": "Round",
+    "derecha": "Pointy",
+    "izquierda_es": "redondo",
+    "derecha_es": "puntiagudo"
+  },
+  {
+    "id": 158,
+    "archivo": "158.png",
+    "izquierda": "Round animal",
+    "derecha": "Pointy animal",
+    "izquierda_es": "animales redondos",
+    "derecha_es": "animal puntiagudo"
+  },
+  {
+    "id": 159,
+    "archivo": "159.png",
+    "izquierda": "Sad movie",
+    "derecha": "Happy movie",
+    "izquierda_es": "pelicula triste",
+    "derecha_es": "feliz pelicula"
+  },
+  {
+    "id": 160,
+    "archivo": "160.png",
+    "izquierda": "Sad song",
+    "derecha": "Happy song",
+    "izquierda_es": "cancion triste",
+    "derecha_es": "feliz cancion"
+  },
+  {
+    "id": 161,
+    "archivo": "161.png",
+    "izquierda": "Ss, Scary animal",
+    "derecha": "Nice animal",
+    "izquierda_es": "Ss, animal aterrador",
+    "derecha_es": "Bonito animal"
+  },
+  {
+    "id": 162,
+    "archivo": "162.png",
+    "izquierda": "Science",
+    "derecha": "Pseudoscience",
+    "izquierda_es": "ciencia",
+    "derecha_es": "Pseudociencia"
+  },
+  {
+    "id": 163,
+    "archivo": "163.png",
+    "izquierda": "Secret",
+    "derecha": "Public Knowledge",
+    "izquierda_es": "secreto",
+    "derecha_es": "Conocimiento público"
+  },
+  {
+    "id": 164,
+    "archivo": "164.png",
+    "izquierda": "Short",
+    "derecha": "Long",
+    "izquierda_es": "corto",
+    "derecha_es": "largo"
+  },
+  {
+    "id": 165,
+    "archivo": "165.png",
+    "izquierda": "Short lived",
+    "derecha": "Long lived",
+    "izquierda_es": "De corta duración",
+    "derecha_es": "larga vida"
+  },
+  {
+    "id": 166,
+    "archivo": "166.png",
+    "izquierda": "Similar",
+    "derecha": "Identical",
+    "izquierda_es": "similares",
+    "derecha_es": "Idéntico"
+  },
+  {
+    "id": 167,
+    "archivo": "167.png",
+    "izquierda": "Small",
+    "derecha": "Tiny",
+    "izquierda_es": "pequeño",
+    "derecha_es": "diminuto"
+  },
+  {
+    "id": 168,
+    "archivo": "168.png",
+    "izquierda": "Small number",
+    "derecha": "Large number",
+    "izquierda_es": "Número pequeño",
+    "derecha_es": "Gran número"
+  },
+  {
+    "id": 169,
+    "archivo": "169.png",
+    "izquierda": "Small talk",
+    "derecha": "Heavt topic",
+    "izquierda_es": "pequeña charla",
+    "derecha_es": "tema pesado"
+  },
+  {
+    "id": 170,
+    "archivo": "170.png",
+    "izquierda": "Smells bad",
+    "derecha": "Smells good",
+    "izquierda_es": "huele mal",
+    "derecha_es": "Huele bien"
+  },
+  {
+    "id": 171,
+    "archivo": "171.png",
+    "izquierda": "Smelly ina bad way",
+    "derecha": "Smelly in a good way",
+    "izquierda_es": "Huele mal",
+    "derecha_es": "Huele mal en el buen sentido"
+  },
+  {
+    "id": 172,
+    "archivo": "172.png",
+    "izquierda": "Snack",
+    "derecha": "Meal",
+    "izquierda_es": "merienda",
+    "derecha_es": "comida"
+  },
+  {
+    "id": 173,
+    "archivo": "173.png",
+    "izquierda": "Socialist",
+    "derecha": "Capitalist",
+    "izquierda_es": "socialista",
+    "derecha_es": "capitalista"
+  },
+  {
+    "id": 174,
+    "archivo": "174.png",
+    "izquierda": "Soft",
+    "derecha": "Hard",
+    "izquierda_es": "suave",
+    "derecha_es": "duro"
+  },
+  {
+    "id": 175,
+    "archivo": "175.png",
+    "izquierda": "Sport",
+    "derecha": "Game",
+    "izquierda_es": "deporte",
+    "derecha_es": "juego"
+  },
+  {
+    "id": 176,
+    "archivo": "176.png",
+    "izquierda": "Square",
+    "derecha": "Round",
+    "izquierda_es": "cuadrado",
+    "derecha_es": "redondo"
+  },
+  {
+    "id": 177,
+    "archivo": "177.png",
+    "izquierda": "Star Wars",
+    "derecha": "Star Trek",
+    "izquierda_es": "guerra de las galaxias",
+    "derecha_es": "viaje a las estrellas"
+  },
+  {
+    "id": 178,
+    "archivo": "178.png",
+    "izquierda": "Stationary",
+    "derecha": "Mobile",
+    "izquierda_es": "estacionario",
+    "derecha_es": "Móvil"
+  },
+  {
+    "id": 179,
+    "archivo": "179.png",
+    "izquierda": "Straight",
+    "derecha": "Curvy",
+    "izquierda_es": "Recto",
+    "derecha_es": "con curvas"
+  },
+  {
+    "id": 180,
+    "archivo": "180.png",
+    "izquierda": "Stupid",
+    "derecha": "Brilliant",
+    "izquierda_es": "estúpido",
+    "derecha_es": "brillante"
+  },
+  {
+    "id": 181,
+    "archivo": "181.png",
+    "izquierda": "Sustenance",
+    "derecha": "Haute cuisine",
+    "izquierda_es": "sustento",
+    "derecha_es": "Alta cocina"
+  },
+  {
+    "id": 182,
+    "archivo": "182.png",
+    "izquierda": "Talent",
+    "derecha": "Skill",
+    "izquierda_es": "Talento",
+    "derecha_es": "Habilidad"
+  },
+  {
+    "id": 183,
+    "archivo": "183.png",
+    "izquierda": "Tastes bad",
+    "derecha": "Tastes good",
+    "izquierda_es": "Sabe mal",
+    "derecha_es": "Sabe bien"
+  },
+  {
+    "id": 184,
+    "archivo": "184.png",
+    "izquierda": "Temporary",
+    "derecha": "a Permanent",
+    "izquierda_es": "Temporal",
+    "derecha_es": "un permanente"
+  },
+  {
+    "id": 185,
+    "archivo": "185.png",
+    "izquierda": "The Light Side of the Force",
+    "derecha": "The Dark Side of the Force",
+    "izquierda_es": "El lado luminoso de la fuerza",
+    "derecha_es": "El lado oscuro de la fuerza"
+  },
+  {
+    "id": 186,
+    "archivo": "186.png",
+    "izquierda": "The worst",
+    "derecha": "The best",
+    "izquierda_es": "lo peor",
+    "derecha_es": "el mejor"
+  },
+  {
+    "id": 187,
+    "archivo": "187.png",
+    "izquierda": "Thrilling",
+    "derecha": "Terrifying",
+    "izquierda_es": "emocionante",
+    "derecha_es": "aterrador"
+  },
+  {
+    "id": 188,
+    "archivo": "188.png",
+    "izquierda": "Tick",
+    "derecha": "Tock",
+    "izquierda_es": "garrapata",
+    "derecha_es": "tac"
+  },
+  {
+    "id": 189,
+    "archivo": "189.png",
+    "izquierda": "Tired",
+    "derecha": "Wired",
+    "izquierda_es": "cansado",
+    "derecha_es": "cableado"
+  },
+  {
+    "id": 190,
+    "archivo": "190.png",
+    "izquierda": "Too small",
+    "derecha": "Too big",
+    "izquierda_es": "demasiado pequeño",
+    "derecha_es": "demasiado grande"
+  },
+  {
+    "id": 191,
+    "archivo": "191.png",
+    "izquierda": "Traditional",
+    "derecha": "Radical",
+    "izquierda_es": "Tradicional",
+    "derecha_es": "radicales"
+  },
+  {
+    "id": 192,
+    "archivo": "192.png",
+    "izquierda": "Traditionally masculine",
+    "derecha": "Traditionally feminine",
+    "izquierda_es": "Tradicionalmente masculino",
+    "derecha_es": "Tradicionalmente femenina"
+  },
+  {
+    "id": 193,
+    "archivo": "193.png",
+    "izquierda": "Trashy",
+    "derecha": "Classy",
+    "izquierda_es": "basura",
+    "derecha_es": "con clase"
+  },
+  {
+    "id": 194,
+    "archivo": "194.png",
+    "izquierda": "True",
+    "derecha": "False",
+    "izquierda_es": "Verdadero",
+    "derecha_es": "Falso"
+  },
+  {
+    "id": 195,
+    "archivo": "195.png",
+    "izquierda": "Ugly",
+    "derecha": "Beautiful",
+    "izquierda_es": "feo",
+    "derecha_es": "hermosa"
+  },
+  {
+    "id": 196,
+    "archivo": "196.png",
+    "izquierda": "Ugly man",
+    "derecha": "Beautiful man",
+    "izquierda_es": "hombre feo",
+    "derecha_es": "hermoso hombre"
+  },
+  {
+    "id": 197,
+    "archivo": "197.png",
+    "izquierda": "Ugly word",
+    "derecha": "Beautiful word",
+    "izquierda_es": "palabra fea",
+    "derecha_es": "Hermosa palabra"
+  },
+  {
+    "id": 198,
+    "archivo": "198.png",
+    "izquierda": "Unbelievable",
+    "derecha": "Believable",
+    "izquierda_es": "increíble",
+    "derecha_es": "Creíble"
+  },
+  {
+    "id": 199,
+    "archivo": "199.png",
+    "izquierda": "Uncontroversial topic",
+    "derecha": "Controversial topic",
+    "izquierda_es": "Tema no controvertido",
+    "derecha_es": "Tema controvertido"
+  },
+  {
+    "id": 200,
+    "archivo": "200.png",
+    "izquierda": "Uncool",
+    "derecha": "Cool",
+    "izquierda_es": "poco genial",
+    "derecha_es": "genial"
+  },
+  {
+    "id": 201,
+    "archivo": "201.png",
+    "izquierda": "Underpaid",
+    "derecha": "Overpaid",
+    "izquierda_es": "Mal pagado",
+    "derecha_es": "pagado en exceso"
+  },
+  {
+    "id": 202,
+    "archivo": "202.png",
+    "izquierda": "Underrated",
+    "derecha": "Overrated",
+    "izquierda_es": "subestimado",
+    "derecha_es": "sobrevalorado"
+  },
+  {
+    "id": 203,
+    "archivo": "203.png",
+    "izquierda": "Underrated actor",
+    "derecha": "Overrated actor",
+    "izquierda_es": "actor subestimado",
+    "derecha_es": "actor sobrevalorado"
+  },
+  {
+    "id": 204,
+    "archivo": "204.png",
+    "izquierda": "Underrated book",
+    "derecha": "Overrated book",
+    "izquierda_es": "Libro subestimado",
+    "derecha_es": "libro sobrevalorado"
+  },
+  {
+    "id": 205,
+    "archivo": "205.png",
+    "izquierda": "Underrated game",
+    "derecha": "Overrated game",
+    "izquierda_es": "Juego subestimado",
+    "derecha_es": "juego sobrevalorado"
+  },
+  {
+    "id": 206,
+    "archivo": "206.png",
+    "izquierda": "Underrated letter of the alphabet",
+    "derecha": "Overrated letter of the alphabet",
+    "izquierda_es": "Letra subestimada del alfabeto.",
+    "derecha_es": "Letra sobrevalorada del alfabeto."
+  },
+  {
+    "id": 207,
+    "archivo": "207.png",
+    "izquierda": "Underrated movie",
+    "derecha": "Overrated movie",
+    "izquierda_es": "Película subestimada",
+    "derecha_es": "película sobrevalorada"
+  },
+  {
+    "id": 208,
+    "archivo": "208.png",
+    "izquierda": "Underrated musician",
+    "derecha": "Overrated musician",
+    "izquierda_es": "Músico subestimado",
+    "derecha_es": "Músico sobrevalorado"
+  },
+  {
+    "id": 209,
+    "archivo": "209.png",
+    "izquierda": "Underrated skill",
+    "derecha": "Overrated skill",
+    "izquierda_es": "Habilidad subestimada",
+    "derecha_es": "habilidad sobrevalorada"
+  },
+  {
+    "id": 210,
+    "archivo": "210.png",
+    "izquierda": "Underrated thinc to own",
+    "derecha": "Overrated thing to own",
+    "izquierda_es": "Algo subestimado para poseer",
+    "derecha_es": "Algo sobrevalorado para poseer"
+  },
+  {
+    "id": 211,
+    "archivo": "211.png",
+    "izquierda": "Worthless",
+    "derecha": "Priceless",
+    "izquierda_es": "sin valor",
+    "derecha_es": "No tiene precio"
+  },
+  {
+    "id": 212,
+    "archivo": "212.png",
+    "izquierda": "Underrated weapon",
+    "derecha": "Overrated weapon",
+    "izquierda_es": "Arma subestimada",
+    "derecha_es": "Arma sobrevalorada"
+  },
+  {
+    "id": 213,
+    "archivo": "213.png",
+    "izquierda": "Unethical",
+    "derecha": "Ethical",
+    "izquierda_es": "poco ético",
+    "derecha_es": "ético"
+  },
+  {
+    "id": 214,
+    "archivo": "214.png",
+    "izquierda": "Unfashionable",
+    "derecha": "Fashionable",
+    "izquierda_es": "pasado de moda",
+    "derecha_es": "De moda"
+  },
+  {
+    "id": 215,
+    "archivo": "215.png",
+    "izquierda": "Unforgivable",
+    "derecha": "Forgivable",
+    "izquierda_es": "Imperdonable",
+    "derecha_es": "perdonable"
+  },
+  {
+    "id": 216,
+    "archivo": "216.png",
+    "izquierda": "Unhealthy",
+    "derecha": "Healthy",
+    "izquierda_es": "Insalubre",
+    "derecha_es": "saludable"
+  },
+  {
+    "id": 217,
+    "archivo": "217.png",
+    "izquierda": "Unhygienic",
+    "derecha": "Hygienic",
+    "izquierda_es": "Antihigiénico",
+    "derecha_es": "higiénico"
+  },
+  {
+    "id": 218,
+    "archivo": "218.png",
+    "izquierda": "Unimportant",
+    "derecha": "Important",
+    "izquierda_es": "Sin importancia",
+    "derecha_es": "importante"
+  },
+  {
+    "id": 219,
+    "archivo": "219.png",
+    "izquierda": "Unknown",
+    "derecha": "Famous",
+    "izquierda_es": "Desconocido",
+    "derecha_es": "Famoso"
+  },
+  {
+    "id": 220,
+    "archivo": "220.png",
+    "izquierda": "Unnatural",
+    "derecha": "Natural",
+    "izquierda_es": "Antinatural",
+    "derecha_es": "naturales"
+  },
+  {
+    "id": 221,
+    "archivo": "221.png",
+    "izquierda": "Unpopular",
+    "derecha": "Popular",
+    "izquierda_es": "impopular",
+    "derecha_es": "populares"
+  },
+  {
+    "id": 222,
+    "archivo": "222.png",
+    "izquierda": "Unpopular activity",
+    "derecha": "Popular activity",
+    "izquierda_es": "Actividad impopular",
+    "derecha_es": "Actividad popular"
+  },
+  {
+    "id": 223,
+    "archivo": "223.png",
+    "izquierda": "Unreasonable phobia",
+    "derecha": "Reasonable phobia",
+    "izquierda_es": "fobia irrazonable",
+    "derecha_es": "fobia razonable"
+  },
+  {
+    "id": 224,
+    "archivo": "224.png",
+    "izquierda": "Unreliable",
+    "derecha": "Reliable",
+    "izquierda_es": "poco confiable",
+    "derecha_es": "confiable"
+  },
+  {
+    "id": 225,
+    "archivo": "225.png",
+    "izquierda": "Unscented",
+    "derecha": "Scented",
+    "izquierda_es": "Sin perfume",
+    "derecha_es": "perfumado"
+  },
+  {
+    "id": 226,
+    "archivo": "226.png",
+    "izquierda": "Unsexy animal",
+    "derecha": "Sexy animal",
+    "izquierda_es": "animal poco sexy",
+    "derecha_es": "animales atractivos"
+  },
+  {
+    "id": 227,
+    "archivo": "227.png",
+    "izquierda": "Unsexy color",
+    "derecha": "Sexy color",
+    "izquierda_es": "color poco sexy",
+    "derecha_es": "color atractivo"
+  },
+  {
+    "id": 228,
+    "archivo": "228.png",
+    "izquierda": "Unsexy emoji",
+    "derecha": "Sexy emoji",
+    "izquierda_es": "emoji poco sexy",
+    "derecha_es": "emojis sexys"
+  },
+  {
+    "id": 229,
+    "archivo": "229.png",
+    "izquierda": "Pok mon",
+    "derecha": "Sexy Pok mon",
+    "izquierda_es": "Pokémon",
+    "derecha_es": "Pokémon sexy"
+  },
+  {
+    "id": 230,
+    "archivo": "230.png",
+    "izquierda": "Unstable",
+    "derecha": "Stable",
+    "izquierda_es": "inestable",
+    "derecha_es": "Estable"
+  },
+  {
+    "id": 231,
+    "archivo": "231.png",
+    "izquierda": "Untalented",
+    "derecha": "Talented",
+    "izquierda_es": "Sin talento",
+    "derecha_es": "talentoso"
+  },
+  {
+    "id": 232,
+    "archivo": "232.png",
+    "izquierda": "Useless",
+    "derecha": "Useful",
+    "izquierda_es": "Inútil",
+    "derecha_es": "Útil"
+  },
+  {
+    "id": 233,
+    "archivo": "233.png",
+    "izquierda": "Useless body part",
+    "derecha": "Useful body part",
+    "izquierda_es": "parte del cuerpo inutil",
+    "derecha_es": "Parte útil del cuerpo."
+  },
+  {
+    "id": 234,
+    "archivo": "234.png",
+    "izquierda": "Useless in an emergency",
+    "derecha": "Useful in an emergency",
+    "izquierda_es": "Inútil en caso de emergencia",
+    "derecha_es": "Útil en caso de emergencia"
+  },
+  {
+    "id": 235,
+    "archivo": "235.png",
+    "izquierda": "Useless invention",
+    "derecha": "Useful invention",
+    "izquierda_es": "Invención inútil",
+    "derecha_es": "Invención útil"
+  },
+  {
+    "id": 236,
+    "archivo": "236.png",
+    "izquierda": "Ss, Useless major",
+    "derecha": "Useful major",
+    "izquierda_es": "Ss, mayor inútil",
+    "derecha_es": "Mayor útil"
+  },
+  {
+    "id": 237,
+    "archivo": "237.png",
+    "izquierda": "Vape",
+    "derecha": "Doesn't vape",
+    "izquierda_es": "vapear",
+    "derecha_es": "no vapea"
+  },
+  {
+    "id": 238,
+    "archivo": "238.png",
+    "izquierda": "Vice",
+    "derecha": "Virtue",
+    "izquierda_es": "vicio",
+    "derecha_es": "virtud"
+  },
+  {
+    "id": 239,
+    "archivo": "239.png",
+    "izquierda": "Villain",
+    "derecha": "Hero",
+    "izquierda_es": "villano",
+    "derecha_es": "héroe"
+  },
+  {
+    "id": 240,
+    "archivo": "240.png",
+    "izquierda": "Waste of time",
+    "derecha": "use of time",
+    "izquierda_es": "pérdida de tiempo",
+    "derecha_es": "uso del tiempo"
+  },
+  {
+    "id": 241,
+    "archivo": "241.png",
+    "izquierda": "Weak",
+    "derecha": "Strong",
+    "izquierda_es": "Débil",
+    "derecha_es": "fuerte"
+  },
+  {
+    "id": 242,
+    "archivo": "242.png",
+    "izquierda": "Weird",
+    "derecha": "Strange",
+    "izquierda_es": "raro",
+    "derecha_es": "extraño"
+  },
+  {
+    "id": 243,
+    "archivo": "243.png",
+    "izquierda": "Wise",
+    "derecha": "Intelligent",
+    "izquierda_es": "sabio",
+    "derecha_es": "inteligente"
+  },
+  {
+    "id": 244,
+    "archivo": "244.png",
+    "izquierda": "Won't live to 100",
+    "derecha": "Will live to 100",
+    "izquierda_es": "No vivirá hasta los 100",
+    "derecha_es": "Vivirá hasta los 100"
+  },
+  {
+    "id": 245,
+    "archivo": "245.png",
+    "izquierda": "Worst athlete of all time",
+    "derecha": "Greatest athlete of all time",
+    "izquierda_es": "El peor deportista de todos los tiempos.",
+    "derecha_es": "El mejor atleta de todos los tiempos."
+  },
+  {
+    "id": 246,
+    "archivo": "246.png",
+    "izquierda": "Worst chore",
+    "derecha": "Best chore",
+    "izquierda_es": "peor tarea",
+    "derecha_es": "mejor tarea"
+  },
+  {
+    "id": 247,
+    "archivo": "247.png",
+    "izquierda": "Worst day of the year",
+    "derecha": "Best day of the year",
+    "izquierda_es": "El peor día del año.",
+    "derecha_es": "El mejor día del año."
+  },
+  {
+    "id": 248,
+    "archivo": "248.png",
+    "izquierda": "Worst era to time travel",
+    "derecha": "Best era to time travel",
+    "izquierda_es": "La peor época para viajar en el tiempo.",
+    "derecha_es": "La mejor era para viajar en el tiempo."
+  },
+  {
+    "id": 249,
+    "archivo": "249.png",
+    "izquierda": "Worst living person",
+    "derecha": "Greatest living person",
+    "izquierda_es": "La peor persona viva",
+    "derecha_es": "la persona viva mas grande"
+  },
+  {
+    "id": 250,
+    "archivo": "250.png",
+    "izquierda": "Worst year in history",
+    "derecha": "Best year in history",
+    "izquierda_es": "El peor año de la historia.",
+    "derecha_es": "El mejor año de la historia."
+  }
+]
