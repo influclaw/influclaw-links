@@ -323,6 +323,17 @@ html, body {
   padding: 2px 2px 12px;
 }
 
+.btn-deck-size {
+  border-color: rgba(255, 209, 102, 0.45);
+  color: #ffd166;
+  min-width: 52px;
+  font-size: 0.95rem;
+}
+
+.btn-deck-size[hidden] {
+  display: none !important;
+}
+
 /* TOPBAR */
 .topbar {
   display: flex;
@@ -940,6 +951,97 @@ html, body {
   z-index: 1;
 }
 
+/* TIME'S UP END OF DECK */
+.timesup-end {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.timesup-end[hidden] {
+  display: none !important;
+}
+
+.end-big {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.phases-summary {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 12px 14px;
+  text-align: left;
+  max-height: 38vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.phases-summary h4 {
+  margin: 0 0 8px;
+  color: var(--accent-3);
+  font-size: 0.95rem;
+}
+
+.phases-summary ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.phases-summary li {
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: #d8d8e4;
+}
+
+.end-hint {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+#confetti {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  border-radius: 20px;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -24px;
+  border-radius: 2px;
+  opacity: 0;
+  animation-name: confetti-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-24px) rotate(0deg);
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(90vh) rotate(720deg);
+    opacity: 0.9;
+  }
+}
+
 /* Toast */
 .toast {
   position: fixed;
@@ -1195,8 +1297,20 @@ html, body {
 }
 
 .deck-hand-actions .btn-secondary {
-  flex: 0 0 auto;
-  min-width: 118px;
+  flex: 1;
+  min-width: 0;
+}
+
+.deck-footer .btn-primary {
+  flex: 1;
+}
+
+.deck-footer .btn-primary[hidden] {
+  display: none !important;
+}
+
+#btn-back-hand[hidden] {
+  display: none !important;
 }
 
 .deck-complete {

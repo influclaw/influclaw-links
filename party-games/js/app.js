@@ -136,7 +136,7 @@
       <h4>Preparación</h4>
       <ul>
         <li>Formad equipos (ideal: de 2 personas). Sentad de forma que los turnos se alternen entre equipos.</li>
-        <li>🃏 Sacad <strong>40 cartas + 2 por jugador</strong> y repartidlas lo más equitativo posible.</li>
+        <li>🃏 Sacad <strong>40 o 20 cartas</strong> (elige arriba a la derecha) + 2 por jugador y repartidlas lo más equitativo posible.</li>
         <li>Cada jugador mira sus cartas y <strong>elige 2 para devolver</strong> a la caja.</li>
         <li>Juntad todas las cartas, barajad y formad un único mazo frente al jugador inicial.</li>
       </ul>
@@ -149,15 +149,16 @@
       <h4>Puntuación</h4>
       <ul>
         <li>Cada acierto es <strong>1 punto</strong>: la carta se guarda como punto de victoria.</li>
+        <li>Pulsa el botón <strong>🔴 o 🔵</strong> de abajo para asignar la carta al equipo y sumarle el punto (↩ deshace si te equivocas).</li>
         <li>La fase termina cuando el mazo se vacía; se suman los aciertos de todos los jugadores del equipo.</li>
         <li>Gana el equipo con más puntos tras las 3 fases 👑. En caso de empate, se comparte la victoria.</li>
       </ul>
       <h4>En el móvil</h4>
       <ul>
-        <li>🗂 <strong>Preparar mazo</strong>: elige con qué cartas jugaréis (toca para quitar las que devolvéis a la caja) y pulsa <em>Jugar</em>.</li>
+        <li>🗂 <strong>Preparar mazo</strong>: reparte y elige las cartas con las que jugaréis (↻ refresca la mano, ← Volver cambia la elección) y pulsa <em>Jugar</em>.</li>
         <li>⏱ <strong>temporizador de 30 s</strong> para cada turno (pulsa para iniciar/reiniciar).</li>
-        <li>← siguiente · → anterior · ↑ quitar · 🗑 quitadas · 🔀 barajar.</li>
-        <li>Usa el marcador 👤 para anotar los puntos de cada equipo.</li>
+        <li>← siguiente · → anterior · 🔀 barajar · ↩ deshacer.</li>
+        <li>▦ botón de equipos: ver las cartas ganadas y devolverlas al mazo entre fases.</li>
       </ul>
     `,
   };
@@ -175,6 +176,7 @@
   let timesupSelected = null;
   let timesupSetup = null;
   let timesupTeams = { red: [], blue: [] };
+  let timesupDeckSize = 40;
   let timesupHistory = [];
   let cardRotation = { amigos: false, mente: false, timesup: false };
 
@@ -269,6 +271,7 @@
       timesupSetup,
       cardRotation,
       timesupTeams,
+      timesupDeckSize,
       updatedAt: Date.now(),
     };
     const raw = JSON.stringify(payload);
@@ -326,11 +329,24 @@
     return a;
   }
 
+  function timesupDeckIds() {
+    const teamSet = new Set([...timesupTeams.red, ...timesupTeams.blue]);
+    const removedSet = new Set(decks.timesup ? decks.timesup.removed : []);
+    let ids =
+      timesupSelected && timesupSelected.length
+        ? timesupSelected.slice()
+        : rangeIds(GAMES.timesup.count);
+    return ids.filter((x) => !teamSet.has(x) && !removedSet.has(x));
+  }
+
   function defaultDeck(gameId) {
     const g = GAMES[gameId];
     let ids = rangeIds(g.count);
     if (gameId === "timesup" && timesupSelected && timesupSelected.length) {
       ids = timesupSelected;
+    }
+    if (gameId === "timesup") {
+      ids = timesupDeckIds();
     }
     return {
       order: shuffle(ids),
@@ -449,6 +465,8 @@
     $("#rules-icon").src = g.icon;
     $("#rules-content").innerHTML = RULES[gameId];
     $("#btn-prepare-deck").hidden = gameId !== "timesup";
+    $("#btn-deck-size").hidden = gameId !== "timesup";
+    $("#btn-deck-size").textContent = String(timesupDeckSize);
     showView("rules");
   }
 
@@ -461,13 +479,13 @@
 
   function updateDeckPlayerInfo() {
     const count = getTimesupPlayerCount();
-    const total = 40 + count * 2;
+    const total = timesupDeckSize + count * 2;
     $("#deck-player-count").value = String(count);
-    $("#deck-pool-info").textContent = `Se repartirán ${total} cartas: 40 para el mazo y 2 por jugador para devolver.`;
+    $("#deck-pool-info").textContent = `Se repartirán ${total} cartas: ${timesupDeckSize} para el mazo y 2 por jugador para devolver.`;
   }
 
   function createTimesupSetup(playerCount) {
-    const total = 40 + playerCount * 2;
+    const total = timesupDeckSize + playerCount * 2;
     const pool = shuffle(rangeIds(GAMES.timesup.count)).slice(0, total);
     const base = Math.floor(total / playerCount);
     const extra = total % playerCount;
@@ -502,6 +520,7 @@
     $("#deck-config").hidden = false;
     $("#deck-hand").hidden = true;
     $("#deck-complete").hidden = true;
+    $("#btn-confirm-hand").hidden = true;
     updateDeckPlayerInfo();
   }
 
@@ -523,6 +542,8 @@
     $("#deck-config").hidden = true;
     $("#deck-hand").hidden = false;
     $("#deck-complete").hidden = true;
+    $("#btn-confirm-hand").hidden = false;
+    $("#btn-back-hand").hidden = timesupSetup.currentPlayer === 0;
     const grid = $("#deck-hand-grid");
     grid.innerHTML = "";
     for (const id of hand.cards) {
@@ -548,6 +569,14 @@
     const confirm = $("#btn-confirm-hand");
     confirm.disabled = selected.size !== 2;
     confirm.textContent = selected.size === 2 ? "Devolver 2 y continuar" : `Seleccionadas ${selected.size}/2`;
+  }
+
+  function backTimesupHand() {
+    if (timesupSetup.currentPlayer === 0) return;
+    timesupSetup.currentPlayer -= 1;
+    saveState();
+    renderDeckHand();
+    toast("Volviendo al jugador " + (timesupSetup.currentPlayer + 1));
   }
 
   function refreshTimesupHand() {
@@ -594,13 +623,19 @@
   }
 
   function renderDeckComplete() {
+    const deckSize = timesupDeckIds().length;
+    const teamN = timesupTeams.red.length + timesupTeams.blue.length;
     $("#deck-title").textContent = "Mazo listo";
-    $("#deck-sub").textContent = `Habéis elegido ${timesupSelected.length} cartas para jugar.`;
+    $("#deck-sub").textContent =
+      teamN > 0
+        ? deckSize + " cartas en el mazo y " + teamN + " asignadas a los equipos."
+        : "Hab" + String.fromCharCode(233) + "is elegido " + deckSize + " cartas para jugar.";
     $("#deck-config").hidden = true;
     $("#deck-hand").hidden = true;
     $("#deck-complete").hidden = false;
-    $("#deck-final-count").textContent = `${timesupSelected.length} cartas preparadas`;
-    $("#btn-deck-play").textContent = `Jugar con ${timesupSelected.length} cartas`;
+    $("#btn-confirm-hand").hidden = true;
+    $("#deck-final-count").textContent = deckSize + " cartas preparadas";
+    $("#btn-deck-play").textContent = "Jugar con " + deckSize + " cartas";
   }
 
   function startPreparedTimesup() {
@@ -610,7 +645,7 @@
     closeDeckSheet();
     showView("play");
     renderPlay();
-    toast(`Mazo preparado con ${timesupSelected.length} cartas`);
+    toast("Mazo preparado con " + timesupDeckIds().length + " cartas");
   }
 
   function resetTimesupSetup() {
@@ -662,6 +697,36 @@
     );
   }
 
+  // ---------- end of deck (Time's Up) ----------
+  const CONFETTI_COLORS = ["#ff4d6d", "#4d7cff", "#ffd166", "#2dd4bf", "#a78bfa", "#5eead4", "#ff8a5b"];
+
+  function spawnConfetti() {
+    const wrap = $("#confetti");
+    if (!wrap || wrap.children.length > 0) return;
+    for (let i = 0; i < 90; i++) {
+      const piece = document.createElement("span");
+      piece.className = "confetti-piece";
+      piece.style.left = Math.random() * 100 + "%";
+      piece.style.background = CONFETTI_COLORS[Math.floor(Math.random() * CONFETTI_COLORS.length)];
+      piece.style.animationDelay = Math.random() * 2.5 + "s";
+      piece.style.animationDuration = 2 + Math.random() * 2.5 + "s";
+      piece.style.animationIterationCount = "1";
+      piece.style.width = 6 + Math.random() * 6 + "px";
+      piece.style.height = 8 + Math.random() * 8 + "px";
+      wrap.appendChild(piece);
+    }
+    clearTimeout(spawnConfetti._t);
+    spawnConfetti._t = setTimeout(() => {
+      clearConfetti();
+    }, 9500);
+  }
+
+  function clearConfetti() {
+    clearTimeout(spawnConfetti._t);
+    const wrap = $("#confetti");
+    if (wrap) wrap.innerHTML = "";
+  }
+
   // ---------- Time's Up teams ----------
   function assignCurrentToTeam(color) {
     if (currentGameId !== "timesup") return;
@@ -691,12 +756,13 @@
       d.order = [last.id];
       d.index = 0;
     } else {
-      const insertAt = Math.min(d.index + 1, d.order.length);
+      const insertAt = Math.min(d.index, d.order.length);
       d.order.splice(insertAt, 0, last.id);
+      d.index = insertAt;
     }
     saveState();
     renderPlay();
-    toast("Carta devuelta: deshecho");
+    toast("Deshecho: la carta vuelve a mostrarse");
   }
 
   function openTeamsSheet() {
@@ -918,17 +984,20 @@
     const ctx = getAudioCtx();
     if (!ctx) return;
     try {
-      [0, 0.22].forEach((offset, i) => {
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-        osc.type = "sine";
-        osc.frequency.value = i === 0 ? 1046 : 784;
-        gain.gain.setValueAtTime(0.12, ctx.currentTime + offset);
-        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + offset + 0.16);
-        osc.connect(gain).connect(ctx.destination);
-        osc.start(ctx.currentTime + offset);
-        osc.stop(ctx.currentTime + offset + 0.18);
-      });
+      for (let i = 0; i < 5; i++) {
+        const base = i * 0.22;
+        [0, 0.11].forEach((offset, j) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = "sine";
+          osc.frequency.value = j === 0 ? 1046 : 784;
+          gain.gain.setValueAtTime(0.12, ctx.currentTime + base + offset);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + base + offset + 0.07);
+          osc.connect(gain).connect(ctx.destination);
+          osc.start(ctx.currentTime + base + offset);
+          osc.stop(ctx.currentTime + base + offset + 0.08);
+        });
+      }
     } catch (_) {}
   }
 
@@ -1006,6 +1075,8 @@
       $("#btn-team-red").hidden = false;
       $("#btn-team-blue").hidden = false;
       $("#btn-undo").hidden = false;
+      $("#btn-removed").hidden = true;
+      $("#hint-remove").hidden = true;
     } else {
       $("#btn-prev").textContent = "← Anterior";
       $("#btn-next").textContent = "Siguiente →";
@@ -1013,6 +1084,8 @@
       $("#btn-team-red").hidden = true;
       $("#btn-team-blue").hidden = true;
       $("#btn-undo").hidden = true;
+      $("#btn-removed").hidden = false;
+      $("#hint-remove").hidden = false;
     }
     $("#play-footer").classList.toggle("timesup-footer", currentGameId === "timesup");
     $("#team-red-count").textContent = timesupTeams.red.length;
@@ -1035,10 +1108,20 @@
     if (!totalLeft) {
       img.hidden = true;
       empty.hidden = false;
+      if (currentGameId === "timesup") {
+        $("#empty-title").textContent = "¡Fin de la fase!";
+        $("#timesup-end").hidden = false;
+        spawnConfetti();
+      } else {
+        $("#empty-title").textContent = "No quedan cartas";
+        $("#timesup-end").hidden = true;
+        clearConfetti();
+      }
       return;
     }
     empty.hidden = true;
     img.hidden = false;
+    clearConfetti();
     const id = currentId(currentGameId);
     img.src = cardUrl(currentGameId, id);
     img.alt = `Carta ${id}`;
@@ -1078,15 +1161,19 @@
       toast("Pocas cartas para barajar");
       return;
     }
-    const current = d.order[d.index];
     d.order = shuffle(d.order);
-    d.index = Math.max(0, d.order.indexOf(current));
+    d.index = 0;
     saveState();
     toast("Mazo barajado");
     refreshCurrentView(gameId);
   }
 
   function resetDeck(gameId = currentGameId) {
+    if (gameId === "timesup" && decks.timesup && decks.timesup.order.length === 0) {
+      // fin de fase: devolver las cartas de los equipos y limpiar el historial
+      timesupTeams = { red: [], blue: [] };
+      timesupHistory = [];
+    }
     decks[gameId] = defaultDeck(gameId);
     saveState();
     toast("Mazo restaurado y barajado");
@@ -1342,7 +1429,7 @@
       const fb =
         gameId === "wavelength" ? $("#wl-swipe-feedback") : $("#swipe-feedback");
       if (!fb) return;
-      if (Math.abs(dy) > Math.abs(dx) && dy < -40) {
+      if (Math.abs(dy) > Math.abs(dx) && dy < -40 && gameId !== "timesup") {
         fb.textContent = "QUITAR";
         fb.className = "swipe-feedback show remove";
       } else if (dx < -50) {
@@ -1376,7 +1463,7 @@
       const absY = Math.abs(dy);
       const threshold = 70;
 
-      if (absY > absX && dy < -threshold) {
+      if (absY > absX && dy < -threshold && gameId !== "timesup") {
         removeCurrent(gameId);
       } else if (absX > threshold) {
         // INVERTED: left = next, right = prev
@@ -1527,9 +1614,14 @@
 
     // deck setup
     $("#btn-deck-close").addEventListener("click", closeDeckSheet);
-    $("#btn-deck-close-2").addEventListener("click", closeDeckSheet);
     $("#deck-backdrop").addEventListener("click", closeDeckSheet);
     $("#deck-player-count").addEventListener("input", updateDeckPlayerInfo);
+    $("#btn-deck-size").addEventListener("click", () => {
+      timesupDeckSize = timesupDeckSize === 40 ? 20 : 40;
+      saveState();
+      $("#btn-deck-size").textContent = String(timesupDeckSize);
+      toast("Mazo de " + timesupDeckSize + " cartas");
+    });
     $("#btn-deck-player-minus").addEventListener("click", () => {
       $("#deck-player-count").value = getTimesupPlayerCount() - 1;
       updateDeckPlayerInfo();
@@ -1539,6 +1631,7 @@
       updateDeckPlayerInfo();
     });
     $("#btn-deal-timesup").addEventListener("click", dealTimesup);
+    $("#btn-back-hand").addEventListener("click", backTimesupHand);
     $("#btn-refresh-hand").addEventListener("click", refreshTimesupHand);
     $("#btn-confirm-hand").addEventListener("click", confirmTimesupHand);
     $("#btn-deck-play").addEventListener("click", startPreparedTimesup);
@@ -1572,12 +1665,12 @@
         // inverted keyboard to match swipe feel: left = next
         if (e.key === "ArrowLeft") goNext(currentGameId);
         if (e.key === "ArrowRight") goPrev(currentGameId);
-        if (e.key === "ArrowUp" || e.key === "Delete" || e.key === "Backspace") {
+        if ((e.key === "ArrowUp" || e.key === "Delete" || e.key === "Backspace") && currentGameId !== "timesup") {
           e.preventDefault();
           removeCurrent(currentGameId);
         }
         if (e.key.toLowerCase() === "s") shuffleDeck(currentGameId);
-        if (e.key.toLowerCase() === "r") openRemovedSheet(currentGameId);
+        if (e.key.toLowerCase() === "r" && currentGameId !== "timesup") openRemovedSheet(currentGameId);
         if (e.key.toLowerCase() === "t") toggleTimer();
       }
       if (views.wavelength.classList.contains("active")) {
@@ -1609,6 +1702,9 @@
     wire();
 
     const saved = loadState();
+    if (saved && (saved.timesupDeckSize === 40 || saved.timesupDeckSize === 20)) {
+      timesupDeckSize = saved.timesupDeckSize;
+    }
     if (saved && saved.timesupTeams && Array.isArray(saved.timesupTeams.red) && Array.isArray(saved.timesupTeams.blue)) {
       const valid = new Set(rangeIds(GAMES.timesup.count));
       timesupTeams = {

@@ -7,7 +7,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="theme-color" content="#0f0f14" />
   <title>Juegos de Mesa</title>
-  <link rel="stylesheet" href="css/styles.css?v=24" />
+  <link rel="stylesheet" href="css/styles.css?v=34" />
 </head>
 <body>
   <div id="app">
@@ -27,6 +27,7 @@
         <button class="btn-icon" id="btn-rules-back" aria-label="Volver">&larr;</button>
         <h2 id="rules-title">Reglas</h2>
         <span class="topbar-spacer"></span>
+        <button class="btn-chip btn-deck-size" id="btn-deck-size" title="Cartas totales del mazo" hidden>40</button>
       </header>
       <div class="rules-body">
         <div class="rules-hero">
@@ -66,7 +67,7 @@
       <div class="deck-stage" id="deck-stage">
         <div class="swipe-hints">
           <span>&larr; siguiente</span>
-          <span>&uarr; quitar</span>
+          <span id="hint-remove">&uarr; quitar</span>
           <span>anterior &rarr;</span>
         </div>
         <div class="card-stack" id="card-stack">
@@ -74,7 +75,20 @@
             <img id="card-image" alt="Carta" draggable="false" />
             <button class="btn-icon btn-rotate-face" id="btn-rotate-face" title="Rotar carta" aria-label="Rotar carta" hidden>&#8635;</button>
             <div class="card-empty" id="card-empty" hidden>
-              <p>No quedan cartas</p>
+              <div class="confetti" id="confetti"></div>
+              <p id="empty-title">No quedan cartas</p>
+              <div class="timesup-end" id="timesup-end" hidden>
+                <p class="end-big">&#127881; &iexcl;Fin de la fase!</p>
+                <div class="phases-summary">
+                  <h4>Las 3 fases</h4>
+                  <ul>
+                    <li><strong>Fase I &middot; Describir</strong>: describe al personaje sin usar derivados del nombre. Sin l&iacute;mite de intentos y sin poder pasar de carta.</li>
+                    <li><strong>Fase II &middot; Una palabra</strong>: una &uacute;nica palabra (no derivada del nombre). Puedes pasar de carta y el equipo tiene una sola oportunidad.</li>
+                    <li><strong>Fase III &middot; Gestos</strong>: solo gestos y sonidos. Puedes pasar de carta y hay una sola oportunidad.</li>
+                  </ul>
+                </div>
+                <p class="end-hint">Pulsa <strong>Restaurar mazo</strong> para devolver todas las cartas de los equipos y empezar la siguiente fase.</p>
+              </div>
               <button class="btn-secondary" id="btn-reset-deck">Restaurar mazo</button>
             </div>
           </div>
@@ -245,8 +259,8 @@
       <div id="deck-hand" class="deck-hand" hidden>
         <div class="deck-hand-grid" id="deck-hand-grid"></div>
         <div class="deck-hand-actions">
+          <button class="btn-secondary" id="btn-back-hand" type="button" hidden>&larr; Volver</button>
           <button class="btn-secondary" id="btn-refresh-hand" type="button">&#8635; Refrescar</button>
-          <button class="btn-primary" id="btn-confirm-hand" disabled>Seleccionadas 0/2</button>
         </div>
       </div>
 
@@ -257,8 +271,8 @@
         <button class="btn-secondary" id="btn-deck-new">Repartir de nuevo</button>
       </div>
 
-      <footer class="sheet-footer">
-        <button class="btn-secondary" id="btn-deck-close-2">Cancelar</button>
+      <footer class="sheet-footer deck-footer">
+        <button class="btn-primary" id="btn-confirm-hand" hidden>Seleccionadas 0/2</button>
       </footer>
     </div>
   </div>
@@ -312,6 +326,6 @@
   </div>
 
   <div id="toast" class="toast" hidden></div>
-  <script src="js/app.js?v=24"></script>
+  <script src="js/app.js?v=34"></script>
 </body>
 </html>
