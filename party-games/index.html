@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -7,16 +7,16 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="theme-color" content="#0f0f14" />
   <title>Juegos de Mesa</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css?v=9" />
 </head>
 <body>
   <div id="app">
     <!-- HOME -->
     <section id="view-home" class="view active">
       <header class="home-header">
-        <p class="eyebrow">Modo móvil · Party night</p>
+        <p class="eyebrow">Modo m&oacute;vil &middot; Party night</p>
         <h1>Juegos de mesa improvisados</h1>
-        <p class="subtitle">Elige un juego y pasa cartas desde el móvil</p>
+        <p class="subtitle">Elige un juego y pasa cartas desde el m&oacute;vil</p>
       </header>
       <div class="game-list" id="game-list"></div>
     </section>
@@ -24,7 +24,7 @@
     <!-- RULES -->
     <section id="view-rules" class="view">
       <header class="topbar">
-        <button class="btn-icon" id="btn-rules-back" aria-label="Volver">←</button>
+        <button class="btn-icon" id="btn-rules-back" aria-label="Volver">&larr;</button>
         <h2 id="rules-title">Reglas</h2>
         <span class="topbar-spacer"></span>
       </header>
@@ -41,22 +41,28 @@
     <!-- PLAY: Amigos / Mente -->
     <section id="view-play" class="view">
       <header class="topbar play-topbar">
-        <button class="btn-icon" id="btn-play-back" aria-label="Volver">←</button>
+        <button class="btn-icon" id="btn-play-back" aria-label="Volver">&larr;</button>
         <div class="play-meta">
           <h2 id="play-title">Juego</h2>
           <span id="play-counter" class="counter">0 / 0</span>
         </div>
         <div class="header-actions">
-          <button class="btn-chip" id="btn-removed" title="Cartas quitadas">🗑 <span id="removed-count">0</span></button>
-          <button class="btn-icon" id="btn-shuffle" aria-label="Barajar" title="Barajar">🔀</button>
+          <button class="btn-icon btn-score-toggle" id="btn-score-toggle" aria-label="Abrir marcador" title="Marcador" hidden>
+            <svg class="profile-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="8" r="3.5"></circle>
+              <path d="M4.5 20c.7-3.4 3.2-5.5 7.5-5.5s6.8 2.1 7.5 5.5"></path>
+            </svg>
+          </button>
+          <button class="btn-chip" id="btn-removed" title="Cartas quitadas">&#128465; <span id="removed-count">0</span></button>
+          <button class="btn-icon" id="btn-shuffle" aria-label="Barajar" title="Barajar">&#128256;</button>
         </div>
       </header>
 
       <div class="deck-stage" id="deck-stage">
         <div class="swipe-hints">
-          <span>← siguiente</span>
-          <span>↑ quitar</span>
-          <span>anterior →</span>
+          <span>&larr; siguiente</span>
+          <span>&uarr; quitar</span>
+          <span>anterior &rarr;</span>
         </div>
         <div class="card-stack" id="card-stack">
           <div class="card-face" id="card-face">
@@ -71,52 +77,58 @@
       </div>
 
       <footer class="play-footer">
-        <button class="btn-secondary" id="btn-prev">← Anterior</button>
-        <button class="btn-danger-soft" id="btn-remove">↑ Quitar</button>
-        <button class="btn-secondary" id="btn-next">Siguiente →</button>
+        <button class="btn-secondary" id="btn-prev">&larr; Anterior</button>
+        <button class="btn-danger-soft" id="btn-remove">&uarr; Quitar</button>
+        <button class="btn-secondary" id="btn-next">Siguiente &rarr;</button>
       </footer>
     </section>
 
     <!-- PLAY: Wavelength -->
     <section id="view-wavelength" class="view">
       <header class="topbar play-topbar wl-topbar">
-        <button class="btn-icon" id="btn-wl-back" aria-label="Volver">←</button>
+        <button class="btn-icon" id="btn-wl-back" aria-label="Volver">&larr;</button>
         <div class="play-meta">
           <h2>Wavelength</h2>
           <span id="wl-counter" class="counter">0 / 0</span>
         </div>
         <div class="wl-actions">
-          <button class="btn-chip" id="btn-wl-removed" title="Cartas quitadas">🗑 <span id="wl-removed-count">0</span></button>
+          <button class="btn-icon btn-score-toggle" id="btn-wl-score-toggle" aria-label="Abrir marcador" title="Marcador" hidden>
+            <svg class="profile-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="8" r="3.5"></circle>
+              <path d="M4.5 20c.7-3.4 3.2-5.5 7.5-5.5s6.8 2.1 7.5 5.5"></path>
+            </svg>
+          </button>
+          <button class="btn-chip" id="btn-wl-removed" title="Cartas quitadas">&#128465; <span id="wl-removed-count">0</span></button>
           <button class="btn-chip" id="btn-wl-lang" title="Idioma">ES</button>
-          <button class="btn-chip" id="btn-wl-photo" title="Ver foto">📷</button>
-          <button class="btn-icon" id="btn-wl-shuffle" aria-label="Barajar">🔀</button>
+          <button class="btn-icon" id="btn-wl-shuffle" aria-label="Barajar">&#128256;</button>
         </div>
       </header>
 
       <div class="wl-stage" id="wl-stage">
         <div class="wl-hints">
-          <span>← siguiente · anterior →</span>
-          <span>↑ quitar</span>
-          <span>móvil de lado · ruleta</span>
+          <span>&larr; siguiente &middot; anterior &rarr;</span>
+          <span>&uarr; quitar</span>
+          <span>m&oacute;vil de lado &middot; ruleta</span>
         </div>
         <div class="swipe-feedback" id="wl-swipe-feedback"></div>
 
         <div class="wl-card" id="wl-card">
+          <button class="btn-chip wl-photo-toggle" id="btn-wl-photo" title="Ver imagen de la carta" aria-label="Ver imagen de la carta">&#128247;</button>
           <div class="wl-spectrum" id="wl-spectrum">
             <div class="wl-end left">
-              <span class="wl-arrow big" aria-hidden="true">◀</span>
-              <span class="wl-label" id="wl-left">—</span>
+              <span class="wl-arrow big" aria-hidden="true">&#9664;</span>
+              <span class="wl-label" id="wl-left">&mdash;</span>
             </div>
             <div class="wl-bar" aria-hidden="true">
-              <span class="wl-arrow mid">◀</span>
+              <span class="wl-arrow mid">&#9664;</span>
               <div class="wl-dot"></div>
               <div class="wl-line"></div>
               <div class="wl-dot"></div>
-              <span class="wl-arrow mid">▶</span>
+              <span class="wl-arrow mid">&#9654;</span>
             </div>
             <div class="wl-end right">
-              <span class="wl-label" id="wl-right">—</span>
-              <span class="wl-arrow big" aria-hidden="true">▶</span>
+              <span class="wl-label" id="wl-right">&mdash;</span>
+              <span class="wl-arrow big" aria-hidden="true">&#9654;</span>
             </div>
           </div>
 
@@ -132,11 +144,40 @@
       </div>
 
       <footer class="play-footer wl-footer">
-        <button class="btn-secondary" id="btn-wl-prev">← Anterior</button>
-        <button class="btn-danger-soft" id="btn-wl-remove">↑ Quitar</button>
-        <button class="btn-secondary" id="btn-wl-next">Siguiente →</button>
+        <button class="btn-secondary" id="btn-wl-prev">&larr; Anterior</button>
+        <button class="btn-danger-soft" id="btn-wl-remove">&uarr; Quitar</button>
+        <button class="btn-secondary" id="btn-wl-next">Siguiente &rarr;</button>
       </footer>
     </section>
+  </div>
+
+  <!-- SCOREBOARD FOR AMIGOS / MENTE -->
+  <div id="score-sheet" class="sheet" hidden>
+    <div class="sheet-backdrop" id="score-backdrop"></div>
+    <div class="sheet-panel score-panel" role="dialog" aria-modal="true" aria-labelledby="score-title">
+      <header class="sheet-header">
+        <div>
+          <h2 id="score-title">Marcador</h2>
+          <p class="sheet-sub" id="score-sub">Puntuaciones de la partida</p>
+        </div>
+        <button class="btn-icon" id="btn-score-close" aria-label="Cerrar">&times;</button>
+      </header>
+
+      <div class="score-sheet-body">
+        <div class="scoreboard-add">
+          <input id="score-input" type="text" placeholder="Nombre del jugador..." maxlength="24" autocomplete="off" enterkeyhint="done" />
+          <button class="btn-chip score-add-btn" id="btn-score-add">A&ntilde;adir</button>
+        </div>
+        <ul class="scoreboard-list" id="scoreboard-list"></ul>
+        <p class="scoreboard-empty" id="scoreboard-empty" hidden>
+          A&ntilde;ade jugadores para ir anotando sus puntos.
+        </p>
+      </div>
+
+      <footer class="sheet-footer">
+        <button class="btn-secondary" id="btn-score-close-2">Cerrar</button>
+      </footer>
+    </div>
   </div>
 
   <!-- REMOVED CARDS SHEET -->
@@ -146,15 +187,15 @@
       <header class="sheet-header">
         <div>
           <h2 id="removed-title">Cartas quitadas</h2>
-          <p class="sheet-sub" id="removed-sub">0 cartas · toca para seleccionar</p>
+          <p class="sheet-sub" id="removed-sub">0 cartas &middot; toca para seleccionar</p>
         </div>
-        <button class="btn-icon" id="btn-removed-close" aria-label="Cerrar">✕</button>
+        <button class="btn-icon" id="btn-removed-close" aria-label="Cerrar">&times;</button>
       </header>
 
       <div class="removed-preview" id="removed-preview" hidden>
         <img id="removed-preview-img" alt="Vista previa" />
         <div class="removed-preview-meta">
-          <strong id="removed-preview-id">—</strong>
+          <strong id="removed-preview-id">&mdash;</strong>
           <span id="removed-preview-text"></span>
         </div>
       </div>
@@ -170,7 +211,7 @@
 
       <div class="removed-empty" id="removed-empty" hidden>
         <p>No hay cartas quitadas</p>
-        <p class="hint">Al hacer swipe ↑ se guardan aquí</p>
+        <p class="hint">Al hacer swipe &uarr; se guardan aqu&iacute;</p>
       </div>
 
       <footer class="sheet-footer">
@@ -181,6 +222,6 @@
   </div>
 
   <div id="toast" class="toast" hidden></div>
-  <script src="js/app.js"></script>
+  <script src="js/app.js?v=9"></script>
 </body>
 </html>

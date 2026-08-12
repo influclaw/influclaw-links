@@ -4,31 +4,31 @@
     "archivo": "001.png",
     "izquierda": "For kids",
     "derecha": "For adults",
-    "izquierda_es": "para niños",
+    "izquierda_es": "Para niños",
     "derecha_es": "Para adultos"
   },
   {
     "id": 2,
     "archivo": "002.png",
     "izquierda": "80s",
-    "derecha": "a 90s",
-    "izquierda_es": "años 80",
-    "derecha_es": "unos 90"
+    "derecha": "90s",
+    "izquierda_es": "Años 80",
+    "derecha_es": "Años 90"
   },
   {
     "id": 3,
     "archivo": "003.png",
     "izquierda": "Action movie",
     "derecha": "Adventure movie",
-    "izquierda_es": "pelicula de accion",
-    "derecha_es": "pelicula de aventuras"
+    "izquierda_es": "Película de acción",
+    "derecha_es": "Película de aventuras"
   },
   {
     "id": 4,
     "archivo": "004.png",
     "izquierda": "Art",
     "derecha": "Commerce",
-    "izquierda_es": "arte",
+    "izquierda_es": "Arte",
     "derecha_es": "Comercio"
   },
   {
@@ -44,8 +44,8 @@
     "archivo": "006.png",
     "izquierda": "Bad",
     "derecha": "Good",
-    "izquierda_es": "malo",
-    "derecha_es": "bueno"
+    "izquierda_es": "Malo",
+    "derecha_es": "Bueno"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "izquierda": "Bad actor",
     "derecha": "Good actor",
     "izquierda_es": "Mal actor",
-    "derecha_es": "buen actor"
+    "derecha_es": "Buen actor"
   },
   {
     "id": 8,
@@ -68,8 +68,8 @@
     "archivo": "009.png",
     "izquierda": "Bad candy",
     "derecha": "Good candy",
-    "izquierda_es": "caramelo malo",
-    "derecha_es": "buenos dulces"
+    "izquierda_es": "Caramelo malo",
+    "derecha_es": "Buen caramelo"
   },
   {
     "id": 10,
@@ -93,7 +93,7 @@
     "izquierda": "Bad for you",
     "derecha": "Good for you",
     "izquierda_es": "Malo para ti",
-    "derecha_es": "bien por ti"
+    "derecha_es": "Bien por ti"
   },
   {
     "id": 13,
@@ -116,8 +116,8 @@
     "archivo": "015.png",
     "izquierda": "Bad man",
     "derecha": "Good man",
-    "izquierda_es": "mal hombre",
-    "derecha_es": "buen hombre"
+    "izquierda_es": "Mal hombre",
+    "derecha_es": "Buen hombre"
   },
   {
     "id": 16,
@@ -133,23 +133,23 @@
     "izquierda": "Bad movie",
     "derecha": "Good movie",
     "izquierda_es": "Mala película",
-    "derecha_es": "buena pelicula"
+    "derecha_es": "Buena película"
   },
   {
     "id": 18,
     "archivo": "018.png",
     "izquierda": "Bad music",
     "derecha": "Good music",
-    "izquierda_es": "mala musica",
-    "derecha_es": "buena musica"
+    "izquierda_es": "Mala música",
+    "derecha_es": "Buena música"
   },
   {
     "id": 19,
     "archivo": "019.png",
     "izquierda": "Bad person",
     "derecha": "Good person",
-    "izquierda_es": "mala persona",
-    "derecha_es": "buena persona"
+    "izquierda_es": "Mala persona",
+    "derecha_es": "Buena persona"
   },
   {
     "id": 20,
@@ -172,8 +172,8 @@
     "archivo": "022.png",
     "izquierda": "Bad school",
     "derecha": "Good school",
-    "izquierda_es": "mala escuela",
-    "derecha_es": "buena escuela"
+    "izquierda_es": "Mala escuela",
+    "derecha_es": "Buena escuela"
   },
   {
     "id": 23,
@@ -187,9 +187,9 @@
     "id": 24,
     "archivo": "024.png",
     "izquierda": "Bad TV show",
-    "derecha": "Good TV show,",
+    "derecha": "Good TV show",
     "izquierda_es": "Mal programa de televisión",
-    "derecha_es": "Buen programa de televisión,"
+    "derecha_es": "Buen programa de televisión"
   },
   {
     "id": 25,
@@ -197,7 +197,7 @@
     "izquierda": "Basic",
     "derecha": "Hipster",
     "izquierda_es": "Básico",
-    "derecha_es": "inconformista"
+    "derecha_es": "Inconformista"
   },
   {
     "id": 26,
@@ -212,15 +212,15 @@
     "archivo": "027.png",
     "izquierda": "Better hot",
     "derecha": "Better cold",
-    "izquierda_es": "mejor caliente",
-    "derecha_es": "Mejor frio"
+    "izquierda_es": "Mejor caliente",
+    "derecha_es": "Mejor frío"
   },
   {
     "id": 28,
     "archivo": "028.png",
     "izquierda": "Blue",
     "derecha": "Green",
-    "izquierda_es": "azul",
+    "izquierda_es": "Azul",
     "derecha_es": "Verde"
   },
   {
@@ -228,8 +228,8 @@
     "archivo": "029.png",
     "izquierda": "Book was better",
     "derecha": "Movie was better",
-    "izquierda_es": "el libro fue mejor",
-    "derecha_es": "la pelicula fue mejor"
+    "izquierda_es": "El libro fue mejor",
+    "derecha_es": "La película fue mejor"
   },
   {
     "id": 30,
@@ -237,23 +237,23 @@
     "izquierda": "Boring",
     "derecha": "Exciting",
     "izquierda_es": "Aburrido",
-    "derecha_es": "emocionante"
+    "derecha_es": "Emocionante"
   },
   {
     "id": 31,
     "archivo": "031.png",
     "izquierda": "Boring hobby",
     "derecha": "Interesting hobby",
-    "izquierda_es": "pasatiempo aburrido",
-    "derecha_es": "pasatiempo interesante"
+    "izquierda_es": "Pasatiempo aburrido",
+    "derecha_es": "Pasatiempo interesante"
   },
   {
     "id": 32,
     "archivo": "032.png",
     "izquierda": "Boring person",
     "derecha": "Fun person",
-    "izquierda_es": "persona aburrida",
-    "derecha_es": "persona divertida"
+    "izquierda_es": "Persona aburrida",
+    "derecha_es": "Persona divertida"
   },
   {
     "id": 33,
@@ -269,7 +269,7 @@
     "izquierda": "Casual",
     "derecha": "Formal",
     "izquierda_es": "Informal",
-    "derecha_es": "formales"
+    "derecha_es": "Formal"
   },
   {
     "id": 35,
@@ -284,8 +284,8 @@
     "archivo": "036.png",
     "izquierda": "Cat person",
     "derecha": "Dog person",
-    "izquierda_es": "persona gato",
-    "derecha_es": "persona perro"
+    "izquierda_es": "Persona gato",
+    "derecha_es": "Persona perro"
   },
   {
     "id": 37,
@@ -301,7 +301,7 @@
     "izquierda": "Colorless",
     "derecha": "Colorful",
     "izquierda_es": "Incoloro",
-    "derecha_es": "colorido"
+    "derecha_es": "Colorido"
   },
   {
     "id": 39,
@@ -317,7 +317,7 @@
     "izquierda": "Conventional wisdom",
     "derecha": "Fringe belief",
     "izquierda_es": "Sabiduría convencional",
-    "derecha_es": "creencia marginal"
+    "derecha_es": "Creencia marginal"
   },
   {
     "id": 41,
@@ -348,7 +348,7 @@
     "archivo": "044.png",
     "izquierda": "Dark",
     "derecha": "Light",
-    "izquierda_es": "oscuro",
+    "izquierda_es": "Oscuro",
     "derecha_es": "Luz"
   },
   {
@@ -356,8 +356,8 @@
     "archivo": "045.png",
     "izquierda": "Deep thought",
     "derecha": "Shallow thought",
-    "izquierda_es": "pensamiento profundo",
-    "derecha_es": "pensamiento superficial"
+    "izquierda_es": "Pensamiento profundo",
+    "derecha_es": "Pensamiento superficial"
   },
   {
     "id": 46,
@@ -365,15 +365,15 @@
     "izquierda": "Derivative",
     "derecha": "Original",
     "izquierda_es": "Derivado",
-    "derecha_es": "Originales"
+    "derecha_es": "Original"
   },
   {
     "id": 47,
     "archivo": "047.png",
     "izquierda": "Dictatorship",
     "derecha": "Democracy",
-    "izquierda_es": "dictadura",
-    "derecha_es": "democracia"
+    "izquierda_es": "Dictadura",
+    "derecha_es": "Democracia"
   },
   {
     "id": 48,
@@ -388,15 +388,15 @@
     "archivo": "049.png",
     "izquierda": "Dirty",
     "derecha": "Clean",
-    "izquierda_es": "sucio",
-    "derecha_es": "limpio"
+    "izquierda_es": "Sucio",
+    "derecha_es": "Limpio"
   },
   {
     "id": 50,
     "archivo": "050.png",
-    "izquierda": "Disgusting cerea",
+    "izquierda": "Disgusting cereal",
     "derecha": "Delicious cereal",
-    "izquierda_es": "Cerea repugnante",
+    "izquierda_es": "Cereal repugnante",
     "derecha_es": "Delicioso cereal"
   },
   {
@@ -404,40 +404,40 @@
     "archivo": "051.png",
     "izquierda": "Divided",
     "derecha": "Whole",
-    "izquierda_es": "dividido",
-    "derecha_es": "entero"
+    "izquierda_es": "Dividido",
+    "derecha_es": "Entero"
   },
   {
     "id": 52,
     "archivo": "052.png",
     "izquierda": "Dog name",
     "derecha": "Cat name",
-    "izquierda_es": "nombre del perro",
-    "derecha_es": "nombre del gato"
+    "izquierda_es": "Nombre del perro",
+    "derecha_es": "Nombre del gato"
   },
   {
     "id": 53,
     "archivo": "053.png",
     "izquierda": "Dry",
     "derecha": "Wet",
-    "izquierda_es": "seco",
-    "derecha_es": "mojado"
+    "izquierda_es": "Seco",
+    "derecha_es": "Mojado"
   },
   {
     "id": 54,
     "archivo": "054.png",
     "izquierda": "Dry food",
     "derecha": "Wet food",
-    "izquierda_es": "comida seca",
-    "derecha_es": "comida humeda"
+    "izquierda_es": "Comida seca",
+    "derecha_es": "Comida húmeda"
   },
   {
     "id": 55,
     "archivo": "055.png",
     "izquierda": "Dystopia",
     "derecha": "Utopia",
-    "izquierda_es": "distopía",
-    "derecha_es": "utopía"
+    "izquierda_es": "Distopía",
+    "derecha_es": "Utopía"
   },
   {
     "id": 56,
@@ -452,7 +452,7 @@
     "archivo": "057.png",
     "izquierda": "Easy to kill",
     "derecha": "Hard to kill",
-    "izquierda_es": "fácil de matar",
+    "izquierda_es": "Fácil de matar",
     "derecha_es": "Difícil de matar"
   },
   {
@@ -460,7 +460,7 @@
     "archivo": "058.png",
     "izquierda": "Easy to spell",
     "derecha": "Hard to spell",
-    "izquierda_es": "fácil de deletrear",
+    "izquierda_es": "Fácil de deletrear",
     "derecha_es": "Difícil de deletrear"
   },
   {
@@ -485,22 +485,22 @@
     "izquierda": "Etiquette",
     "derecha": "Manners",
     "izquierda_es": "Etiqueta",
-    "derecha_es": "modales"
+    "derecha_es": "Modales"
   },
   {
     "id": 62,
     "archivo": "062.png",
     "izquierda": "Expected",
     "derecha": "Unexpected",
-    "izquierda_es": "esperado",
-    "derecha_es": "inesperado"
+    "izquierda_es": "Esperado",
+    "derecha_es": "Inesperado"
   },
   {
     "id": 63,
     "archivo": "063.png",
     "izquierda": "Fad",
     "derecha": "Classic",
-    "izquierda_es": "moda pasajera",
+    "izquierda_es": "Moda pasajera",
     "derecha_es": "Clásico"
   },
   {
@@ -508,8 +508,8 @@
     "archivo": "064.png",
     "izquierda": "Failure",
     "derecha": "Masterpiece",
-    "izquierda_es": "fracaso",
-    "derecha_es": "obra maestra"
+    "izquierda_es": "Fracaso",
+    "derecha_es": "Obra maestra"
   },
   {
     "id": 65,
@@ -517,14 +517,14 @@
     "izquierda": "Famous",
     "derecha": "Infamous",
     "izquierda_es": "Famoso",
-    "derecha_es": "infame"
+    "derecha_es": "Infame"
   },
   {
     "id": 66,
     "archivo": "066.png",
     "izquierda": "Fantasy",
     "derecha": "Sci-Fi",
-    "izquierda_es": "fantasía",
+    "izquierda_es": "Fantasía",
     "derecha_es": "Ciencia ficción"
   },
   {
@@ -532,8 +532,8 @@
     "archivo": "067.png",
     "izquierda": "Feels bad",
     "derecha": "Feels good",
-    "izquierda_es": "se siente mal",
-    "derecha_es": "se siente bien"
+    "izquierda_es": "Se siente mal",
+    "derecha_es": "Se siente bien"
   },
   {
     "id": 68,
@@ -548,15 +548,15 @@
     "archivo": "069.png",
     "izquierda": "Forbidden",
     "derecha": "Encouraged",
-    "izquierda_es": "prohibido",
-    "derecha_es": "alentado"
+    "izquierda_es": "Prohibido",
+    "derecha_es": "Alentado"
   },
   {
     "id": 70,
     "archivo": "070.png",
     "izquierda": "Fragile",
     "derecha": "Durable",
-    "izquierda_es": "frágil",
+    "izquierda_es": "Frágil",
     "derecha_es": "Durable"
   },
   {
@@ -564,32 +564,32 @@
     "archivo": "071.png",
     "izquierda": "Ordinary",
     "derecha": "Extraordinary",
-    "izquierda_es": "ordinario",
-    "derecha_es": "extraordinario"
+    "izquierda_es": "Ordinario",
+    "derecha_es": "Extraordinario"
   },
   {
     "id": 72,
     "archivo": "072.png",
     "izquierda": "Freedom fighter",
-    "derecha": "ee Terrorist",
-    "izquierda_es": "luchador por la libertad",
-    "derecha_es": "ee terrorista"
+    "derecha": "Terrorist",
+    "izquierda_es": "Luchador por la libertad",
+    "derecha_es": "Terrorista"
   },
   {
     "id": 73,
     "archivo": "073.png",
     "izquierda": "Friend",
     "derecha": "Enemy",
-    "izquierda_es": "amigo",
-    "derecha_es": "enemigo"
+    "izquierda_es": "Amigo",
+    "derecha_es": "Enemigo"
   },
   {
     "id": 74,
     "archivo": "074.png",
     "izquierda": "Fruit",
     "derecha": "Vegetable",
-    "izquierda_es": "fruta",
-    "derecha_es": "vegetal"
+    "izquierda_es": "Fruta",
+    "derecha_es": "Vegetal"
   },
   {
     "id": 75,
@@ -597,38 +597,38 @@
     "izquierda": "Funny topic",
     "derecha": "Serious topic",
     "izquierda_es": "Tema divertido",
-    "derecha_es": "tema serio"
+    "derecha_es": "Tema serio"
   },
   {
     "id": 76,
     "archivo": "076.png",
     "izquierda": "Geek",
     "derecha": "Dork",
-    "izquierda_es": "friki",
-    "derecha_es": "idiota"
+    "izquierda_es": "Friki",
+    "derecha_es": "Idiota"
   },
   {
     "id": 77,
     "archivo": "077.png",
     "izquierda": "Genuine person",
     "derecha": "Phony person",
-    "izquierda_es": "persona genuina",
-    "derecha_es": "persona falsa"
+    "izquierda_es": "Persona genuina",
+    "derecha_es": "Persona falsa"
   },
   {
     "id": 78,
     "archivo": "078.png",
     "izquierda": "Good",
     "derecha": "Evil",
-    "izquierda_es": "bueno",
-    "derecha_es": "mal"
+    "izquierda_es": "Bueno",
+    "derecha_es": "Mal"
   },
   {
     "id": 79,
     "archivo": "079.png",
     "izquierda": "Gossip",
     "derecha": "News",
-    "izquierda_es": "chismes",
+    "izquierda_es": "Chismes",
     "derecha_es": "Noticias"
   },
   {
@@ -636,7 +636,7 @@
     "archivo": "080.png",
     "izquierda": "Gryffindor",
     "derecha": "Slytherin",
-    "izquierda_es": "gryffindor",
+    "izquierda_es": "Gryffindor",
     "derecha_es": "Slytherin"
   },
   {
@@ -644,16 +644,16 @@
     "archivo": "081.png",
     "izquierda": "Guilty pleasure",
     "derecha": "Openly love",
-    "izquierda_es": "placer culpable",
-    "derecha_es": "amor abiertamente"
+    "izquierda_es": "Placer culpable",
+    "derecha_es": "Amor abiertamente"
   },
   {
     "id": 82,
     "archivo": "082.png",
     "izquierda": "Hairless",
     "derecha": "Hairy",
-    "izquierda_es": "sin pelo",
-    "derecha_es": "peludo"
+    "izquierda_es": "Sin pelo",
+    "derecha_es": "Peludo"
   },
   {
     "id": 83,
@@ -669,7 +669,7 @@
     "izquierda": "Hard to do",
     "derecha": "Easy to do",
     "izquierda_es": "Difícil de hacer",
-    "derecha_es": "fácil de hacer"
+    "derecha_es": "Fácil de hacer"
   },
   {
     "id": 85,
@@ -693,7 +693,7 @@
     "izquierda": "Hard to remember",
     "derecha": "Easy to remember",
     "izquierda_es": "Difícil de recordar",
-    "derecha_es": "fácil de recordar"
+    "derecha_es": "Fácil de recordar"
   },
   {
     "id": 88,
@@ -716,16 +716,16 @@
     "archivo": "090.png",
     "izquierda": "Has a bad reputation",
     "derecha": "Has a good reputation",
-    "izquierda_es": "Tiene mala reputacion",
+    "izquierda_es": "Tiene mala reputación",
     "derecha_es": "Tiene buena reputación"
   },
   {
     "id": 91,
     "archivo": "091.png",
-    "izquierda": "Ss, Hetrogeneous",
+    "izquierda": "Heterogeneous",
     "derecha": "Homogenous",
-    "izquierda_es": "Ss, heterogéneo",
-    "derecha_es": "homogéneo"
+    "izquierda_es": "Heterogéneo",
+    "derecha_es": "Homogéneo"
   },
   {
     "id": 92,
@@ -741,7 +741,7 @@
     "izquierda": "Horizontal",
     "derecha": "Vertical",
     "izquierda_es": "Horizontales",
-    "derecha_es": "verticales"
+    "derecha_es": "Verticales"
   },
   {
     "id": 94,
@@ -749,14 +749,14 @@
     "izquierda": "Hot",
     "derecha": "Cold",
     "izquierda_es": "Caliente",
-    "derecha_es": "frio"
+    "derecha_es": "Frío"
   },
   {
     "id": 95,
     "archivo": "095.png",
     "izquierda": "Illegal",
     "derecha": "Legal",
-    "izquierda_es": "ilegal",
+    "izquierda_es": "Ilegal",
     "derecha_es": "Legales"
   },
   {
@@ -764,7 +764,7 @@
     "archivo": "096.png",
     "izquierda": "Inclusive",
     "derecha": "Exclusive",
-    "izquierda_es": "inclusivo",
+    "izquierda_es": "Inclusivo",
     "derecha_es": "Exclusivo"
   },
   {
@@ -796,8 +796,8 @@
     "archivo": "100.png",
     "izquierda": "Introvert",
     "derecha": "Extrovert",
-    "izquierda_es": "introvertido",
-    "derecha_es": "extrovertido"
+    "izquierda_es": "Introvertido",
+    "derecha_es": "Extrovertido"
   },
   {
     "id": 101,
@@ -805,7 +805,7 @@
     "izquierda": "Job",
     "derecha": "Career",
     "izquierda_es": "Trabajo",
-    "derecha_es": "carrera"
+    "derecha_es": "Carrera"
   },
   {
     "id": 102,
@@ -820,16 +820,16 @@
     "archivo": "103.png",
     "izquierda": "Least powerful god",
     "derecha": "Most powerful god",
-    "izquierda_es": "dios menos poderoso",
-    "derecha_es": "dios mas poderoso"
+    "izquierda_es": "Dios menos poderoso",
+    "derecha_es": "Dios más poderoso"
   },
   {
     "id": 104,
     "archivo": "104.png",
     "izquierda": "Liberal",
     "derecha": "Conservative",
-    "izquierda_es": "liberales",
-    "derecha_es": "conservador"
+    "izquierda_es": "Liberal",
+    "derecha_es": "Conservador"
   },
   {
     "id": 105,
@@ -837,7 +837,7 @@
     "izquierda": "Limited",
     "derecha": "Infinite",
     "izquierda_es": "Limitado",
-    "derecha_es": "infinito"
+    "derecha_es": "Infinito"
   },
   {
     "id": 106,
@@ -845,15 +845,15 @@
     "izquierda": "Limp",
     "derecha": "Firm",
     "izquierda_es": "Cojear",
-    "derecha_es": "firme"
+    "derecha_es": "Firme"
   },
   {
     "id": 107,
     "archivo": "107.png",
     "izquierda": "Little known fact",
     "derecha": "Well known fact",
-    "izquierda_es": "hecho poco conocido",
-    "derecha_es": "hecho bien conocido"
+    "izquierda_es": "Hecho poco conocido",
+    "derecha_es": "Hecho bien conocido"
   },
   {
     "id": 108,
@@ -885,15 +885,15 @@
     "izquierda": "Lowbrow",
     "derecha": "Highbrow",
     "izquierda_es": "De poca cultura",
-    "derecha_es": "intelectual"
+    "derecha_es": "Intelectual"
   },
   {
     "id": 112,
     "archivo": "112.png",
     "izquierda": "Low calorie",
     "derecha": "High calorie",
-    "izquierda_es": "Bajo en calorias",
-    "derecha_es": "alto en calorias"
+    "izquierda_es": "Bajo en calorías",
+    "derecha_es": "Alto en calorías"
   },
   {
     "id": 113,
@@ -908,23 +908,23 @@
     "archivo": "114.png",
     "izquierda": "Mainstream",
     "derecha": "Niche",
-    "izquierda_es": "corriente principal",
-    "derecha_es": "nicho"
+    "izquierda_es": "Corriente principal",
+    "derecha_es": "Nicho"
   },
   {
     "id": 115,
     "archivo": "115.png",
     "izquierda": "Mature person",
     "derecha": "Immature person",
-    "izquierda_es": "persona madura",
-    "derecha_es": "persona inmadura"
+    "izquierda_es": "Persona madura",
+    "derecha_es": "Persona inmadura"
   },
   {
     "id": 116,
     "archivo": "116.png",
     "izquierda": "Mean person",
     "derecha": "Nice person",
-    "izquierda_es": "persona mala",
+    "izquierda_es": "Persona mala",
     "derecha_es": "Buena persona"
   },
   {
@@ -933,31 +933,31 @@
     "izquierda": "Mental activity",
     "derecha": "Physical activity",
     "izquierda_es": "Actividad mental",
-    "derecha_es": "Actividad fisica"
+    "derecha_es": "Actividad física"
   },
   {
     "id": 118,
     "archivo": "118.png",
     "izquierda": "Messy food",
     "derecha": "Clean food",
-    "izquierda_es": "comida desordenada",
-    "derecha_es": "comida limpia"
+    "izquierda_es": "Comida desordenada",
+    "derecha_es": "Comida limpia"
   },
   {
     "id": 119,
     "archivo": "119.png",
     "izquierda": "Mild",
     "derecha": "Spicy",
-    "izquierda_es": "leve",
-    "derecha_es": "picante"
+    "izquierda_es": "Leve",
+    "derecha_es": "Picante"
   },
   {
     "id": 120,
     "archivo": "120.png",
     "izquierda": "Mildly addictive",
-    "derecha": "addictive",
+    "derecha": "Addictive",
     "izquierda_es": "Ligeramente adictivo",
-    "derecha_es": "adictivo"
+    "derecha_es": "Adictivo"
   },
   {
     "id": 121,
@@ -965,7 +965,7 @@
     "izquierda": "Movie",
     "derecha": "Film",
     "izquierda_es": "Película",
-    "derecha_es": "película"
+    "derecha_es": "Película"
   },
   {
     "id": 122,
@@ -980,24 +980,24 @@
     "archivo": "123.png",
     "izquierda": "Nature",
     "derecha": "Nurture",
-    "izquierda_es": "naturaleza",
-    "derecha_es": "nutrir"
+    "izquierda_es": "Naturaleza",
+    "derecha_es": "Crianza"
   },
   {
     "id": 124,
     "archivo": "124.png",
     "izquierda": "Need",
     "derecha": "Want",
-    "izquierda_es": "necesidad",
-    "derecha_es": "querer"
+    "izquierda_es": "Necesidad",
+    "derecha_es": "Querer"
   },
   {
     "id": 125,
     "archivo": "125.png",
     "izquierda": "Nerd",
     "derecha": "Jock",
-    "izquierda_es": "empollón",
-    "derecha_es": "atleta"
+    "izquierda_es": "Empollón",
+    "derecha_es": "Atleta"
   },
   {
     "id": 126,
@@ -1012,8 +1012,8 @@
     "archivo": "127.png",
     "izquierda": "Nobody does it",
     "derecha": "Everybody does it",
-    "izquierda_es": "nadie lo hace",
-    "derecha_es": "todo el mundo lo hace"
+    "izquierda_es": "Nadie lo hace",
+    "derecha_es": "Todo el mundo lo hace"
   },
   {
     "id": 128,
@@ -1021,31 +1021,31 @@
     "izquierda": "Non-partisan",
     "derecha": "Partisan",
     "izquierda_es": "No partidista",
-    "derecha_es": "partidista"
+    "derecha_es": "Partidista"
   },
   {
     "id": 129,
     "archivo": "129.png",
     "izquierda": "Normal",
     "derecha": "Weird",
-    "izquierda_es": "normales",
-    "derecha_es": "raro"
+    "izquierda_es": "Normal",
+    "derecha_es": "Raro"
   },
   {
     "id": 130,
     "archivo": "130.png",
     "izquierda": "Normal greeting",
     "derecha": "Weird greeting",
-    "izquierda_es": "saludo normal",
-    "derecha_es": "saludo raro"
+    "izquierda_es": "Saludo normal",
+    "derecha_es": "Saludo raro"
   },
   {
     "id": 131,
     "archivo": "131.png",
     "izquierda": "Normal pet",
     "derecha": "Exotic pet",
-    "izquierda_es": "mascota normal",
-    "derecha_es": "mascota exótica"
+    "izquierda_es": "Mascota normal",
+    "derecha_es": "Mascota exótica"
   },
   {
     "id": 132,
@@ -1060,16 +1060,16 @@
     "archivo": "133.png",
     "izquierda": "Not art",
     "derecha": "Art",
-    "izquierda_es": "No arte",
-    "derecha_es": "arte"
+    "izquierda_es": "No es arte",
+    "derecha_es": "Arte"
   },
   {
     "id": 134,
     "archivo": "134.png",
     "izquierda": "Not a sandwich",
     "derecha": "A sandwich",
-    "izquierda_es": "no es un sándwich",
-    "derecha_es": "un sándwich"
+    "izquierda_es": "No es un sándwich",
+    "derecha_es": "Un sándwich"
   },
   {
     "id": 135,
@@ -1077,31 +1077,31 @@
     "izquierda": "Not enough",
     "derecha": "Too much",
     "izquierda_es": "No es suficiente",
-    "derecha_es": "demasiado"
+    "derecha_es": "Demasiado"
   },
   {
     "id": 136,
     "archivo": "136.png",
     "izquierda": "Not huggable",
     "derecha": "Huggable",
-    "izquierda_es": "no abrazable",
-    "derecha_es": "abrazable"
+    "izquierda_es": "No abrazable",
+    "derecha_es": "Abrazable"
   },
   {
     "id": 137,
     "archivo": "137.png",
     "izquierda": "Old fashioned",
     "derecha": "Avant garde",
-    "izquierda_es": "pasado de moda",
-    "derecha_es": "vanguardia"
+    "izquierda_es": "Pasado de moda",
+    "derecha_es": "Vanguardia"
   },
   {
     "id": 138,
     "archivo": "138.png",
     "izquierda": "One hit wonder",
     "derecha": "Pop icon",
-    "izquierda_es": "Una maravilla de golpe",
-    "derecha_es": "icono pop"
+    "izquierda_es": "Éxito de un solo tema",
+    "derecha_es": "Icono del pop"
   },
   {
     "id": 139,
@@ -1116,24 +1116,24 @@
     "archivo": "140.png",
     "izquierda": "Out of control",
     "derecha": "In control",
-    "izquierda_es": "fuera de control",
-    "derecha_es": "en control"
+    "izquierda_es": "Fuera de control",
+    "derecha_es": "En control"
   },
   {
     "id": 141,
     "archivo": "141.png",
-    "izquierda": "Underrated thing todo",
-    "derecha": "Overrated thing todo",
+    "izquierda": "Underrated thing to own",
+    "derecha": "Overrated thing to own",
     "izquierda_es": "Algo subestimado",
-    "derecha_es": "cosa sobrevalorada"
+    "derecha_es": "Cosa sobrevalorada"
   },
   {
     "id": 142,
     "archivo": "142.png",
     "izquierda": "Peaceful",
     "derecha": "Warlike",
-    "izquierda_es": "pacífico",
-    "derecha_es": "guerrero"
+    "izquierda_es": "Pacífico",
+    "derecha_es": "Guerrero"
   },
   {
     "id": 143,
@@ -1149,30 +1149,30 @@
     "izquierda": "Plain",
     "derecha": "Fancy",
     "izquierda_es": "Llano",
-    "derecha_es": "fantasía"
+    "derecha_es": "Fantasía"
   },
   {
     "id": 145,
     "archivo": "145.png",
     "izquierda": "Poorly made",
     "derecha": "Well made",
-    "izquierda_es": "mal hecho",
-    "derecha_es": "bien hecho"
+    "izquierda_es": "Mal hecho",
+    "derecha_es": "Bien hecho"
   },
   {
     "id": 146,
     "archivo": "146.png",
     "izquierda": "Popular",
     "derecha": "Elitist",
-    "izquierda_es": "populares",
-    "derecha_es": "elitista"
+    "izquierda_es": "Populares",
+    "derecha_es": "Elitista"
   },
   {
     "id": 147,
     "archivo": "147.png",
     "izquierda": "Powerless",
     "derecha": "Powerful",
-    "izquierda_es": "impotente",
+    "izquierda_es": "Impotente",
     "derecha_es": "Potente"
   },
   {
@@ -1189,23 +1189,23 @@
     "izquierda": "Quiet",
     "derecha": "Loud",
     "izquierda_es": "Tranquilo",
-    "derecha_es": "ruidoso"
+    "derecha_es": "Ruidoso"
   },
   {
     "id": 150,
     "archivo": "150.png",
     "izquierda": "Quiet place",
     "derecha": "Loud place",
-    "izquierda_es": "lugar tranquilo",
-    "derecha_es": "lugar ruidoso"
+    "izquierda_es": "Lugar tranquilo",
+    "derecha_es": "Lugar ruidoso"
   },
   {
     "id": 151,
     "archivo": "151.png",
     "izquierda": "Rare",
     "derecha": "Common",
-    "izquierda_es": "raro",
-    "derecha_es": "común"
+    "izquierda_es": "Raro",
+    "derecha_es": "Común"
   },
   {
     "id": 152,
@@ -1213,22 +1213,22 @@
     "izquierda": "Religious",
     "derecha": "Sacrilegious",
     "izquierda_es": "Religioso",
-    "derecha_es": "sacrílego"
+    "derecha_es": "Sacrílego"
   },
   {
     "id": 153,
     "archivo": "153.png",
     "izquierda": "Replaceable",
-    "derecha": "e Irreplaceable",
+    "derecha": "Irreplaceable",
     "izquierda_es": "Reemplazable",
-    "derecha_es": "e irremplazable"
+    "derecha_es": "Irremplazable"
   },
   {
     "id": 154,
     "archivo": "154.png",
     "izquierda": "Requires luck",
     "derecha": "Requires skill",
-    "izquierda_es": "requiere suerte",
+    "izquierda_es": "Requiere suerte",
     "derecha_es": "Requiere habilidad"
   },
   {
@@ -1244,7 +1244,7 @@
     "archivo": "156.png",
     "izquierda": "Rough",
     "derecha": "Smooth",
-    "izquierda_es": "áspero",
+    "izquierda_es": "Áspero",
     "derecha_es": "Suave"
   },
   {
@@ -1252,39 +1252,39 @@
     "archivo": "157.png",
     "izquierda": "Round",
     "derecha": "Pointy",
-    "izquierda_es": "redondo",
-    "derecha_es": "puntiagudo"
+    "izquierda_es": "Redondo",
+    "derecha_es": "Puntiagudo"
   },
   {
     "id": 158,
     "archivo": "158.png",
     "izquierda": "Round animal",
     "derecha": "Pointy animal",
-    "izquierda_es": "animales redondos",
-    "derecha_es": "animal puntiagudo"
+    "izquierda_es": "Animales redondos",
+    "derecha_es": "Animal puntiagudo"
   },
   {
     "id": 159,
     "archivo": "159.png",
     "izquierda": "Sad movie",
     "derecha": "Happy movie",
-    "izquierda_es": "pelicula triste",
-    "derecha_es": "feliz pelicula"
+    "izquierda_es": "Película triste",
+    "derecha_es": "Película feliz"
   },
   {
     "id": 160,
     "archivo": "160.png",
     "izquierda": "Sad song",
     "derecha": "Happy song",
-    "izquierda_es": "cancion triste",
-    "derecha_es": "feliz cancion"
+    "izquierda_es": "Canción triste",
+    "derecha_es": "Feliz canción"
   },
   {
     "id": 161,
     "archivo": "161.png",
-    "izquierda": "Ss, Scary animal",
+    "izquierda": "Scary animal",
     "derecha": "Nice animal",
-    "izquierda_es": "Ss, animal aterrador",
+    "izquierda_es": "Animal aterrador",
     "derecha_es": "Bonito animal"
   },
   {
@@ -1292,7 +1292,7 @@
     "archivo": "162.png",
     "izquierda": "Science",
     "derecha": "Pseudoscience",
-    "izquierda_es": "ciencia",
+    "izquierda_es": "Ciencia",
     "derecha_es": "Pseudociencia"
   },
   {
@@ -1300,7 +1300,7 @@
     "archivo": "163.png",
     "izquierda": "Secret",
     "derecha": "Public Knowledge",
-    "izquierda_es": "secreto",
+    "izquierda_es": "Secreto",
     "derecha_es": "Conocimiento público"
   },
   {
@@ -1308,8 +1308,8 @@
     "archivo": "164.png",
     "izquierda": "Short",
     "derecha": "Long",
-    "izquierda_es": "corto",
-    "derecha_es": "largo"
+    "izquierda_es": "Corto",
+    "derecha_es": "Largo"
   },
   {
     "id": 165,
@@ -1317,14 +1317,14 @@
     "izquierda": "Short lived",
     "derecha": "Long lived",
     "izquierda_es": "De corta duración",
-    "derecha_es": "larga vida"
+    "derecha_es": "Larga vida"
   },
   {
     "id": 166,
     "archivo": "166.png",
     "izquierda": "Similar",
     "derecha": "Identical",
-    "izquierda_es": "similares",
+    "izquierda_es": "Similares",
     "derecha_es": "Idéntico"
   },
   {
@@ -1332,8 +1332,8 @@
     "archivo": "167.png",
     "izquierda": "Small",
     "derecha": "Tiny",
-    "izquierda_es": "pequeño",
-    "derecha_es": "diminuto"
+    "izquierda_es": "Pequeño",
+    "derecha_es": "Diminuto"
   },
   {
     "id": 168,
@@ -1347,22 +1347,22 @@
     "id": 169,
     "archivo": "169.png",
     "izquierda": "Small talk",
-    "derecha": "Heavt topic",
-    "izquierda_es": "pequeña charla",
-    "derecha_es": "tema pesado"
+    "derecha": "Heavy topic",
+    "izquierda_es": "Pequeña charla",
+    "derecha_es": "Tema pesado"
   },
   {
     "id": 170,
     "archivo": "170.png",
     "izquierda": "Smells bad",
     "derecha": "Smells good",
-    "izquierda_es": "huele mal",
+    "izquierda_es": "Huele mal",
     "derecha_es": "Huele bien"
   },
   {
     "id": 171,
     "archivo": "171.png",
-    "izquierda": "Smelly ina bad way",
+    "izquierda": "Smelly in a bad way",
     "derecha": "Smelly in a good way",
     "izquierda_es": "Huele mal",
     "derecha_es": "Huele mal en el buen sentido"
@@ -1372,55 +1372,55 @@
     "archivo": "172.png",
     "izquierda": "Snack",
     "derecha": "Meal",
-    "izquierda_es": "merienda",
-    "derecha_es": "comida"
+    "izquierda_es": "Merienda",
+    "derecha_es": "Comida"
   },
   {
     "id": 173,
     "archivo": "173.png",
     "izquierda": "Socialist",
     "derecha": "Capitalist",
-    "izquierda_es": "socialista",
-    "derecha_es": "capitalista"
+    "izquierda_es": "Socialista",
+    "derecha_es": "Capitalista"
   },
   {
     "id": 174,
     "archivo": "174.png",
     "izquierda": "Soft",
     "derecha": "Hard",
-    "izquierda_es": "suave",
-    "derecha_es": "duro"
+    "izquierda_es": "Suave",
+    "derecha_es": "Duro"
   },
   {
     "id": 175,
     "archivo": "175.png",
     "izquierda": "Sport",
     "derecha": "Game",
-    "izquierda_es": "deporte",
-    "derecha_es": "juego"
+    "izquierda_es": "Deporte",
+    "derecha_es": "Juego"
   },
   {
     "id": 176,
     "archivo": "176.png",
     "izquierda": "Square",
     "derecha": "Round",
-    "izquierda_es": "cuadrado",
-    "derecha_es": "redondo"
+    "izquierda_es": "Cuadrado",
+    "derecha_es": "Redondo"
   },
   {
     "id": 177,
     "archivo": "177.png",
     "izquierda": "Star Wars",
     "derecha": "Star Trek",
-    "izquierda_es": "guerra de las galaxias",
-    "derecha_es": "viaje a las estrellas"
+    "izquierda_es": "Guerra de las galaxias",
+    "derecha_es": "Viaje a las estrellas"
   },
   {
     "id": 178,
     "archivo": "178.png",
     "izquierda": "Stationary",
     "derecha": "Mobile",
-    "izquierda_es": "estacionario",
+    "izquierda_es": "Estacionario",
     "derecha_es": "Móvil"
   },
   {
@@ -1429,22 +1429,22 @@
     "izquierda": "Straight",
     "derecha": "Curvy",
     "izquierda_es": "Recto",
-    "derecha_es": "con curvas"
+    "derecha_es": "Con curvas"
   },
   {
     "id": 180,
     "archivo": "180.png",
     "izquierda": "Stupid",
     "derecha": "Brilliant",
-    "izquierda_es": "estúpido",
-    "derecha_es": "brillante"
+    "izquierda_es": "Estúpido",
+    "derecha_es": "Brillante"
   },
   {
     "id": 181,
     "archivo": "181.png",
     "izquierda": "Sustenance",
     "derecha": "Haute cuisine",
-    "izquierda_es": "sustento",
+    "izquierda_es": "Sustento",
     "derecha_es": "Alta cocina"
   },
   {
@@ -1467,9 +1467,9 @@
     "id": 184,
     "archivo": "184.png",
     "izquierda": "Temporary",
-    "derecha": "a Permanent",
+    "derecha": "Permanent",
     "izquierda_es": "Temporal",
-    "derecha_es": "un permanente"
+    "derecha_es": "Permanente"
   },
   {
     "id": 185,
@@ -1484,40 +1484,40 @@
     "archivo": "186.png",
     "izquierda": "The worst",
     "derecha": "The best",
-    "izquierda_es": "lo peor",
-    "derecha_es": "el mejor"
+    "izquierda_es": "Lo peor",
+    "derecha_es": "El mejor"
   },
   {
     "id": 187,
     "archivo": "187.png",
     "izquierda": "Thrilling",
     "derecha": "Terrifying",
-    "izquierda_es": "emocionante",
-    "derecha_es": "aterrador"
+    "izquierda_es": "Emocionante",
+    "derecha_es": "Aterrador"
   },
   {
     "id": 188,
     "archivo": "188.png",
     "izquierda": "Tick",
     "derecha": "Tock",
-    "izquierda_es": "garrapata",
-    "derecha_es": "tac"
+    "izquierda_es": "Tic",
+    "derecha_es": "Tac"
   },
   {
     "id": 189,
     "archivo": "189.png",
     "izquierda": "Tired",
     "derecha": "Wired",
-    "izquierda_es": "cansado",
-    "derecha_es": "cableado"
+    "izquierda_es": "Cansado",
+    "derecha_es": "Conectado"
   },
   {
     "id": 190,
     "archivo": "190.png",
     "izquierda": "Too small",
     "derecha": "Too big",
-    "izquierda_es": "demasiado pequeño",
-    "derecha_es": "demasiado grande"
+    "izquierda_es": "Demasiado pequeño",
+    "derecha_es": "Demasiado grande"
   },
   {
     "id": 191,
@@ -1525,7 +1525,7 @@
     "izquierda": "Traditional",
     "derecha": "Radical",
     "izquierda_es": "Tradicional",
-    "derecha_es": "radicales"
+    "derecha_es": "Radical"
   },
   {
     "id": 192,
@@ -1540,8 +1540,8 @@
     "archivo": "193.png",
     "izquierda": "Trashy",
     "derecha": "Classy",
-    "izquierda_es": "basura",
-    "derecha_es": "con clase"
+    "izquierda_es": "De mal gusto",
+    "derecha_es": "Con clase"
   },
   {
     "id": 194,
@@ -1556,23 +1556,23 @@
     "archivo": "195.png",
     "izquierda": "Ugly",
     "derecha": "Beautiful",
-    "izquierda_es": "feo",
-    "derecha_es": "hermosa"
+    "izquierda_es": "Feo",
+    "derecha_es": "Hermoso"
   },
   {
     "id": 196,
     "archivo": "196.png",
     "izquierda": "Ugly man",
     "derecha": "Beautiful man",
-    "izquierda_es": "hombre feo",
-    "derecha_es": "hermoso hombre"
+    "izquierda_es": "Hombre feo",
+    "derecha_es": "Hermoso hombre"
   },
   {
     "id": 197,
     "archivo": "197.png",
     "izquierda": "Ugly word",
     "derecha": "Beautiful word",
-    "izquierda_es": "palabra fea",
+    "izquierda_es": "Palabra fea",
     "derecha_es": "Hermosa palabra"
   },
   {
@@ -1580,7 +1580,7 @@
     "archivo": "198.png",
     "izquierda": "Unbelievable",
     "derecha": "Believable",
-    "izquierda_es": "increíble",
+    "izquierda_es": "Increíble",
     "derecha_es": "Creíble"
   },
   {
@@ -1596,8 +1596,8 @@
     "archivo": "200.png",
     "izquierda": "Uncool",
     "derecha": "Cool",
-    "izquierda_es": "poco genial",
-    "derecha_es": "genial"
+    "izquierda_es": "Poco genial",
+    "derecha_es": "Genial"
   },
   {
     "id": 201,
@@ -1605,23 +1605,23 @@
     "izquierda": "Underpaid",
     "derecha": "Overpaid",
     "izquierda_es": "Mal pagado",
-    "derecha_es": "pagado en exceso"
+    "derecha_es": "Pagado en exceso"
   },
   {
     "id": 202,
     "archivo": "202.png",
     "izquierda": "Underrated",
     "derecha": "Overrated",
-    "izquierda_es": "subestimado",
-    "derecha_es": "sobrevalorado"
+    "izquierda_es": "Subestimado",
+    "derecha_es": "Sobrevalorado"
   },
   {
     "id": 203,
     "archivo": "203.png",
     "izquierda": "Underrated actor",
     "derecha": "Overrated actor",
-    "izquierda_es": "actor subestimado",
-    "derecha_es": "actor sobrevalorado"
+    "izquierda_es": "Actor subestimado",
+    "derecha_es": "Actor sobrevalorado"
   },
   {
     "id": 204,
@@ -1629,7 +1629,7 @@
     "izquierda": "Underrated book",
     "derecha": "Overrated book",
     "izquierda_es": "Libro subestimado",
-    "derecha_es": "libro sobrevalorado"
+    "derecha_es": "Libro sobrevalorado"
   },
   {
     "id": 205,
@@ -1637,15 +1637,15 @@
     "izquierda": "Underrated game",
     "derecha": "Overrated game",
     "izquierda_es": "Juego subestimado",
-    "derecha_es": "juego sobrevalorado"
+    "derecha_es": "Juego sobrevalorado"
   },
   {
     "id": 206,
     "archivo": "206.png",
     "izquierda": "Underrated letter of the alphabet",
     "derecha": "Overrated letter of the alphabet",
-    "izquierda_es": "Letra subestimada del alfabeto.",
-    "derecha_es": "Letra sobrevalorada del alfabeto."
+    "izquierda_es": "Letra subestimada del alfabeto",
+    "derecha_es": "Letra sobrevalorada del alfabeto"
   },
   {
     "id": 207,
@@ -1653,7 +1653,7 @@
     "izquierda": "Underrated movie",
     "derecha": "Overrated movie",
     "izquierda_es": "Película subestimada",
-    "derecha_es": "película sobrevalorada"
+    "derecha_es": "Película sobrevalorada"
   },
   {
     "id": 208,
@@ -1669,12 +1669,12 @@
     "izquierda": "Underrated skill",
     "derecha": "Overrated skill",
     "izquierda_es": "Habilidad subestimada",
-    "derecha_es": "habilidad sobrevalorada"
+    "derecha_es": "Habilidad sobrevalorada"
   },
   {
     "id": 210,
     "archivo": "210.png",
-    "izquierda": "Underrated thinc to own",
+    "izquierda": "Underrated thing to own",
     "derecha": "Overrated thing to own",
     "izquierda_es": "Algo subestimado para poseer",
     "derecha_es": "Algo sobrevalorado para poseer"
@@ -1684,7 +1684,7 @@
     "archivo": "211.png",
     "izquierda": "Worthless",
     "derecha": "Priceless",
-    "izquierda_es": "sin valor",
+    "izquierda_es": "Sin valor",
     "derecha_es": "No tiene precio"
   },
   {
@@ -1700,15 +1700,15 @@
     "archivo": "213.png",
     "izquierda": "Unethical",
     "derecha": "Ethical",
-    "izquierda_es": "poco ético",
-    "derecha_es": "ético"
+    "izquierda_es": "Poco ético",
+    "derecha_es": "Ético"
   },
   {
     "id": 214,
     "archivo": "214.png",
     "izquierda": "Unfashionable",
     "derecha": "Fashionable",
-    "izquierda_es": "pasado de moda",
+    "izquierda_es": "Pasado de moda",
     "derecha_es": "De moda"
   },
   {
@@ -1717,7 +1717,7 @@
     "izquierda": "Unforgivable",
     "derecha": "Forgivable",
     "izquierda_es": "Imperdonable",
-    "derecha_es": "perdonable"
+    "derecha_es": "Perdonable"
   },
   {
     "id": 216,
@@ -1725,7 +1725,7 @@
     "izquierda": "Unhealthy",
     "derecha": "Healthy",
     "izquierda_es": "Insalubre",
-    "derecha_es": "saludable"
+    "derecha_es": "Saludable"
   },
   {
     "id": 217,
@@ -1733,7 +1733,7 @@
     "izquierda": "Unhygienic",
     "derecha": "Hygienic",
     "izquierda_es": "Antihigiénico",
-    "derecha_es": "higiénico"
+    "derecha_es": "Higiénico"
   },
   {
     "id": 218,
@@ -1741,7 +1741,7 @@
     "izquierda": "Unimportant",
     "derecha": "Important",
     "izquierda_es": "Sin importancia",
-    "derecha_es": "importante"
+    "derecha_es": "Importante"
   },
   {
     "id": 219,
@@ -1757,15 +1757,15 @@
     "izquierda": "Unnatural",
     "derecha": "Natural",
     "izquierda_es": "Antinatural",
-    "derecha_es": "naturales"
+    "derecha_es": "Naturales"
   },
   {
     "id": 221,
     "archivo": "221.png",
     "izquierda": "Unpopular",
     "derecha": "Popular",
-    "izquierda_es": "impopular",
-    "derecha_es": "populares"
+    "izquierda_es": "Impopular",
+    "derecha_es": "Populares"
   },
   {
     "id": 222,
@@ -1780,16 +1780,16 @@
     "archivo": "223.png",
     "izquierda": "Unreasonable phobia",
     "derecha": "Reasonable phobia",
-    "izquierda_es": "fobia irrazonable",
-    "derecha_es": "fobia razonable"
+    "izquierda_es": "Fobia irrazonable",
+    "derecha_es": "Fobia razonable"
   },
   {
     "id": 224,
     "archivo": "224.png",
     "izquierda": "Unreliable",
     "derecha": "Reliable",
-    "izquierda_es": "poco confiable",
-    "derecha_es": "confiable"
+    "izquierda_es": "Poco confiable",
+    "derecha_es": "Confiable"
   },
   {
     "id": 225,
@@ -1797,37 +1797,37 @@
     "izquierda": "Unscented",
     "derecha": "Scented",
     "izquierda_es": "Sin perfume",
-    "derecha_es": "perfumado"
+    "derecha_es": "Perfumado"
   },
   {
     "id": 226,
     "archivo": "226.png",
     "izquierda": "Unsexy animal",
     "derecha": "Sexy animal",
-    "izquierda_es": "animal poco sexy",
-    "derecha_es": "animales atractivos"
+    "izquierda_es": "Animal poco sexy",
+    "derecha_es": "Animales atractivos"
   },
   {
     "id": 227,
     "archivo": "227.png",
     "izquierda": "Unsexy color",
     "derecha": "Sexy color",
-    "izquierda_es": "color poco sexy",
-    "derecha_es": "color atractivo"
+    "izquierda_es": "Color poco sexy",
+    "derecha_es": "Color atractivo"
   },
   {
     "id": 228,
     "archivo": "228.png",
     "izquierda": "Unsexy emoji",
     "derecha": "Sexy emoji",
-    "izquierda_es": "emoji poco sexy",
-    "derecha_es": "emojis sexys"
+    "izquierda_es": "Emoji poco sexy",
+    "derecha_es": "Emojis sexys"
   },
   {
     "id": 229,
     "archivo": "229.png",
-    "izquierda": "Pok mon",
-    "derecha": "Sexy Pok mon",
+    "izquierda": "Pokémon",
+    "derecha": "Sexy Pokémon",
     "izquierda_es": "Pokémon",
     "derecha_es": "Pokémon sexy"
   },
@@ -1836,7 +1836,7 @@
     "archivo": "230.png",
     "izquierda": "Unstable",
     "derecha": "Stable",
-    "izquierda_es": "inestable",
+    "izquierda_es": "Inestable",
     "derecha_es": "Estable"
   },
   {
@@ -1845,7 +1845,7 @@
     "izquierda": "Untalented",
     "derecha": "Talented",
     "izquierda_es": "Sin talento",
-    "derecha_es": "talentoso"
+    "derecha_es": "Talentoso"
   },
   {
     "id": 232,
@@ -1860,7 +1860,7 @@
     "archivo": "233.png",
     "izquierda": "Useless body part",
     "derecha": "Useful body part",
-    "izquierda_es": "parte del cuerpo inutil",
+    "izquierda_es": "Parte del cuerpo inútil",
     "derecha_es": "Parte útil del cuerpo."
   },
   {
@@ -1882,42 +1882,42 @@
   {
     "id": 236,
     "archivo": "236.png",
-    "izquierda": "Ss, Useless major",
+    "izquierda": "Useless major",
     "derecha": "Useful major",
-    "izquierda_es": "Ss, mayor inútil",
-    "derecha_es": "Mayor útil"
+    "izquierda_es": "Carrera universitaria inútil",
+    "derecha_es": "Carrera universitaria útil"
   },
   {
     "id": 237,
     "archivo": "237.png",
     "izquierda": "Vape",
     "derecha": "Doesn't vape",
-    "izquierda_es": "vapear",
-    "derecha_es": "no vapea"
+    "izquierda_es": "Vapea",
+    "derecha_es": "No vapea"
   },
   {
     "id": 238,
     "archivo": "238.png",
     "izquierda": "Vice",
     "derecha": "Virtue",
-    "izquierda_es": "vicio",
-    "derecha_es": "virtud"
+    "izquierda_es": "Vicio",
+    "derecha_es": "Virtud"
   },
   {
     "id": 239,
     "archivo": "239.png",
     "izquierda": "Villain",
     "derecha": "Hero",
-    "izquierda_es": "villano",
-    "derecha_es": "héroe"
+    "izquierda_es": "Villano",
+    "derecha_es": "Héroe"
   },
   {
     "id": 240,
     "archivo": "240.png",
     "izquierda": "Waste of time",
-    "derecha": "use of time",
-    "izquierda_es": "pérdida de tiempo",
-    "derecha_es": "uso del tiempo"
+    "derecha": "Good use of time",
+    "izquierda_es": "Pérdida de tiempo",
+    "derecha_es": "Uso del tiempo"
   },
   {
     "id": 241,
@@ -1925,23 +1925,23 @@
     "izquierda": "Weak",
     "derecha": "Strong",
     "izquierda_es": "Débil",
-    "derecha_es": "fuerte"
+    "derecha_es": "Fuerte"
   },
   {
     "id": 242,
     "archivo": "242.png",
     "izquierda": "Weird",
     "derecha": "Strange",
-    "izquierda_es": "raro",
-    "derecha_es": "extraño"
+    "izquierda_es": "Raro",
+    "derecha_es": "Extraño"
   },
   {
     "id": 243,
     "archivo": "243.png",
     "izquierda": "Wise",
     "derecha": "Intelligent",
-    "izquierda_es": "sabio",
-    "derecha_es": "inteligente"
+    "izquierda_es": "Sabio",
+    "derecha_es": "Inteligente"
   },
   {
     "id": 244,
@@ -1956,32 +1956,32 @@
     "archivo": "245.png",
     "izquierda": "Worst athlete of all time",
     "derecha": "Greatest athlete of all time",
-    "izquierda_es": "El peor deportista de todos los tiempos.",
-    "derecha_es": "El mejor atleta de todos los tiempos."
+    "izquierda_es": "El peor deportista de todos los tiempos",
+    "derecha_es": "El mejor atleta de todos los tiempos"
   },
   {
     "id": 246,
     "archivo": "246.png",
     "izquierda": "Worst chore",
     "derecha": "Best chore",
-    "izquierda_es": "peor tarea",
-    "derecha_es": "mejor tarea"
+    "izquierda_es": "Peor tarea",
+    "derecha_es": "Mejor tarea"
   },
   {
     "id": 247,
     "archivo": "247.png",
     "izquierda": "Worst day of the year",
     "derecha": "Best day of the year",
-    "izquierda_es": "El peor día del año.",
-    "derecha_es": "El mejor día del año."
+    "izquierda_es": "El peor día del año",
+    "derecha_es": "El mejor día del año"
   },
   {
     "id": 248,
     "archivo": "248.png",
     "izquierda": "Worst era to time travel",
     "derecha": "Best era to time travel",
-    "izquierda_es": "La peor época para viajar en el tiempo.",
-    "derecha_es": "La mejor era para viajar en el tiempo."
+    "izquierda_es": "La peor época para viajar en el tiempo",
+    "derecha_es": "La mejor era para viajar en el tiempo"
   },
   {
     "id": 249,
@@ -1989,14 +1989,14 @@
     "izquierda": "Worst living person",
     "derecha": "Greatest living person",
     "izquierda_es": "La peor persona viva",
-    "derecha_es": "la persona viva mas grande"
+    "derecha_es": "La mejor persona viva"
   },
   {
     "id": 250,
     "archivo": "250.png",
     "izquierda": "Worst year in history",
     "derecha": "Best year in history",
-    "izquierda_es": "El peor año de la historia.",
-    "derecha_es": "El mejor año de la historia."
+    "izquierda_es": "El peor año de la historia",
+    "derecha_es": "El mejor año de la historia"
   }
 ]

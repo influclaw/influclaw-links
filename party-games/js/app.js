@@ -11,7 +11,7 @@
       id: "amigos",
       name: "Amigos de mierda",
       short: "Vota quién es el más… de la mesa",
-      icon: "assets/icon-amigos.png",
+      icon: "assets/icon-amigos.png?v=2",
       className: "amigos",
       count: 111,
       path: "amigos",
@@ -31,7 +31,7 @@
       id: "wavelength",
       name: "Wavelength",
       short: "Pistas en un espectro de opuestos",
-      icon: "assets/icon-wavelength.png",
+      icon: "assets/icon-wavelength.png?v=2",
       className: "wavelength",
       count: 250,
       path: "wavelength",
@@ -45,12 +45,26 @@
       <p>En <strong>Amigos de mierda</strong> puedes decirle a tus amigos lo que siempre pensaste… y nunca te atreviste.</p>
       <h4>Cómo se juega</h4>
       <ol>
-        <li>Un jugador roba una carta del mazo y la lee en voz alta.</li>
+        <li>🃏 Un jugador roba una carta del mazo y la lee en voz alta.</li>
         <li>Todos piensan un momento a quién de la mesa se ajusta mejor.</li>
-        <li>A la cuenta de tres, todos votan <strong>señalando con el dedo</strong> a un jugador.</li>
+        <li>A la cuenta de tres, todos votan <strong>señalando con el dedo</strong> 👉 a un jugador.</li>
         <li>Quien recibe más votos “gana” la carta y se la queda.</li>
-        <li>El primero en conseguir <strong>5 cartas</strong> es coronado <em>Amigo de mierda</em>.</li>
+        <li>El primero en conseguir <strong>5 cartas</strong> es coronado <em>Amigo de mierda</em> 👑.</li>
       </ol>
+      <h4>Variantes</h4>
+      <ul>
+        <li>⏱️ <strong>Duración</strong>: para partidas más <strong>largas</strong>, se gana con <strong>7 cartas</strong>; para partidas más <strong>cortas</strong>, con <strong>4 cartas</strong>.</li>
+      </ul>
+      <p>🎭 <strong>Amigo invisible</strong> — las mismas reglas, pero antes de empezar cada jugador escribe en un papel el nombre de una persona o personaje que <em>no esté presente</em> y lo coloca delante suyo. Al momento de votar, se vota por el personaje del papel en lugar del jugador.</p>
+      <p>🍻 <strong>Drinking</strong> — las mismas reglas, pero con bebidas:</p>
+      <ul>
+        <li>Siempre que alguien gana una votación <strong>sin ir al desempate</strong>, esa persona bebe.</li>
+        <li>Si alguien gana una votación <strong>de manera unánime</strong>, bebe doble.</li>
+        <li>Si en algún momento <strong>todos menos uno</strong> tienen cartas, el que no tiene cartas bebe.</li>
+        <li>En caso de <strong>empate</strong>, todos beben.</li>
+        <li>Si alguien <strong>se ríe</strong> 😂 mientras se está leyendo una carta, bebe.</li>
+        <li>Siempre que un jugador <strong>se queje</strong> del resultado de una votación, ese jugador bebe.</li>
+      </ul>
       <h4>En el móvil</h4>
       <ul>
         <li><strong>Swipe izquierda</strong> = siguiente · <strong>derecha</strong> = anterior.</li>
@@ -64,21 +78,21 @@
       <p>En <strong>Mente vacuna</strong> no gana quien es más original: gana quien piensa como el grupo.</p>
       <h4>Preparación</h4>
       <ul>
-        <li>Cartas de pregunta en un montón accesible.</li>
+        <li>🃏 Cartas de pregunta en un montón accesible.</li>
         <li>Cada jugador con hoja/lápiz (o apunten en el móvil).</li>
-        <li>Fichas de puntuación y la “vaca rosa” en el centro.</li>
+        <li>Fichas de puntuación y la “vaca rosa” 🌸 en el centro.</li>
       </ul>
       <h4>Cómo se juega</h4>
       <ol>
         <li>Un jugador elige una carta de pregunta y la lee en voz alta.<br><em>Ej.: «¿Cuál es tu casa de Hogwarts favorita?»</em></li>
         <li>Todos anotan en secreto la respuesta que creen que dará <strong>la mayoría</strong>.</li>
         <li>Se revelan las respuestas.</li>
-        <li>Si coincidiste con la mayoría, sumas <strong>1 punto</strong>.</li>
-        <li>Si diste una respuesta que <strong>nadie más</strong> ha dado, te llevas la <strong>vaca rosa</strong>.</li>
+        <li>Si coincidiste con la mayoría, sumas <strong>1 punto</strong> ⭐.</li>
+        <li>Si diste una respuesta que <strong>nadie más</strong> ha dado, te llevas la <strong>vaca rosa</strong> 🌸.</li>
       </ol>
       <h4>Objetivo y vaca rosa</h4>
       <ul>
-        <li>Gana quien llega a <strong>8 puntos</strong> sin tener la vaca rosa.</li>
+        <li>Gana quien llega a <strong>8 puntos</strong> sin tener la vaca rosa 👑.</li>
         <li>Tener la vaca rosa te impide ganar, hasta que otro jugador se la quede.</li>
       </ul>
       <p><img class="rules-img" src="assets/mente-reglas.png" alt="Reglas Mente vacuna" /></p>
@@ -89,13 +103,13 @@
     `,
     wavelength: `
       <p class="meta">2 equipos · juego social de adivinar en un espectro</p>
-      <p><strong>Wavelength</strong>: un “médium” conoce la diana de la ruleta y da una pista según la carta de opuestos.</p>
+      <p><strong>Wavelength</strong>: un “médium” 🔮 conoce la diana de la ruleta y da una pista según la carta de opuestos.</p>
       <h4>Resumen de ronda</h4>
       <ol>
         <li>Equipos se turnan. Un jugador es el <strong>Médium</strong>.</li>
-        <li>Gira la ruleta (pantalla cerrada) y mira en secreto la diana.</li>
+        <li>Gira la ruleta (pantalla cerrada) y mira en secreto la diana 🎯.</li>
         <li>Roba una carta con dos extremos (ej. <em>Frío ← → Caliente</em>).</li>
-        <li>Da <strong>una sola pista</strong> que sitúe el concepto en el punto del espectro.</li>
+        <li>Da <strong>una sola pista</strong> 💡 que sitúe el concepto en el punto del espectro.</li>
         <li>Su equipo mueve el marcador; el rival puede apostar izquierda/derecha.</li>
         <li>Se abre la pantalla y se puntúa.</li>
       </ol>
@@ -114,6 +128,8 @@
   let decks = {};
   let wlLang = "es";
   let wlShowPhoto = false;
+  let scorePlayersByGame = { amigos: [], mente: [], wavelength: [] };
+  let scoreGameId = null;
 
   // removed sheet
   let removedGameId = null;
@@ -146,6 +162,16 @@
     toast._t = setTimeout(() => {
       el.hidden = true;
     }, ms);
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, (c) => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;",
+    }[c]));
   }
 
   // ---------- persistence ----------
@@ -191,6 +217,7 @@
       decks,
       wlLang,
       wlShowPhoto,
+      playersByGame: scorePlayersByGame,
       updatedAt: Date.now(),
     };
     const raw = JSON.stringify(payload);
@@ -203,26 +230,35 @@
   }
 
   function loadState() {
-    let raw = null;
+    const candidates = [];
     try {
-      raw = localStorage.getItem(STORAGE_KEY);
+      candidates.push(localStorage.getItem(STORAGE_KEY));
     } catch (_) {}
-    if (!raw) {
-      try {
-        raw = localStorage.getItem("party-games-state-v1");
-      } catch (_) {}
-    }
-    if (!raw) {
-      try {
-        raw = getCookieChunks(COOKIE_NAME);
-      } catch (_) {}
-    }
-    if (!raw) return null;
     try {
-      return JSON.parse(raw);
-    } catch (_) {
-      return null;
-    }
+      candidates.push(localStorage.getItem("party-games-state-v1"));
+    } catch (_) {}
+    try {
+      candidates.push(getCookieChunks(COOKIE_NAME));
+    } catch (_) {}
+
+    const states = candidates
+      .filter(Boolean)
+      .map((raw) => {
+        try {
+          return JSON.parse(raw);
+        } catch (_) {
+          return null;
+        }
+      })
+      .filter(Boolean);
+
+    if (!states.length) return null;
+    return states.reduce((latest, state) => {
+      if (!latest) return state;
+      return (state.updatedAt || 0) >= (latest.updatedAt || 0)
+        ? state
+        : latest;
+    }, null);
   }
 
   // ---------- deck helpers ----------
@@ -354,6 +390,110 @@
     showView("rules");
   }
 
+  // ---------- scoreboard ----------
+  function isScoreGame(gameId) {
+    return gameId === "amigos" || gameId === "mente" || gameId === "wavelength";
+  }
+
+  function sanitizePlayers(list) {
+    if (!Array.isArray(list)) return [];
+    return list
+      .filter((p) => p && typeof p.name === "string" && p.name.trim())
+      .map((p) => ({
+        name: p.name.trim().slice(0, 24),
+        score: Number.isFinite(p.score) ? p.score : 0,
+      }));
+  }
+
+  function loadScorePlayers(saved) {
+    const savedByGame = saved && saved.playersByGame;
+    const legacy = saved && Array.isArray(saved.players) ? saved.players : [];
+    return {
+      amigos: sanitizePlayers(
+        savedByGame && Array.isArray(savedByGame.amigos)
+          ? savedByGame.amigos
+          : legacy
+      ),
+      mente: sanitizePlayers(
+        savedByGame && Array.isArray(savedByGame.mente)
+          ? savedByGame.mente
+          : legacy
+      ),
+      wavelength: sanitizePlayers(
+        savedByGame && Array.isArray(savedByGame.wavelength)
+          ? savedByGame.wavelength
+          : legacy
+      ),
+    };
+  }
+
+  function renderScoreboard(gameId = scoreGameId) {
+    if (!isScoreGame(gameId)) return;
+    const list = $("#scoreboard-list");
+    const empty = $("#scoreboard-empty");
+    const currentPlayers = scorePlayersByGame[gameId];
+    $("#score-title").textContent = `Marcador - ${GAMES[gameId].name}`;
+    $("#score-sub").textContent =
+      `${currentPlayers.length} jugador${currentPlayers.length === 1 ? "" : "es"}`;
+    list.innerHTML = "";
+    empty.hidden = currentPlayers.length > 0;
+    currentPlayers.forEach((p, i) => {
+      const li = document.createElement("li");
+      li.className = "player-row";
+      li.innerHTML = `
+        <button class="score-btn del" data-i="${i}" aria-label="Eliminar jugador">&times;</button>
+        <span class="player-name">${escapeHtml(p.name)}</span>
+        <div class="player-controls">
+          <button class="score-btn minus" data-i="${i}" aria-label="Restar punto">−</button>
+          <span class="player-score">${p.score}</span>
+          <button class="score-btn plus" data-i="${i}" aria-label="Sumar punto">+</button>
+        </div>
+      `;
+      list.appendChild(li);
+    });
+    list.querySelectorAll(".score-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const i = Number(btn.dataset.i);
+        const players = scorePlayersByGame[scoreGameId];
+        if (!players || !players[i]) return;
+        if (btn.classList.contains("minus")) players[i].score -= 1;
+        else if (btn.classList.contains("plus")) players[i].score += 1;
+        else players.splice(i, 1);
+        saveState();
+        renderScoreboard(scoreGameId);
+      });
+    });
+  }
+
+  function openScoreSheet(gameId = currentGameId) {
+    if (!isScoreGame(gameId)) return;
+    scoreGameId = gameId;
+    renderScoreboard(gameId);
+    $("#score-sheet").hidden = false;
+  }
+
+  function closeScoreSheet() {
+    $("#score-sheet").hidden = true;
+    scoreGameId = null;
+  }
+
+  function addPlayer() {
+    const input = $("#score-input");
+    const players = scorePlayersByGame[scoreGameId];
+    if (!players) return;
+    const name = input.value.trim().slice(0, 24);
+    if (!name) {
+      toast("Escribe un nombre");
+      input.focus();
+      return;
+    }
+    players.push({ name, score: 0 });
+    input.value = "";
+    saveState();
+    renderScoreboard(scoreGameId);
+    input.focus();
+  }
+
   function startGame() {
     if (!currentGameId) return;
     if (currentGameId === "wavelength") {
@@ -369,6 +509,7 @@
   function renderPlay() {
     const g = GAMES[currentGameId];
     const d = decks[currentGameId];
+    $("#btn-score-toggle").hidden = !isScoreGame(currentGameId);
     $("#play-title").textContent = g.name;
     const totalLeft = d.order.length;
     const removedN = d.removed.length;
@@ -464,9 +605,9 @@
     const card = wavelengthCards.find((c) => c.id === id);
     if (!card) return "";
     if (wlLang === "en") {
-      return `${card.izquierda} ← → ${card.derecha}`;
+      return `${capitalizePhrase(card.izquierda)} ← → ${capitalizePhrase(card.derecha)}`;
     }
-    return `${card.izquierda_es || card.izquierda} ← → ${card.derecha_es || card.derecha}`;
+    return `${capitalizePhrase(card.izquierda_es || card.izquierda)} ← → ${capitalizePhrase(card.derecha_es || card.derecha)}`;
   }
 
   function renderRemovedSheet() {
@@ -606,14 +747,23 @@
   }
 
   // ---------- wavelength ----------
+  function capitalizePhrase(value) {
+    const text = String(value || "").trim();
+    if (!text) return "—";
+    return text.charAt(0).toLocaleUpperCase("es-ES") + text.slice(1);
+  }
+
   function wlText(card) {
     if (!card) return { left: "—", right: "—" };
     if (wlLang === "en") {
-      return { left: card.izquierda, right: card.derecha };
+      return {
+        left: capitalizePhrase(card.izquierda),
+        right: capitalizePhrase(card.derecha),
+      };
     }
     return {
-      left: card.izquierda_es || card.izquierda,
-      right: card.derecha_es || card.derecha,
+      left: capitalizePhrase(card.izquierda_es || card.izquierda),
+      right: capitalizePhrase(card.derecha_es || card.derecha),
     };
   }
 
@@ -626,6 +776,7 @@
         ? `0 en mazo · ${removedN} quitadas`
         : `${d.index + 1} / ${totalLeft} · ${removedN} quitadas`;
     updateRemovedBadges("wavelength");
+    $("#btn-wl-score-toggle").hidden = false;
     $("#btn-wl-lang").textContent = wlLang.toUpperCase();
     $("#btn-wl-photo").classList.toggle("active", wlShowPhoto);
 
@@ -826,10 +977,28 @@
     $("#btn-select-none").addEventListener("click", selectNoneRemoved);
     $("#btn-restore").addEventListener("click", restoreSelected);
 
+    // scoreboard
+    $("#btn-score-toggle").addEventListener("click", () => openScoreSheet(currentGameId));
+    $("#btn-wl-score-toggle").addEventListener("click", () => openScoreSheet("wavelength"));
+    $("#btn-score-add").addEventListener("click", addPlayer);
+    $("#score-input").addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        addPlayer();
+      }
+    });
+    $("#btn-score-close").addEventListener("click", closeScoreSheet);
+    $("#btn-score-close-2").addEventListener("click", closeScoreSheet);
+    $("#score-backdrop").addEventListener("click", closeScoreSheet);
+
     bindGestures($("#deck-stage"), () => currentGameId);
     bindGestures($("#wl-stage"), () => "wavelength");
 
     window.addEventListener("keydown", (e) => {
+      if (!$("#score-sheet").hidden) {
+        if (e.key === "Escape") closeScoreSheet();
+        return;
+      }
       if (!$("#removed-sheet").hidden) {
         if (e.key === "Escape") closeRemovedSheet();
         return;
@@ -879,6 +1048,8 @@
       if (saved.wlLang === "en" || saved.wlLang === "es") wlLang = saved.wlLang;
       if (typeof saved.wlShowPhoto === "boolean") wlShowPhoto = saved.wlShowPhoto;
     }
+    scorePlayersByGame = loadScorePlayers(saved);
+    saveState();
 
     try {
       const res = await fetch("assets/wavelength-parejas.json");
