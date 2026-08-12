@@ -443,10 +443,12 @@ html, body {
   overflow: hidden;
 }
 
-.rules-prepare {
+.rules-body .rules-prepare {
   flex: 0 0 auto;
   border: 1px solid rgba(255, 209, 102, 0.35);
   color: #ffd166;
+  min-height: 48px;
+  margin-top: 0;
 }
 
 .rules-prepare[hidden] {
@@ -607,6 +609,29 @@ html, body {
   object-fit: contain;
   background: #0a0a10;
   pointer-events: none;
+}
+
+.btn-rotate-face {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(15, 15, 20, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: var(--text);
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+
+.btn-rotate-face[hidden] {
+  display: none !important;
+}
+
+.card-face img {
+  transition: transform 0.25s ease;
 }
 
 .card-empty {
@@ -879,69 +904,47 @@ html, body {
   }
 }
 
-/* FULLSCREEN CARD VIEWER */
-.card-viewer {
+/* TEAM CARD VIEWER */
+.team-viewer {
   position: fixed;
   inset: 0;
-  z-index: 90;
+  z-index: 95;
   display: grid;
   place-items: center;
   background: #000;
 }
 
-.card-viewer[hidden] {
+.team-viewer[hidden] {
   display: none !important;
 }
 
-.card-viewer-backdrop {
+.team-viewer-backdrop {
   position: absolute;
   inset: 0;
   background: #000;
 }
 
-.card-viewer .btn-icon {
+.team-viewer-close {
   position: fixed;
+  top: calc(14px + var(--safe-top));
+  right: 14px;
   z-index: 5;
   background: rgba(30, 30, 40, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.card-viewer-close {
-  top: calc(14px + var(--safe-top));
-  right: 14px;
-}
-
-.card-viewer-rotate {
-  bottom: calc(20px + var(--safe-bottom));
-  right: 14px;
-}
-
-.viewer-stage {
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  place-items: center;
-  transition: transform 0.25s ease;
-  z-index: 1;
-}
-
-.viewer-stage.rot-90 {
-  width: 100vh;
-  height: 100vw;
-  transform: rotate(90deg);
-}
-
-#card-viewer-img {
-  max-width: 100%;
-  max-height: 100%;
+#team-viewer-img {
+  max-width: 94vw;
+  max-height: 94vh;
   object-fit: contain;
+  z-index: 1;
 }
 
 /* Toast */
 .toast {
   position: fixed;
   left: 50%;
-  bottom: calc(24px + var(--safe-bottom));
+  bottom: calc(136px + var(--safe-bottom));
   transform: translateX(-50%);
   background: rgba(30, 30, 40, 0.95);
   color: white;
@@ -957,6 +960,146 @@ html, body {
 
 .toast[hidden] {
   display: none !important;
+}
+
+/* TIME'S UP FOOTER LAYOUT */
+.play-footer.timesup-footer {
+  gap: 6px;
+}
+
+.play-footer.timesup-footer .btn-arrow {
+  flex: 0 0 15%;
+  min-width: 0;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+.play-footer.timesup-footer .team-btn {
+  flex: 0 0 30%;
+  min-width: 0;
+  padding: 0 4px;
+}
+
+.play-footer.timesup-footer .btn-undo {
+  flex: 0 0 10%;
+  min-width: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  border-color: rgba(255, 209, 102, 0.4);
+  color: #ffd166;
+  background: rgba(255, 209, 102, 0.08);
+}
+
+.btn-undo[hidden] {
+  display: none !important;
+}
+
+/* TIME'S UP TEAMS */
+.team-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+.team-btn[hidden] {
+  display: none !important;
+}
+
+.team-btn.team-red {
+  background: rgba(255, 77, 109, 0.14);
+  border: 1px solid rgba(255, 77, 109, 0.5);
+  color: #ff8fa3;
+}
+
+.team-btn.team-blue {
+  background: rgba(77, 124, 255, 0.14);
+  border: 1px solid rgba(77, 124, 255, 0.5);
+  color: #9db6ff;
+}
+
+.team-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.team-red .team-dot {
+  background: #ff4d6d;
+  box-shadow: 0 0 10px rgba(255, 77, 109, 0.7);
+}
+
+.team-blue .team-dot {
+  background: #4d7cff;
+  box-shadow: 0 0 10px rgba(77, 124, 255, 0.7);
+}
+
+.btn-teams-toggle {
+  border: 1px solid rgba(45, 212, 191, 0.45);
+  color: var(--accent-3);
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
+
+.btn-teams-toggle[hidden] {
+  display: none !important;
+}
+
+.teams-body {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 2px 2px 12px;
+}
+
+.team-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.team-block .removed-grid {
+  overflow: visible;
+  flex: none;
+  min-height: 0;
+  max-height: 34dvh;
+  overflow-y: auto;
+}
+
+.team-head {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.team-head span {
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.team-head-red {
+  color: #ff8fa3;
+}
+
+.team-head-blue {
+  color: #9db6ff;
+}
+
+.team-block .removed-empty {
+  padding: 16px;
+  min-height: 0;
 }
 
 /* TIME'S UP DECK SETUP */
@@ -1044,9 +1187,16 @@ html, body {
   aspect-ratio: 4 / 3;
 }
 
-.deck-hand > .btn-primary {
+.deck-hand-actions {
   flex: 0 0 auto;
+  display: flex;
+  gap: 8px;
   margin-top: 4px;
+}
+
+.deck-hand-actions .btn-secondary {
+  flex: 0 0 auto;
+  min-width: 118px;
 }
 
 .deck-complete {

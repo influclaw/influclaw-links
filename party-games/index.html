@@ -7,7 +7,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="theme-color" content="#0f0f14" />
   <title>Juegos de Mesa</title>
-  <link rel="stylesheet" href="css/styles.css?v=13" />
+  <link rel="stylesheet" href="css/styles.css?v=24" />
 </head>
 <body>
   <div id="app">
@@ -48,8 +48,10 @@
           <span id="play-counter" class="counter">0 / 0</span>
         </div>
         <div class="header-actions">
-          <button class="btn-icon btn-rotate-card" id="btn-rotate-card" title="Ver en horizontal" aria-label="Ver en horizontal" hidden>&#8635;</button>
           <button class="btn-chip btn-timer" id="btn-timer" title="Temporizador de ronda (30 s)" hidden>⏱ 30s</button>
+          <button class="btn-icon btn-teams-toggle" id="btn-teams" title="Cartas por equipo" aria-label="Cartas por equipo" hidden>
+            <svg class="profile-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"></rect><rect x="14" y="4" width="6" height="6" rx="1"></rect><rect x="4" y="14" width="6" height="6" rx="1"></rect><rect x="14" y="14" width="6" height="6" rx="1"></rect></svg>
+          </button>
           <button class="btn-icon btn-score-toggle" id="btn-score-toggle" aria-label="Abrir marcador" title="Marcador" hidden>
             <svg class="profile-icon" viewBox="0 0 24 24" aria-hidden="true">
               <circle cx="12" cy="8" r="3.5"></circle>
@@ -70,6 +72,7 @@
         <div class="card-stack" id="card-stack">
           <div class="card-face" id="card-face">
             <img id="card-image" alt="Carta" draggable="false" />
+            <button class="btn-icon btn-rotate-face" id="btn-rotate-face" title="Rotar carta" aria-label="Rotar carta" hidden>&#8635;</button>
             <div class="card-empty" id="card-empty" hidden>
               <p>No quedan cartas</p>
               <button class="btn-secondary" id="btn-reset-deck">Restaurar mazo</button>
@@ -79,10 +82,13 @@
         <div class="swipe-feedback" id="swipe-feedback"></div>
       </div>
 
-      <footer class="play-footer">
-        <button class="btn-secondary" id="btn-prev">&larr; Anterior</button>
+      <footer class="play-footer" id="play-footer">
+        <button class="btn-secondary btn-arrow" id="btn-prev">&larr; Anterior</button>
         <button class="btn-danger-soft" id="btn-remove">&uarr; Quitar</button>
-        <button class="btn-secondary" id="btn-next">Siguiente &rarr;</button>
+        <button class="btn-secondary team-btn team-red" id="btn-team-red" hidden><span class="team-dot"></span><span id="team-red-count">0</span></button>
+        <button class="btn-secondary btn-undo" id="btn-undo" title="Deshacer &uacute;ltima asignaci&oacute;n" hidden>&#8617;</button>
+        <button class="btn-secondary team-btn team-blue" id="btn-team-blue" hidden><span class="team-dot"></span><span id="team-blue-count">0</span></button>
+        <button class="btn-secondary btn-arrow" id="btn-next">Siguiente &rarr;</button>
       </footer>
     </section>
 
@@ -183,6 +189,36 @@
     </div>
   </div>
 
+  <!-- TEAMS SHEET (Time's Up) -->
+  <div id="teams-sheet" class="sheet" hidden>
+    <div class="sheet-backdrop" id="teams-backdrop"></div>
+    <div class="sheet-panel score-panel" role="dialog" aria-modal="true" aria-labelledby="teams-title">
+      <header class="sheet-header">
+        <div>
+          <h2 id="teams-title">Equipos</h2>
+          <p class="sheet-sub">Pulsa una carta para ampliarla</p>
+        </div>
+        <button class="btn-icon" id="btn-teams-close" aria-label="Cerrar">&times;</button>
+      </header>
+
+      <div class="teams-body">
+        <div class="team-block">
+          <h3 class="team-head team-head-red">Equipo rojo <span id="team-red-total">0</span></h3>
+          <div class="removed-grid" id="team-red-grid"></div>
+        </div>
+        <div class="team-block">
+          <h3 class="team-head team-head-blue">Equipo azul <span id="team-blue-total">0</span></h3>
+          <div class="removed-grid" id="team-blue-grid"></div>
+        </div>
+      </div>
+
+      <footer class="sheet-footer">
+        <button class="btn-secondary" id="btn-teams-close-2">Cerrar</button>
+        <button class="btn-primary btn-restore" id="btn-teams-restore">Devolver todo al mazo</button>
+      </footer>
+    </div>
+  </div>
+
   <!-- DECK SETUP SHEET (Time's Up) -->
   <div id="deck-sheet" class="sheet" hidden>
     <div class="sheet-backdrop" id="deck-backdrop"></div>
@@ -208,7 +244,10 @@
 
       <div id="deck-hand" class="deck-hand" hidden>
         <div class="deck-hand-grid" id="deck-hand-grid"></div>
-        <button class="btn-primary" id="btn-confirm-hand" disabled>Seleccionadas 0/2</button>
+        <div class="deck-hand-actions">
+          <button class="btn-secondary" id="btn-refresh-hand" type="button">&#8635; Refrescar</button>
+          <button class="btn-primary" id="btn-confirm-hand" disabled>Seleccionadas 0/2</button>
+        </div>
       </div>
 
       <div id="deck-complete" class="deck-complete" hidden>
@@ -265,15 +304,14 @@
     </div>
   </div>
 
-  <!-- FULLSCREEN CARD VIEWER -->
-  <div id="card-viewer" class="card-viewer" hidden>
-    <div class="card-viewer-backdrop" id="card-viewer-backdrop"></div>
-    <button class="btn-icon card-viewer-close" id="card-viewer-close" aria-label="Cerrar">&times;</button>
-    <button class="btn-icon card-viewer-rotate" id="card-viewer-rotate" aria-label="Rotar" title="Rotar">&#8635;</button>
-    <div class="viewer-stage" id="viewer-stage"><img id="card-viewer-img" alt="Carta" /></div>
+  <!-- TEAM CARD VIEWER -->
+  <div id="team-viewer" class="team-viewer" hidden>
+    <div class="team-viewer-backdrop" id="team-viewer-backdrop"></div>
+    <button class="btn-icon team-viewer-close" id="team-viewer-close" aria-label="Cerrar">&times;</button>
+    <img id="team-viewer-img" alt="Carta" />
   </div>
 
   <div id="toast" class="toast" hidden></div>
-  <script src="js/app.js?v=13"></script>
+  <script src="js/app.js?v=24"></script>
 </body>
 </html>

@@ -174,7 +174,9 @@
   let timerLeft = 0;
   let timesupSelected = null;
   let timesupSetup = null;
-  let viewerRotation = 0;
+  let timesupTeams = { red: [], blue: [] };
+  let timesupHistory = [];
+  let cardRotation = { amigos: false, mente: false, timesup: false };
 
   // removed sheet
   let removedGameId = null;
@@ -265,6 +267,8 @@
       playersByGame: scorePlayersByGame,
       timesupSelected,
       timesupSetup,
+      cardRotation,
+      timesupTeams,
       updatedAt: Date.now(),
     };
     const raw = JSON.stringify(payload);
@@ -351,10 +355,16 @@
         const inOrder = new Set(order);
         removed = removed.filter((x) => !inOrder.has(x));
 
-        // cards missing from both → put back in order (migration / repair)
-        const known = new Set([...order, ...removed]);
-        for (const n of valid) {
-          if (!known.has(n)) order.push(n);
+        if (id === "timesup") {
+          // Time's Up: the deck is exactly what was saved; team cards are outside
+          const teamSet = new Set([...timesupTeams.red, ...timesupTeams.blue]);
+          order = order.filter((x) => !teamSet.has(x));
+        } else {
+          // cards missing from both ? put back in order (migration / repair)
+          const known = new Set([...order, ...removed]);
+          for (const n of valid) {
+            if (!known.has(n)) order.push(n);
+          }
         }
 
         // if order empty but we have data, keep empty order (all removed)
@@ -499,6 +509,7 @@
     const playerCount = getTimesupPlayerCount();
     timesupSetup = createTimesupSetup(playerCount);
     timesupSelected = null;
+    timesupTeams = { red: [], blue: [] };
     saveState();
     renderDeckSheet();
   }
@@ -537,6 +548,28 @@
     const confirm = $("#btn-confirm-hand");
     confirm.disabled = selected.size !== 2;
     confirm.textContent = selected.size === 2 ? "Devolver 2 y continuar" : `Seleccionadas ${selected.size}/2`;
+  }
+
+  function refreshTimesupHand() {
+    const handIndex = timesupSetup.currentPlayer;
+    const hand = timesupSetup.hands[handIndex];
+    const size = hand.cards.length;
+    const used = new Set(timesupSetup.hands.flatMap((item) => item.cards));
+    const remaining = rangeIds(GAMES.timesup.count).filter((x) => !used.has(x));
+    if (remaining.length === 0) {
+      toast("No quedan cartas nuevas");
+      return;
+    }
+    const take = Math.min(size, remaining.length);
+    hand.cards = shuffle(remaining).slice(0, take);
+    hand.returnIds = [];
+    saveState();
+    renderDeckHand();
+    toast(
+      take < size
+        ? "Mano nueva (solo quedaban " + take + " cartas)"
+        : "Mano nueva"
+    );
   }
 
   function confirmTimesupHand() {
@@ -587,34 +620,156 @@
     renderDeckConfig();
   }
 
-  // ---------- fullscreen card viewer ----------
+  // ---------- card rotation (amigos / mente / timesup) ----------
   function isCardViewerGame(gameId) {
     return gameId === "amigos" || gameId === "mente" || gameId === "timesup";
   }
 
-  function openCardViewer() {
-    if (!isCardViewerGame(currentGameId)) return;
+  function applyCardRotation() {
     const img = $("#card-image");
-    if (img.hidden || !img.src) return;
-    viewerRotation = 0;
-    applyViewerRotation();
-    $("#card-viewer-img").src = img.src;
-    $("#card-viewer-img").alt = img.alt;
-    $("#card-viewer").hidden = false;
+    const face = $("#card-face");
+    if (!img || !face) return;
+    const rotated = isCardViewerGame(currentGameId) && !!cardRotation[currentGameId];
+    if (!rotated) {
+      face.style.width = "";
+      face.style.height = "";
+      img.style.width = "";
+      img.style.height = "";
+      img.style.transform = "";
+      img.style.background = "";
+      return;
+    }
+    face.style.width = "";
+    face.style.height = "";
+    const w = face.clientWidth || 1;
+    const h = face.clientHeight || 1;
+    img.style.width = "";
+    img.style.height = "";
+    img.style.transform = "rotate(90deg) scale(" + (h / w) + ")";
+    img.style.transformOrigin = "center";
+    img.style.background = "transparent";
   }
 
-  function closeCardViewer() {
-    $("#card-viewer").hidden = true;
+  function toggleCardRotation() {
+    if (!isCardViewerGame(currentGameId)) return;
+    cardRotation[currentGameId] = !cardRotation[currentGameId];
+    saveState();
+    applyCardRotation();
+    toast(
+      cardRotation[currentGameId]
+        ? "Cartas giradas (todo el mazo)"
+        : "Cartas en vertical"
+    );
   }
 
-  function rotateCardViewer() {
-    viewerRotation = (viewerRotation + 90) % 360;
-    applyViewerRotation();
+  // ---------- Time's Up teams ----------
+  function assignCurrentToTeam(color) {
+    if (currentGameId !== "timesup") return;
+    const d = decks.timesup;
+    if (!d.order.length) return;
+    const id = d.order.splice(d.index, 1)[0];
+    timesupTeams[color].push(id);
+    timesupHistory.push({ color, id });
+    if (d.index >= d.order.length) d.index = Math.max(0, d.order.length - 1);
+    saveState();
+    renderPlay();
+    toast("Carta para el equipo " + (color === "red" ? "rojo" : "azul"));
   }
 
-  function applyViewerRotation() {
-    const stage = $("#viewer-stage");
-    stage.classList.toggle("rot-90", viewerRotation === 90 || viewerRotation === 270);
+  function undoLastAssignment() {
+    if (currentGameId !== "timesup") return;
+    const last = timesupHistory.pop();
+    if (!last) {
+      toast("No hay nada que deshacer");
+      return;
+    }
+    const team = timesupTeams[last.color];
+    const idx = team.indexOf(last.id);
+    if (idx >= 0) team.splice(idx, 1);
+    const d = decks.timesup;
+    if (d.order.length === 0) {
+      d.order = [last.id];
+      d.index = 0;
+    } else {
+      const insertAt = Math.min(d.index + 1, d.order.length);
+      d.order.splice(insertAt, 0, last.id);
+    }
+    saveState();
+    renderPlay();
+    toast("Carta devuelta: deshecho");
+  }
+
+  function openTeamsSheet() {
+    if (currentGameId !== "timesup") return;
+    renderTeamsSheet();
+    $("#teams-sheet").hidden = false;
+  }
+
+  function closeTeamsSheet() {
+    $("#teams-sheet").hidden = true;
+  }
+
+  function renderTeamsSheet() {
+    $("#team-red-total").textContent = timesupTeams.red.length;
+    $("#team-blue-total").textContent = timesupTeams.blue.length;
+    renderTeamGrid("red");
+    renderTeamGrid("blue");
+    const btn = $("#btn-teams-restore");
+    btn.disabled = timesupTeams.red.length === 0 && timesupTeams.blue.length === 0;
+  }
+
+  function renderTeamGrid(color) {
+    const grid = $("#team-" + color + "-grid");
+    grid.innerHTML = "";
+    if (!timesupTeams[color].length) {
+      const empty = document.createElement("p");
+      empty.className = "removed-empty";
+      empty.textContent = "Sin cartas";
+      grid.appendChild(empty);
+      return;
+    }
+    timesupTeams[color].forEach((id) => {
+      const tile = document.createElement("button");
+      tile.type = "button";
+      tile.className = "removed-tile";
+      tile.innerHTML = `
+        <img src="${cardUrl("timesup", id)}" alt="Carta ${padId(id)}" loading="lazy" />
+        <span class="tile-id">#${padId(id)}</span>
+      `;
+      tile.addEventListener("click", () => openTeamViewer(id));
+      grid.appendChild(tile);
+    });
+  }
+
+  function openTeamViewer(id) {
+    $("#team-viewer-img").src = cardUrl("timesup", id);
+    $("#team-viewer").hidden = false;
+  }
+
+  function closeTeamViewer() {
+    $("#team-viewer").hidden = true;
+  }
+
+  function returnAllTeamCards() {
+    const d = decks.timesup;
+    const toRestore = [...timesupTeams.red, ...timesupTeams.blue];
+    if (!toRestore.length) return;
+    timesupTeams = { red: [], blue: [] };
+    if (d.order.length === 0) {
+      d.order = toRestore.slice();
+      d.index = 0;
+    } else {
+      const insertAt = Math.min(d.index + 1, d.order.length);
+      d.order.splice(insertAt, 0, ...toRestore);
+    }
+    saveState();
+    renderTeamsSheet();
+    renderPlay();
+    toast(
+      toRestore.length === 1
+        ? "1 carta devuelta al mazo"
+        : toRestore.length + " cartas devueltas al mazo"
+    );
   }
 
   // ---------- scoreboard ----------
@@ -732,6 +887,52 @@
   }
 
   // ---------- round timer (Time's Up) ----------
+  let audioCtx = null;
+
+  function getAudioCtx() {
+    if (!audioCtx) {
+      try {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      } catch (_) {}
+    }
+    return audioCtx;
+  }
+
+  function playTick() {
+    const ctx = getAudioCtx();
+    if (!ctx) return;
+    try {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = "sine";
+      osc.frequency.value = 880;
+      gain.gain.setValueAtTime(0.06, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.07);
+      osc.connect(gain).connect(ctx.destination);
+      osc.start();
+      osc.stop(ctx.currentTime + 0.08);
+    } catch (_) {}
+  }
+
+  function playEndBeep() {
+    const ctx = getAudioCtx();
+    if (!ctx) return;
+    try {
+      [0, 0.22].forEach((offset, i) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = "sine";
+        osc.frequency.value = i === 0 ? 1046 : 784;
+        gain.gain.setValueAtTime(0.12, ctx.currentTime + offset);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + offset + 0.16);
+        osc.connect(gain).connect(ctx.destination);
+        osc.start(ctx.currentTime + offset);
+        osc.stop(ctx.currentTime + offset + 0.18);
+      });
+    } catch (_) {}
+  }
+
+
   const ROUND_SECONDS = 30;
 
   function renderTimer() {
@@ -759,6 +960,10 @@
       clearTimer();
       return;
     }
+    const ctx = getAudioCtx();
+    if (ctx && ctx.state === "suspended") {
+      try { ctx.resume(); } catch (_) {}
+    }
     timerLeft = ROUND_SECONDS;
     renderTimer();
     timerHandle = setInterval(() => {
@@ -766,9 +971,11 @@
       if (timerLeft <= 0) {
         timerLeft = 0;
         clearTimer();
-        toast("¡Tiempo!");
+        playEndBeep();
+        toast("?Tiempo!");
         return;
       }
+      playTick();
       renderTimer();
     }, 1000);
   }
@@ -788,9 +995,28 @@
   function renderPlay() {
     const g = GAMES[currentGameId];
     const d = decks[currentGameId];
-    $("#btn-score-toggle").hidden = !isScoreGame(currentGameId);
+    $("#btn-score-toggle").hidden = !isScoreGame(currentGameId) || currentGameId === "timesup";
+    $("#btn-teams").hidden = currentGameId !== "timesup";
     $("#btn-timer").hidden = currentGameId !== "timesup";
-    $("#btn-rotate-card").hidden = !isCardViewerGame(currentGameId);
+    $("#btn-rotate-face").hidden = !isCardViewerGame(currentGameId);
+    if (currentGameId === "timesup") {
+      $("#btn-prev").textContent = "←";
+      $("#btn-next").textContent = "→";
+      $("#btn-remove").hidden = true;
+      $("#btn-team-red").hidden = false;
+      $("#btn-team-blue").hidden = false;
+      $("#btn-undo").hidden = false;
+    } else {
+      $("#btn-prev").textContent = "← Anterior";
+      $("#btn-next").textContent = "Siguiente →";
+      $("#btn-remove").hidden = false;
+      $("#btn-team-red").hidden = true;
+      $("#btn-team-blue").hidden = true;
+      $("#btn-undo").hidden = true;
+    }
+    $("#play-footer").classList.toggle("timesup-footer", currentGameId === "timesup");
+    $("#team-red-count").textContent = timesupTeams.red.length;
+    $("#team-blue-count").textContent = timesupTeams.blue.length;
     if (currentGameId !== "timesup") clearTimer();
     $("#play-title").textContent = g.name;
     const totalLeft = d.order.length;
@@ -816,6 +1042,7 @@
     const id = currentId(currentGameId);
     img.src = cardUrl(currentGameId, id);
     img.alt = `Carta ${id}`;
+    applyCardRotation();
   }
 
   function goNext(gameId = currentGameId) {
@@ -1262,11 +1489,26 @@
     $("#btn-select-none").addEventListener("click", selectNoneRemoved);
     $("#btn-restore").addEventListener("click", restoreSelected);
 
-    // fullscreen viewer
-    $("#btn-rotate-card").addEventListener("click", openCardViewer);
-    $("#card-viewer-close").addEventListener("click", closeCardViewer);
-    $("#card-viewer-rotate").addEventListener("click", rotateCardViewer);
-    $("#card-viewer-backdrop").addEventListener("click", closeCardViewer);
+    // teams (Time's Up)
+    $("#btn-undo").addEventListener("click", undoLastAssignment);
+    $("#btn-team-red").addEventListener("click", () => assignCurrentToTeam("red"));
+    $("#btn-team-blue").addEventListener("click", () => assignCurrentToTeam("blue"));
+    $("#btn-teams").addEventListener("click", openTeamsSheet);
+    $("#btn-teams-close").addEventListener("click", closeTeamsSheet);
+    $("#btn-teams-close-2").addEventListener("click", closeTeamsSheet);
+    $("#teams-backdrop").addEventListener("click", closeTeamsSheet);
+    $("#btn-teams-restore").addEventListener("click", returnAllTeamCards);
+    $("#team-viewer-close").addEventListener("click", closeTeamViewer);
+    $("#team-viewer-backdrop").addEventListener("click", closeTeamViewer);
+
+    // card rotation
+    $("#btn-rotate-face").addEventListener("click", toggleCardRotation);
+    $("#card-image").addEventListener("load", () => {
+      if (isCardViewerGame(currentGameId) && cardRotation[currentGameId]) applyCardRotation();
+    });
+    window.addEventListener("resize", () => {
+      if (isCardViewerGame(currentGameId) && cardRotation[currentGameId]) applyCardRotation();
+    });
 
     // scoreboard
     $("#btn-timer").addEventListener("click", toggleTimer);
@@ -1297,6 +1539,7 @@
       updateDeckPlayerInfo();
     });
     $("#btn-deal-timesup").addEventListener("click", dealTimesup);
+    $("#btn-refresh-hand").addEventListener("click", refreshTimesupHand);
     $("#btn-confirm-hand").addEventListener("click", confirmTimesupHand);
     $("#btn-deck-play").addEventListener("click", startPreparedTimesup);
     $("#btn-deck-new").addEventListener("click", resetTimesupSetup);
@@ -1305,8 +1548,12 @@
     bindGestures($("#wl-stage"), () => "wavelength");
 
     window.addEventListener("keydown", (e) => {
-      if (!$("#card-viewer").hidden) {
-        if (e.key === "Escape") closeCardViewer();
+      if (!$("#team-viewer").hidden) {
+        if (e.key === "Escape") closeTeamViewer();
+        return;
+      }
+      if (!$("#teams-sheet").hidden) {
+        if (e.key === "Escape") closeTeamsSheet();
         return;
       }
       if (!$("#deck-sheet").hidden) {
@@ -1362,6 +1609,13 @@
     wire();
 
     const saved = loadState();
+    if (saved && saved.timesupTeams && Array.isArray(saved.timesupTeams.red) && Array.isArray(saved.timesupTeams.blue)) {
+      const valid = new Set(rangeIds(GAMES.timesup.count));
+      timesupTeams = {
+        red: saved.timesupTeams.red.filter((x) => valid.has(x)),
+        blue: saved.timesupTeams.blue.filter((x) => valid.has(x)),
+      };
+    }
     ensureDecks(saved);
     if (saved) {
       if (saved.wlLang === "en" || saved.wlLang === "es") wlLang = saved.wlLang;
@@ -1374,6 +1628,13 @@
     }
     if (saved && saved.timesupSetup && Array.isArray(saved.timesupSetup.hands)) {
       timesupSetup = saved.timesupSetup;
+    }
+    if (saved && saved.cardRotation && typeof saved.cardRotation === "object") {
+      for (const key of Object.keys(cardRotation)) {
+        if (typeof saved.cardRotation[key] === "boolean") {
+          cardRotation[key] = saved.cardRotation[key];
+        }
+      }
     }
     saveState();
 
