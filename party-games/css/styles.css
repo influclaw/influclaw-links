@@ -122,6 +122,7 @@ html, body {
 .game-card.amigos { border-color: rgba(255, 107, 74, 0.35); }
 .game-card.mente { border-color: rgba(94, 234, 212, 0.35); }
 .game-card.wavelength { border-color: rgba(167, 139, 250, 0.35); }
+.game-card.timesup { border-color: rgba(255, 209, 102, 0.4); }
 
 .game-icon-wrap {
   width: 72px;
@@ -402,6 +403,28 @@ html, body {
   border-color: transparent;
 }
 
+.btn-timer {
+  border-color: rgba(255, 209, 102, 0.4);
+  color: #ffd166;
+  min-width: 72px;
+  font-variant-numeric: tabular-nums;
+}
+
+.btn-timer[hidden] {
+  display: none !important;
+}
+
+.btn-timer.running {
+  background: rgba(255, 209, 102, 0.16);
+  border-color: #ffd166;
+}
+
+.btn-timer.done {
+  background: rgba(255, 92, 122, 0.25);
+  border-color: var(--danger);
+  color: #ffb0bf;
+}
+
 .wl-actions,
 .header-actions {
   display: flex;
@@ -418,6 +441,16 @@ html, body {
   flex-direction: column;
   gap: 14px;
   overflow: hidden;
+}
+
+.rules-prepare {
+  flex: 0 0 auto;
+  border: 1px solid rgba(255, 209, 102, 0.35);
+  color: #ffd166;
+}
+
+.rules-prepare[hidden] {
+  display: none !important;
 }
 
 .rules-hero {
@@ -846,6 +879,64 @@ html, body {
   }
 }
 
+/* FULLSCREEN CARD VIEWER */
+.card-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  background: #000;
+}
+
+.card-viewer[hidden] {
+  display: none !important;
+}
+
+.card-viewer-backdrop {
+  position: absolute;
+  inset: 0;
+  background: #000;
+}
+
+.card-viewer .btn-icon {
+  position: fixed;
+  z-index: 5;
+  background: rgba(30, 30, 40, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.card-viewer-close {
+  top: calc(14px + var(--safe-top));
+  right: 14px;
+}
+
+.card-viewer-rotate {
+  bottom: calc(20px + var(--safe-bottom));
+  right: 14px;
+}
+
+.viewer-stage {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  transition: transform 0.25s ease;
+  z-index: 1;
+}
+
+.viewer-stage.rot-90 {
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(90deg);
+}
+
+#card-viewer-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
 /* Toast */
 .toast {
   position: fixed;
@@ -866,6 +957,115 @@ html, body {
 
 .toast[hidden] {
   display: none !important;
+}
+
+/* TIME'S UP DECK SETUP */
+.deck-setup-panel {
+  max-height: min(92dvh, 820px);
+}
+
+.deck-config,
+.deck-hand,
+.deck-complete {
+  flex: 1;
+  min-height: 0;
+}
+
+.deck-config {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+}
+
+.deck-config[hidden],
+.deck-hand[hidden],
+.deck-complete[hidden] {
+  display: none !important;
+}
+
+.deck-player-label {
+  color: var(--text);
+  font-weight: 800;
+  text-align: center;
+  font-size: 1.05rem;
+}
+
+.deck-player-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.deck-player-control input {
+  width: 78px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background: var(--bg-elevated);
+  color: var(--text);
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+  font-family: inherit;
+}
+
+.deck-player-control input:focus {
+  outline: none;
+  border-color: var(--accent-2);
+}
+
+.deck-pool-info {
+  text-align: center;
+  line-height: 1.4;
+  padding: 0 16px;
+}
+
+.deck-hand {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.deck-hand-grid {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  align-content: start;
+  padding: 2px 2px 12px;
+}
+
+.timesup-hand-tile {
+  aspect-ratio: 4 / 3;
+}
+
+.deck-hand > .btn-primary {
+  flex: 0 0 auto;
+  margin-top: 4px;
+}
+
+.deck-complete {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.deck-final-count {
+  margin: 0;
+  color: var(--accent-3);
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.deck-complete .btn-secondary {
+  flex: 0 0 auto;
 }
 
 /* ===== Removed cards sheet ===== */

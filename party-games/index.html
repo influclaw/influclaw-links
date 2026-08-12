@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -7,7 +7,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="theme-color" content="#0f0f14" />
   <title>Juegos de Mesa</title>
-  <link rel="stylesheet" href="css/styles.css?v=9" />
+  <link rel="stylesheet" href="css/styles.css?v=13" />
 </head>
 <body>
   <div id="app">
@@ -35,6 +35,7 @@
         </div>
         <div id="rules-content" class="rules-content"></div>
         <button class="btn-primary" id="btn-start">Empezar</button>
+        <button class="btn-secondary rules-prepare" id="btn-prepare-deck" hidden>🗂 Preparar mazo</button>
       </div>
     </section>
 
@@ -47,6 +48,8 @@
           <span id="play-counter" class="counter">0 / 0</span>
         </div>
         <div class="header-actions">
+          <button class="btn-icon btn-rotate-card" id="btn-rotate-card" title="Ver en horizontal" aria-label="Ver en horizontal" hidden>&#8635;</button>
+          <button class="btn-chip btn-timer" id="btn-timer" title="Temporizador de ronda (30 s)" hidden>⏱ 30s</button>
           <button class="btn-icon btn-score-toggle" id="btn-score-toggle" aria-label="Abrir marcador" title="Marcador" hidden>
             <svg class="profile-icon" viewBox="0 0 24 24" aria-hidden="true">
               <circle cx="12" cy="8" r="3.5"></circle>
@@ -180,6 +183,47 @@
     </div>
   </div>
 
+  <!-- DECK SETUP SHEET (Time's Up) -->
+  <div id="deck-sheet" class="sheet" hidden>
+    <div class="sheet-backdrop" id="deck-backdrop"></div>
+    <div class="sheet-panel score-panel deck-setup-panel" role="dialog" aria-modal="true" aria-labelledby="deck-title">
+      <header class="sheet-header">
+        <div>
+          <h2 id="deck-title">Preparar mazo</h2>
+          <p class="sheet-sub" id="deck-sub">Primero repartimos las cartas.</p>
+        </div>
+        <button class="btn-icon" id="btn-deck-close" aria-label="Cerrar">&times;</button>
+      </header>
+
+      <div id="deck-config" class="deck-config">
+        <label class="deck-player-label" for="deck-player-count">&iquest;Cu&aacute;ntos jugadores?</label>
+        <div class="deck-player-control">
+          <button class="score-btn" id="btn-deck-player-minus" type="button" aria-label="Restar jugador">&minus;</button>
+          <input id="deck-player-count" type="number" min="2" max="22" value="4" inputmode="numeric" />
+          <button class="score-btn" id="btn-deck-player-plus" type="button" aria-label="Sumar jugador">+</button>
+        </div>
+        <p class="sheet-sub deck-pool-info" id="deck-pool-info"></p>
+        <button class="btn-primary" id="btn-deal-timesup">Repartir cartas</button>
+      </div>
+
+      <div id="deck-hand" class="deck-hand" hidden>
+        <div class="deck-hand-grid" id="deck-hand-grid"></div>
+        <button class="btn-primary" id="btn-confirm-hand" disabled>Seleccionadas 0/2</button>
+      </div>
+
+      <div id="deck-complete" class="deck-complete" hidden>
+        <p class="deck-final-count" id="deck-final-count">40 cartas preparadas</p>
+        <p class="sheet-sub">El mazo ya est&aacute; listo. Pod&eacute;is empezar la primera fase.</p>
+        <button class="btn-primary" id="btn-deck-play">Jugar</button>
+        <button class="btn-secondary" id="btn-deck-new">Repartir de nuevo</button>
+      </div>
+
+      <footer class="sheet-footer">
+        <button class="btn-secondary" id="btn-deck-close-2">Cancelar</button>
+      </footer>
+    </div>
+  </div>
+
   <!-- REMOVED CARDS SHEET -->
   <div id="removed-sheet" class="sheet" hidden>
     <div class="sheet-backdrop" id="removed-backdrop"></div>
@@ -221,7 +265,15 @@
     </div>
   </div>
 
+  <!-- FULLSCREEN CARD VIEWER -->
+  <div id="card-viewer" class="card-viewer" hidden>
+    <div class="card-viewer-backdrop" id="card-viewer-backdrop"></div>
+    <button class="btn-icon card-viewer-close" id="card-viewer-close" aria-label="Cerrar">&times;</button>
+    <button class="btn-icon card-viewer-rotate" id="card-viewer-rotate" aria-label="Rotar" title="Rotar">&#8635;</button>
+    <div class="viewer-stage" id="viewer-stage"><img id="card-viewer-img" alt="Carta" /></div>
+  </div>
+
   <div id="toast" class="toast" hidden></div>
-  <script src="js/app.js?v=9"></script>
+  <script src="js/app.js?v=13"></script>
 </body>
 </html>
