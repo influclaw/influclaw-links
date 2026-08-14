@@ -547,6 +547,7 @@
     $("#btn-prepare-deck").hidden = gameId !== "timesup";
     $("#btn-deck-size").hidden = gameId !== "timesup";
     $("#btn-deck-size").textContent = String(timesupDeckSize);
+    preloadCards(gameId, 0);
     showView("rules");
   }
 
