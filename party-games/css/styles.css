@@ -1016,8 +1016,6 @@ html, body {
   border-radius: 18px;
   overflow: hidden;
   z-index: 0;
-  transform: translateY(8px) scale(0.98);
-  opacity: 0.92;
   pointer-events: none;
   will-change: transform, opacity;
 }

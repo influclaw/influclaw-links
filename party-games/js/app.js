@@ -943,15 +943,13 @@
       back.hidden = true;
     }
 
-    cardEl.style.transition = "transform 0.28s ease, opacity 0.28s ease";
-    cardEl.style.transform = "translateY(8px) scale(0.98)";
-    cardEl.style.opacity = "1";
+    cardEl.style.transition = "";
+    cardEl.style.transform = "";
+    cardEl.style.opacity = "";
     requestAnimationFrame(() => {
-      cardEl.style.transform = "translateY(0) scale(1)";
       fitFastFriendsText();
       fitFastFriendsText($("#ff-card-back"), $("#ff-left-back"));
       requestAnimationFrame(() => {
-        cardEl.style.transition = "";
         fitFastFriendsText();
         fitFastFriendsText($("#ff-card-back"), $("#ff-left-back"));
       });
