@@ -914,14 +914,16 @@
       totalLeft === 0 ? "0 en mazo" : d.index + 1 + " / " + totalLeft;
     $("#btn-ff-score").hidden = false;
     const cardEl = $("#ff-card");
-    cardEl.style.transform = "";
-    cardEl.style.opacity = "";
-    cardEl.style.transition = "";
+    const back = $("#ff-card-back");
     ffSliding = false;
     const empty = $("#ff-empty");
     if (!totalLeft) {
       $("#ff-left").textContent = "";
       empty.hidden = false;
+      back.hidden = true;
+      cardEl.style.transform = "translateY(0) scale(1)";
+      cardEl.style.opacity = "1";
+      cardEl.style.transition = "";
       return;
     }
     empty.hidden = true;
@@ -929,15 +931,39 @@
     const frase = fastfriendsFrases[id - 1];
     const texto = frase ? frase.texto : "";
     $("#ff-left").innerHTML = renderPhraseHtml(texto);
+
+    const nextId = d.order[(d.index + 1) % d.order.length];
+    if (nextId != null) {
+      const nextFrase = fastfriendsFrases[nextId - 1];
+      $("#ff-left-back").innerHTML = renderPhraseHtml(
+        nextFrase ? nextFrase.texto : ""
+      );
+      back.hidden = false;
+    } else {
+      back.hidden = true;
+    }
+
+    cardEl.style.transition = "transform 0.28s ease, opacity 0.28s ease";
+    cardEl.style.transform = "translateY(8px) scale(0.98)";
+    cardEl.style.opacity = "1";
     requestAnimationFrame(() => {
+      cardEl.style.transform = "translateY(0) scale(1)";
       fitFastFriendsText();
-      requestAnimationFrame(fitFastFriendsText);
+      fitFastFriendsText($("#ff-card-back"), $("#ff-left-back"));
+      requestAnimationFrame(() => {
+        cardEl.style.transition = "";
+        fitFastFriendsText();
+        fitFastFriendsText($("#ff-card-back"), $("#ff-left-back"));
+      });
     });
   }
 
-  function fitFastFriendsText() {
-    const card = $("#ff-card");
-    const phrase = $("#ff-left");
+  function fitFastFriendsText(
+    cardEl = $("#ff-card"),
+    phraseEl = $("#ff-left")
+  ) {
+    const card = cardEl;
+    const phrase = phraseEl;
     if (!card || !phrase || !phrase.textContent.trim()) return;
     const pad = 36;
     const maxAlong = Math.max(40, card.clientHeight - pad * 2);
@@ -2078,7 +2104,10 @@
       showView("home");
     });
     window.addEventListener("resize", () => {
-      if (views.fastfriends.classList.contains("active")) fitFastFriendsText();
+      if (views.fastfriends.classList.contains("active")) {
+        fitFastFriendsText();
+        fitFastFriendsText($("#ff-card-back"), $("#ff-left-back"));
+      }
     });
     $("#btn-ff-shuffle").addEventListener("click", () => shuffleDeck("fastfriends"));
     $("#btn-ff-reset").addEventListener("click", resetFastFriends);

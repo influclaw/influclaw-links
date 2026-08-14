@@ -991,15 +991,39 @@ html, body {
 }
 
 .ff-card {
-  flex: 1;
-  min-height: 0;
-  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: block;
   background: #f2ead9;
   border: 2px solid #111;
   border-radius: 18px;
   overflow: hidden;
-  position: relative;
+  z-index: 1;
+  will-change: transform, opacity;
+}
+
+.ff-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f2ead9;
+  border: 2px solid #111;
+  border-radius: 18px;
+  overflow: hidden;
+  z-index: 0;
+  transform: translateY(8px) scale(0.98);
+  opacity: 0.92;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.ff-card-back[hidden] {
+  display: none !important;
 }
 
 .ff-zone {
