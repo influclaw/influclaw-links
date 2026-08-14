@@ -1,0 +1,2184 @@
+{
+  "juego": "Fast Friends",
+  "origen": "Exploding Kittens",
+  "fuente_imagenes": "F:/Escritorio/Juegos de mesa/Fast Friends",
+  "total_frases": 360,
+  "marcador_hueco": "____",
+  "familias": [
+    "verbo",
+    "nombre",
+    "hueco",
+    "sustantivo",
+    "frase"
+  ],
+  "objetivo_por_familia": 72,
+  "por_familia": {
+    "verbo": 72,
+    "nombre": 72,
+    "hueco": 72,
+    "sustantivo": 72,
+    "frase": 72
+  },
+  "frases": [
+    {
+      "texto": "Recuerda ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.11.58.jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "____ Seguro",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.00.jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "Dame ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.02.jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Romper la ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.04.jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Cumple ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.05 (1).jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Llama a ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.05.jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "____ secreto",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.06 (1).jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ malvado",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.06.jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "Santiago ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.07 (1).jpeg",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Nos vemos ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.07 (2).jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Dormir ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.07.jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Irse de ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.08 (1).jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "____ triste",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.08 (2).jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ pesado",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.08.jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "Guitarra ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.09 (1).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Saco de ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.09 (2).jpeg",
+      "tipo": "frase"
+    },
+    {
+      "texto": "____ casual",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.09.jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "Carlos ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.10 (1).jpeg",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Vea ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.10 (2).jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "____ duro",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.10.jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "Eduardo ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.11 (1).jpeg",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Real ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.11 (2).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "____ sur",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.11.jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "Suave como ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.12 (1).jpeg",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Lobo ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.12 (2).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Salva ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.12.jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Aparcamiento ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.13 (1).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Libro de ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.13 (2).jpeg",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Roca ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.13.jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Llamada de ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.14 (1).jpeg",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Accidente ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.14 (2).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "____ de marisco",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.14.jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "Presión ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.15 (1).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "____ Pérez",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.15 (2).jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "Tigre ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.15.jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Antonio ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.16 (1).jpeg",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "¿Cuál es ____?",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.16 (2).jpeg",
+      "tipo": "frase"
+    },
+    {
+      "texto": "____ cero",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.16.jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "Oficina de ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.17 (1).jpeg",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Quédate ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.17 (2).jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Golpe de ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.17.jpeg",
+      "tipo": "frase"
+    },
+    {
+      "texto": "____ Pérez",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.18 (1).jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ adolescente",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.18 (2).jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "Limpia la ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.18.jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "____ perdida",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.19 (1).jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ light",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.19 (2).jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ salvaje",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.19.jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "Pensando en ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.20 (1).jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Pobre ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.20 (2).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "No ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.20 (3).jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Osito ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.20.jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "____ móvil",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.21 (1).jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "Envío ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.21 (2).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Núcleo ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.21.jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Avenida ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.22 (1).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Guardia ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.22 (2).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "____ de melocotón",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.22.jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "Cuerpo ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.23 (1).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Capitán ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.23 (2).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Carmen ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.23.jpeg",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Medio ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.24 (1).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Carretera ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.24 (2).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Orgullo ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.24.jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Fuego y ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.25 (1).jpeg",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Hola ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.25 (2).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Dulce de ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.25.jpeg",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Limpia ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.26 (1).jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Llamar la ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.26 (2).jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "____ frío",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.26.jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ arcoíris",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.27 (1).jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "Momento de ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.27 (2).jpeg",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Pato ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.27.jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Viejo ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.28 (1).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "____ terrorífico",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.28 (2).jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "Mini ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.28.jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Mamá ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.29 (1).jpeg",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Romper ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.29 (2).jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Pan de ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.29.jpeg",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Gofre ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.30 (1).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Solo ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.30 (2).jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Chica ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.30.jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Límite ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.31 (1).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Romper el ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.31 (2).jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "____ final",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.31.jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ cabreado",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.32 (1).jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "Mesa ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.32 (2).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Ir ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.32 (3).jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Punta ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.32.jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Cambio de ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.33 (1).jpeg",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Alberto ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.33 (2).jpeg",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Llueve sobre ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.33.jpeg",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Cama ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.34 (1).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Punto ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.34 (2).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Uva ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.34.jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Agárrate ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.35 (1).jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Bueno para ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.35 (2).jpeg",
+      "tipo": "frase"
+    },
+    {
+      "texto": "José ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.35.jpeg",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Pollo ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.36 (1).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Gallina ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.36 (2).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Últimas ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.12.36.jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Niña ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.08 (1).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "A la ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.08.jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "José ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.09 (1).jpeg",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Jesús ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.09.jpeg",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "____ de goma",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.10 (1).jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ básico",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.10 (2).jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "Sigue tu ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.10.jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Hecho en ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.11 (1).jpeg",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Aguanta ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.11 (2).jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Cepillarse ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.11.jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Pizza ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.12 (1).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "María ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.12 (2).jpeg",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Buen ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.12.jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Libro ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.13 (1).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Rompe ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.13 (2).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Pan y ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.13 (3).jpeg",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Que te ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.13.jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Juan ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.14 (1).jpeg",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "____ casero",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.14 (2).jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "Chicos ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.14.jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "____ de azúcar",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.15 (1).jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ de azúcar",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.15 (2).jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "Súper ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.15.jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Mal ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.16 (1).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "____ con patatas",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.16 (2).jpeg",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "Pelota ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.16.jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Calamar ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.17 (1).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Manzana ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.17 (2).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Trozo de ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.17.jpeg",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Campanas ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.18 (1).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Café ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.18 (2).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "En un ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.18.jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Comportarse como ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.19 (1).jpeg",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Chocolate ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.19 (2).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Abajo ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.19.jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Subir la ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.20 (1).jpeg",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Gran ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.20 (2).jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Mi mejor ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.20.jpeg",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Leche y ____",
+      "hueco": "____",
+      "fuente": "WhatsApp Image 2026-08-14 at 01.13.21.jpeg",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Hazme ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Pasa el ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Toma un ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Canta la ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Cuenta un ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Llévame ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Suelta el ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Miguel ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Lucía ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Pablo ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Laura ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Diego ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Sara ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Raúl ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "____ rápido",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ feliz",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ tímido",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ caliente",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ brillante",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ divertido",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ extraño",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "Perro ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Coche ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Casa ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Playa ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Río ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Zapato ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Reloj ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Olor a ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Taza de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Bolsa de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Rayo de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Par de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Caja de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Ruido de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Miedo a ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Arroz con ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Café con ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Sal y ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Luz y ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Risas y ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Música y ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "¿Dónde está ____?",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "¿Qué es ____?",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "¿Quién es ____?",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "¿Te gusta ____?",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "¿Sabes ____?",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Coge el ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Toca el ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Mira el ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Escucha la ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Escribe un ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Lee el ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Abre la ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Cierra la ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Bebe el ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Come la ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Cocina un ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Prepara el ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Compra el ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Vende el ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Espera un ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Busca el ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Encuentra un ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Elige el ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Guarda el ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Saca el ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Mete el ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Pon el ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Quita el ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Deja el ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Trae el ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Lleva el ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Silba una ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Sonríe al ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Grita al ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Susurra un ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Corre hacia ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Camina por ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Salta la ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Pregunta por ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Calla la ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Tapa la ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Destapa el ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Rellena el ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "verbo"
+    },
+    {
+      "texto": "Álvaro ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Andrea ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Andrés ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Ángel ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Beatriz ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Berta ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Blanca ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Bruno ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Carla ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Carlota ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "César ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Clara ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Cristina ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Daniel ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "David ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Diana ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Elisa ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Emilio ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Enrique ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Eva ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Fabián ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Fernando ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Francisca ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Gabriel ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Gonzalo ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Helena ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Hugo ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Iker ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Irene ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Isabel ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Jaime ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Javier ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Jorge ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Julia ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Julio ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Leo ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Lola ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Luis ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Manuel ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Marcos ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Marta ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Mateo ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Mercedes ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Miriam ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Natalia ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Nerea ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Nicolás ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Olga ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Óscar ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Patricia ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Pedro ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Rafael ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "Ramón ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "nombre"
+    },
+    {
+      "texto": "____ aburrido",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ absurdo",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ agradable",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ amable",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ amargo",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ antiguo",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ azul",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ bonito",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ borracho",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ cariñoso",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ cobarde",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ cómodo",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ complicado",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ cruel",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ curioso",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ delgado",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ dulce",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ encantador",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ enfermo",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ enfadado",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ esponjoso",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ estúpido",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ falso",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ famoso",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ flojo",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ frágil",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ fresco",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ generoso",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ gigante",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ goloso",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ grande",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ guapo",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ importante",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ increíble",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ inseguro",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "____ joven",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "hueco"
+    },
+    {
+      "texto": "Abuela ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Abuelo ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Aceite ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Agua ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Ajo ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Alma ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Araña ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Arte ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Avión ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Bailarina ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Balcón ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Banco ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "sustantivo"
+    },
+    {
+      "texto": "Bolso de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Bota de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Brizna de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Caminos de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Capa de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Cara de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Cascada de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Cesta de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Cinta de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Copa de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Cordón de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Corriente de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Cosa de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Cuchara de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Cucharada de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Cuesta de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Cumbre de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Docena de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Dosis de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Era de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Esencia de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Estilo de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Etapa de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Fábrica de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Faro de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Fase de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Fondo de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Fotografía de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Frontera de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Gama de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Gota de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Grupo de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Historia de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Hora de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    },
+    {
+      "texto": "Huella de ____",
+      "hueco": "____",
+      "fuente": "generada",
+      "tipo": "frase"
+    }
+  ]
+}

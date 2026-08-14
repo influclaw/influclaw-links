@@ -123,6 +123,7 @@ html, body {
 .game-card.mente { border-color: rgba(94, 234, 212, 0.35); }
 .game-card.wavelength { border-color: rgba(167, 139, 250, 0.35); }
 .game-card.timesup { border-color: rgba(255, 209, 102, 0.4); }
+.game-card.fastfriends { border-color: rgba(45, 212, 191, 0.45); }
 
 .game-icon-wrap {
   width: 72px;
@@ -468,11 +469,22 @@ html, body {
 
 .rules-hero {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  text-align: center;
+  gap: 14px;
+}
+
+.rules-topbar {
+  position: relative;
+}
+
+.rules-topbar h2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  white-space: nowrap;
 }
 
 .rules-hero img {
@@ -954,95 +966,165 @@ html, body {
   z-index: 1;
 }
 
-/* TIME'S UP END OF DECK */
-.timesup-end {
-  position: relative;
-  width: 100%;
-  max-width: 420px;
+/* FAST FRIENDS */
+.ff-stage {
+  flex: 1;
+  min-height: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  align-items: center;
+  position: relative;
+  touch-action: manipulation;
+  user-select: none;
 }
 
-.timesup-end[hidden] {
+.ff-stage .swipe-hints,
+.ff-stage .swipe-feedback {
   display: none !important;
 }
 
-.end-big {
-  margin: 0;
-  font-size: 1.4rem;
-  font-weight: 800;
+.ff-card {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  display: block;
+  background: #f2ead9;
+  border: 2px solid #111;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
 }
 
-.phases-summary {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 14px;
-  padding: 12px 14px;
-  text-align: left;
-  max-height: 38vh;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.phases-summary h4 {
-  margin: 0 0 8px;
-  color: var(--accent-3);
-  font-size: 0.95rem;
-}
-
-.phases-summary ul {
-  margin: 0;
-  padding-left: 1.1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.phases-summary li {
-  font-size: 0.88rem;
-  line-height: 1.4;
-  color: #d8d8e4;
-}
-
-.end-hint {
-  margin: 0;
-  font-size: 0.82rem;
-  color: var(--muted);
-  text-align: center;
-}
-
-#confetti {
+.ff-zone {
   position: absolute;
+  left: 0;
+  right: 0;
+  height: 30%;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0;
+  background: transparent;
+}
+
+.ff-zone-red {
+  top: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 70, 90, 0.2) 0%,
+    rgba(255, 70, 90, 0.06) 60%,
+    transparent 100%
+  );
+}
+
+.ff-zone-green {
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(40, 190, 90, 0.2) 0%,
+    rgba(40, 190, 90, 0.06) 60%,
+    transparent 100%
+  );
+}
+
+#view-fastfriends .topbar .btn-icon,
+#view-fastfriends .topbar .btn-chip {
+  transform: rotate(90deg);
+}
+
+.ff-phrase {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  transform-origin: center center;
+  max-width: none;
+  font-family: "Nunito", var(--font);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  color: #1a1a1a;
+  text-align: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.ff-word {
+  white-space: pre;
+}
+
+.ff-blank {
+  display: inline-block;
+  width: 3.1em;
+  min-width: 2.4em;
+  height: 0.95em;
+  margin: 0 0.12em;
+  vertical-align: -0.08em;
+  border: none;
+  border-bottom: 0.13em solid #1a1a1a;
+  border-radius: 0;
+  background: linear-gradient(transparent 72%, rgba(26, 26, 26, 0.08) 72%);
+  box-sizing: border-box;
+}
+
+#view-fastfriends #btn-ff-timer {
+  min-width: 2.6rem;
+  justify-content: center;
+  font-size: 1.15rem;
+  letter-spacing: 0;
+}
+
+#view-fastfriends #btn-ff-timer.running {
+  animation: ff-timer-pulse 1.1s ease-in-out infinite;
+}
+
+@keyframes ff-timer-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: rotate(90deg) scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: rotate(90deg) scale(1.06);
+  }
+}
+
+.ff-confetti {
+  position: fixed;
   inset: 0;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
   pointer-events: none;
-  border-radius: 20px;
+  z-index: 9999;
 }
 
-.confetti-piece {
+.ff-confetti-piece {
   position: absolute;
-  top: -24px;
-  border-radius: 2px;
-  opacity: 0;
-  animation-name: confetti-fall;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  will-change: transform, opacity;
 }
 
-@keyframes confetti-fall {
-  0% {
-    transform: translateY(-24px) rotate(0deg);
-    opacity: 1;
-  }
-  85% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(90vh) rotate(720deg);
-    opacity: 0.9;
-  }
+.ff-card.ff-miss {
+  animation: ff-card-miss 340ms ease;
+}
+
+@keyframes ff-card-miss {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  75% { transform: translateX(8px); }
+}
+
+#ff-empty {
+  z-index: 3;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  gap: 12px;
 }
 
 /* Toast */
@@ -1073,20 +1155,20 @@ html, body {
 }
 
 .play-footer.timesup-footer .btn-arrow {
-  flex: 0 0 15%;
+  flex: 15 0 0;
   min-width: 0;
   padding: 0;
   font-size: 1.1rem;
 }
 
 .play-footer.timesup-footer .team-btn {
-  flex: 0 0 30%;
+  flex: 30 0 0;
   min-width: 0;
   padding: 0 4px;
 }
 
 .play-footer.timesup-footer .btn-undo {
-  flex: 0 0 10%;
+  flex: 10 0 0;
   min-width: 0;
   padding: 0;
   font-size: 1.1rem;

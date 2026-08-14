@@ -37,6 +37,16 @@
       path: "wavelength",
       pad: 3,
     },
+    fastfriends: {
+      id: "fastfriends",
+      name: "Fast Friends",
+      short: "Coincidid en la misma palabra antes de que suene el tiempo",
+      icon: "assets/icon-fastfriends.png",
+      className: "fastfriends",
+      count: 360,
+      path: "fastfriends",
+      pad: 3,
+    },
     timesup: {
       id: "timesup",
       name: "Time's Up",
@@ -161,6 +171,48 @@
         <li>▦ botón de equipos: ver las cartas ganadas y devolverlas al mazo entre fases.</li>
       </ul>
     `,
+    fastfriends: `
+      <p class="meta">2+ jugadores · asociación de palabras · rondas rápidas</p>
+      <p><strong>Fast Friends</strong> 💚 es un juego de sincronización mental: tú y la persona que está a tu izquierda intentáis decir <strong>la misma palabra al mismo tiempo</strong>.</p>
+
+      <h4>🎯 Objetivo</h4>
+      <p>Conseguir que las dos respuestas coincidan. No gana quien encuentra la palabra más original, sino quien consigue pensar como su pareja.</p>
+
+      <h4>🧩 Preparación</h4>
+      <ul>
+        <li>Sentaros formando un círculo o una fila y elegid quién juega con la persona de su izquierda.</li>
+        <li>Dejad el <strong>móvil en el centro</strong>, con la carta visible para la pareja. El texto está girado para poder leerlo desde el lado del móvil.</li>
+        <li>Si usáis las reglas originales, dejad preparadas las <strong>fichas de vida</strong>. Esta versión móvil no las descuenta automáticamente: retirad una ficha a mano cuando corresponda.</li>
+      </ul>
+
+      <h4>⏱ Cómo se juega</h4>
+      <ol>
+        <li>La pareja activa pulsa el <strong>temporizador</strong> ⏱. La duración queda oculta y se elige al azar entre 25 y 120 segundos.</li>
+        <li>Leed la pista de la carta. A la cuenta de <strong>tres</strong>, cada persona dice en voz alta una palabra asociada, <strong>sin copiar a la otra</strong>.</li>
+        <li>Si decís la <strong>misma palabra</strong>, tocad la zona verde 🟢. La carta se supera y pasa el turno a la siguiente pareja.</li>
+        <li>Si las palabras son distintas, tocad la zona roja 🔴. La carta <strong>no cambia</strong>: repetid la cuenta y probad otra vez.</li>
+        <li>Seguid intentándolo hasta coincidir o hasta que suene la bomba.</li>
+      </ol>
+
+      <h4>💣 Si se acaba el tiempo</h4>
+      <ul>
+        <li>La bomba marca el final de la ronda. La pareja activa pierde <strong>una ficha de vida</strong> y deja paso a la siguiente pareja.</li>
+        <li>El confeti es solo una señal visual del móvil; no cambia el resultado.</li>
+        <li>La pareja que acaba de fallar conserva la carta para que la siguiente ronda pueda continuar con el mazo.</li>
+      </ul>
+
+      <h4>📱 Controles del móvil</h4>
+      <ul>
+        <li>⏱ <strong>Temporizador</strong>: inicia o detiene una ronda; la cuenta no se muestra.</li>
+        <li>🟢 <strong>Verde abajo</strong>: hemos coincidido y pasamos de carta.</li>
+        <li>🔴 <strong>Rojo arriba</strong>: no hemos coincidido y repetimos la misma carta.</li>
+        <li>👤 <strong>Marcador</strong>: puntuación opcional de la casa; las fichas de vida se llevan aparte.</li>
+        <li>🔀 <strong>Barajar</strong>: mezcla el mazo. No hay swipe para cambiar de carta.</li>
+      </ul>
+
+      <h4>🏁 Fin de la partida</h4>
+      <p>Seguid rotando las parejas y retirando fichas cuando suene la bomba. Terminad cuando se acabe el mazo o cuando vuestra mesa decida que una pareja sin fichas queda eliminada.</p>
+    `,
   };
 
   // ---------- state ----------
@@ -169,13 +221,15 @@
   let decks = {};
   let wlLang = "es";
   let wlShowPhoto = false;
-  let scorePlayersByGame = { amigos: [], mente: [], wavelength: [], timesup: [] };
+  let scorePlayersByGame = { amigos: [], mente: [], wavelength: [], timesup: [], fastfriends: [] };
   let scoreGameId = null;
   let timerHandle = null;
   let timerLeft = 0;
   let timesupSelected = null;
   let timesupSetup = null;
   let timesupTeams = { red: [], blue: [] };
+  let fastfriendsFrases = [];
+  let fastfriendsLives = 3;
   let timesupDeckSize = 40;
   let timesupHistory = [];
   let cardRotation = { amigos: false, mente: false, timesup: false };
@@ -196,6 +250,7 @@
     rules: $("#view-rules"),
     play: $("#view-play"),
     wavelength: $("#view-wavelength"),
+    fastfriends: $("#view-fastfriends"),
   };
 
   function showView(name) {
@@ -270,6 +325,7 @@
       timesupSelected,
       timesupSetup,
       cardRotation,
+      fastfriendsLives,
       timesupTeams,
       timesupDeckSize,
       updatedAt: Date.now(),
@@ -420,6 +476,7 @@
 
   function refreshCurrentView(gameId) {
     if (gameId === "wavelength") renderWavelength();
+    else if (gameId === "fastfriends") renderFastFriends();
     else if (gameId === currentGameId) renderPlay();
   }
 
@@ -838,13 +895,148 @@
     );
   }
 
+  // ---------- fast friends ----------
+  function renderPhraseHtml(texto) {
+    const partes = String(texto || "").split("____");
+    return partes.map((parte, i) => {
+      let out = "<span class=\"ff-word\">" + parte + "</span>";
+      if (i < partes.length - 1) out += '<span class="ff-blank" aria-hidden="true"></span>';
+      return out;
+    }).join("");
+  }
+
+  function renderFastFriends() {
+    const d = decks.fastfriends;
+    const totalLeft = d.order.length;
+    $("#ff-counter").textContent =
+      totalLeft === 0 ? "0 en mazo" : d.index + 1 + " / " + totalLeft;
+    $("#btn-ff-score").hidden = false;
+    const cardEl = $("#ff-card");
+    cardEl.style.transform = "";
+    cardEl.style.opacity = "";
+    cardEl.style.transition = "";
+    ffSliding = false;
+    const empty = $("#ff-empty");
+    if (!totalLeft) {
+      $("#ff-left").textContent = "";
+      empty.hidden = false;
+      return;
+    }
+    empty.hidden = true;
+    const id = currentId("fastfriends");
+    const frase = fastfriendsFrases[id - 1];
+    const texto = frase ? frase.texto : "";
+    $("#ff-left").innerHTML = renderPhraseHtml(texto);
+    requestAnimationFrame(() => {
+      fitFastFriendsText();
+      requestAnimationFrame(fitFastFriendsText);
+    });
+  }
+
+  function fitFastFriendsText() {
+    const card = $("#ff-card");
+    const phrase = $("#ff-left");
+    if (!card || !phrase || !phrase.textContent.trim()) return;
+    const pad = 36;
+    const maxAlong = Math.max(40, card.clientHeight - pad * 2);
+    const maxAcross = Math.max(40, card.clientWidth - pad * 2);
+    phrase.style.fontSize = "12px";
+    let lo = 12;
+    let hi = 160;
+    let best = 12;
+    while (lo <= hi) {
+      const mid = (lo + hi) >> 1;
+      phrase.style.fontSize = mid + "px";
+      const along = phrase.scrollWidth;
+      const across = phrase.scrollHeight;
+      if (along <= maxAlong && across <= maxAcross) {
+        best = mid;
+        lo = mid + 1;
+      } else {
+        hi = mid - 1;
+      }
+    }
+    phrase.style.fontSize = best + "px";
+  }
+  let ffSliding = false;
+
+  function playCorrectSound() {
+    const ctx = getAudioCtx();
+    if (!ctx) return;
+    try {
+      [0, 0.16].forEach((off, i) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = "sine";
+        osc.frequency.value = i === 0 ? 880 : 1318;
+        gain.gain.setValueAtTime(0.12, ctx.currentTime + off);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + off + 0.22);
+        osc.connect(gain).connect(ctx.destination);
+        osc.start(ctx.currentTime + off);
+        osc.stop(ctx.currentTime + off + 0.24);
+      });
+    } catch (_) {}
+  }
+
+  function playWrongSound() {
+    const ctx = getAudioCtx();
+    if (!ctx) return;
+    try {
+      [0, 0.2].forEach((off, i) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = "sawtooth";
+        osc.frequency.value = i === 0 ? 220 : 150;
+        gain.gain.setValueAtTime(0.1, ctx.currentTime + off);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + off + 0.26);
+        osc.connect(gain).connect(ctx.destination);
+        osc.start(ctx.currentTime + off);
+        osc.stop(ctx.currentTime + off + 0.28);
+      });
+    } catch (_) {}
+  }
+
+  function ffVote(direction) {
+    if (ffSliding) return;
+    const d = decks.fastfriends;
+    if (!d.order.length) return;
+    const card = $("#ff-card");
+
+    if (direction === "up") {
+      playWrongSound();
+      card.classList.remove("ff-miss");
+      void card.offsetWidth;
+      card.classList.add("ff-miss");
+      setTimeout(() => card.classList.remove("ff-miss"), 380);
+      toast("No coincidís: repetid la misma carta");
+      return;
+    }
+
+    ffSliding = true;
+    card.style.transition = "transform 0.35s ease, opacity 0.35s ease";
+    playCorrectSound();
+    card.style.transform = "translateY(120%)";
+    card.style.opacity = "0";
+    setTimeout(() => {
+      goNext("fastfriends");
+    }, 380);
+  }
+
+  function resetFastFriends() {
+    decks.fastfriends = defaultDeck("fastfriends");
+    saveState();
+    renderFastFriends();
+    toast("Mazo restaurado");
+  }
+
   // ---------- scoreboard ----------
   function isScoreGame(gameId) {
     return (
       gameId === "amigos" ||
       gameId === "mente" ||
       gameId === "wavelength" ||
-      gameId === "timesup"
+      gameId === "timesup" ||
+      gameId === "fastfriends"
     );
   }
 
@@ -880,6 +1072,11 @@
       timesup: sanitizePlayers(
         savedByGame && Array.isArray(savedByGame.timesup)
           ? savedByGame.timesup
+          : legacy
+      ),
+      fastfriends: sanitizePlayers(
+        savedByGame && Array.isArray(savedByGame.fastfriends)
+          ? savedByGame.fastfriends
           : legacy
       ),
     };
@@ -980,6 +1177,108 @@
     } catch (_) {}
   }
 
+  function playSynthBomb() {
+    const ctx = getAudioCtx();
+    if (!ctx) return;
+    try {
+      const t0 = ctx.currentTime;
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = "sine";
+      osc.frequency.setValueAtTime(150, t0);
+      osc.frequency.exponentialRampToValueAtTime(26, t0 + 0.8);
+      gain.gain.setValueAtTime(0.85, t0);
+      gain.gain.exponentialRampToValueAtTime(0.001, t0 + 1);
+      osc.connect(gain).connect(ctx.destination);
+      osc.start(t0);
+      osc.stop(t0 + 1.05);
+
+      const dur = 0.6;
+      const buffer = ctx.createBuffer(
+        1,
+        Math.floor(ctx.sampleRate * dur),
+        ctx.sampleRate
+      );
+      const data = buffer.getChannelData(0);
+      for (let i = 0; i < data.length; i++) data[i] = Math.random() * 2 - 1;
+      const src = ctx.createBufferSource();
+      src.buffer = buffer;
+      const nGain = ctx.createGain();
+      nGain.gain.setValueAtTime(0.5, t0);
+      nGain.gain.exponentialRampToValueAtTime(0.001, t0 + dur);
+      const filter = ctx.createBiquadFilter();
+      filter.type = "lowpass";
+      filter.frequency.setValueAtTime(2500, t0);
+      filter.frequency.exponentialRampToValueAtTime(100, t0 + dur);
+      src.connect(filter);
+      filter.connect(nGain);
+      nGain.connect(ctx.destination);
+      src.start(t0);
+      src.stop(t0 + dur);
+    } catch (_) {}
+  }
+
+  function playBombSound() {
+    try {
+      const audio = new Audio("fastfriends/bomba_www.mp3");
+      audio.volume = 0.9;
+      audio.play().catch(() => playSynthBomb());
+    } catch (_) {
+      playSynthBomb();
+    }
+  }
+
+  function playBombConfetti() {
+    const previous = $(".ff-confetti");
+    if (previous) previous.remove();
+    const host = document.createElement("div");
+    host.className = "ff-confetti";
+    host.setAttribute("aria-hidden", "true");
+    document.body.appendChild(host);
+    const vw = window.innerWidth;
+    const duration = 2000;
+    const colors = [
+      "#ff4a5a",
+      "#2fd572",
+      "#ffd93d",
+      "#ffffff",
+      "#ff8a3d",
+      "#4aa3ff",
+      "#c86bff",
+    ];
+    for (let i = 0; i < 180; i++) {
+      const piece = document.createElement("div");
+      piece.className = "ff-confetti-piece";
+      const size = 6 + Math.random() * 9;
+      const startOffset = 20 + Math.random() * 80;
+      piece.style.width = size + "px";
+      piece.style.height = size + "px";
+      piece.style.left = `calc(100% + ${startOffset}px)`;
+      piece.style.top = Math.random() * 100 + "%";
+      piece.style.background = colors[i % colors.length];
+      piece.style.borderRadius = Math.random() > 0.5 ? "50%" : "2px";
+      host.appendChild(piece);
+      const dist = vw + startOffset + size + 120;
+      const rot = (Math.random() - 0.5) * 900;
+      piece.animate(
+        [
+          { transform: "translate(0px, 0px) rotate(0deg)", opacity: 1 },
+          {
+            transform: `translateX(${-dist}px) rotate(${rot}deg)`,
+            opacity: 0.12,
+          },
+        ],
+        {
+          duration,
+          easing: "linear",
+        }
+      );
+    }
+    setTimeout(() => {
+      host.remove();
+    }, duration + 50);
+  }
+
   function playEndBeep() {
     const ctx = getAudioCtx();
     if (!ctx) return;
@@ -1004,9 +1303,19 @@
 
   const ROUND_SECONDS = 30;
 
+  function timerEl() {
+    return views.fastfriends.classList.contains("active")
+      ? $("#btn-ff-timer")
+      : $("#btn-timer");
+  }
+
   function renderTimer() {
-    const el = $("#btn-timer");
-    el.textContent = `⏱ ${timerLeft}s`;
+    const el = timerEl();
+    if (views.fastfriends.classList.contains("active")) {
+      el.textContent = "⏱";
+    } else {
+      el.textContent = `⏱ ${timerLeft}s`;
+    }
     el.classList.toggle("running", timerHandle != null);
     el.classList.toggle("done", timerLeft === 0);
   }
@@ -1017,9 +1326,11 @@
       timerHandle = null;
     }
     timerLeft = 0;
-    const el = $("#btn-timer");
+    const el = timerEl();
     if (el) {
-      el.textContent = `⏱ ${ROUND_SECONDS}s`;
+      el.textContent = views.fastfriends.classList.contains("active")
+        ? "⏱"
+        : `⏱ ${ROUND_SECONDS}s`;
       el.classList.remove("running", "done");
     }
   }
@@ -1033,20 +1344,27 @@
     if (ctx && ctx.state === "suspended") {
       try { ctx.resume(); } catch (_) {}
     }
-    timerLeft = ROUND_SECONDS;
-    renderTimer();
+    timerLeft = views.fastfriends.classList.contains("active")
+      ? 25 + Math.floor(Math.random() * 96)
+      : ROUND_SECONDS;
     timerHandle = setInterval(() => {
       timerLeft -= 1;
       if (timerLeft <= 0) {
         timerLeft = 0;
         clearTimer();
-        playEndBeep();
-        toast("?Tiempo!");
+        if (views.fastfriends.classList.contains("active")) {
+          playBombSound();
+          playBombConfetti();
+        } else {
+          playEndBeep();
+        }
+        toast("¡Tiempo!");
         return;
       }
       playTick();
       renderTimer();
     }, 1000);
+    renderTimer();
   }
 
   function startGame() {
@@ -1054,6 +1372,9 @@
     if (currentGameId === "wavelength") {
       showView("wavelength");
       renderWavelength();
+    } else if (currentGameId === "fastfriends") {
+      showView("fastfriends");
+      renderFastFriends();
     } else {
       showView("play");
       renderPlay();
@@ -1427,9 +1748,13 @@
 
       const gameId = gameIdGetter();
       const fb =
-        gameId === "wavelength" ? $("#wl-swipe-feedback") : $("#swipe-feedback");
+        gameId === "wavelength"
+          ? $("#wl-swipe-feedback")
+          : gameId === "fastfriends"
+            ? $("#ff-swipe-feedback")
+            : $("#swipe-feedback");
       if (!fb) return;
-      if (Math.abs(dy) > Math.abs(dx) && dy < -40 && gameId !== "timesup") {
+      if (Math.abs(dy) > Math.abs(dx) && dy < -40 && gameId !== "timesup" && gameId !== "fastfriends") {
         fb.textContent = "QUITAR";
         fb.className = "swipe-feedback show remove";
       } else if (dx < -50) {
@@ -1453,7 +1778,11 @@
       const gameId = gameIdGetter();
       targetEl.style.transform = "";
       const fb =
-        gameId === "wavelength" ? $("#wl-swipe-feedback") : $("#swipe-feedback");
+        gameId === "wavelength"
+          ? $("#wl-swipe-feedback")
+          : gameId === "fastfriends"
+            ? $("#ff-swipe-feedback")
+            : $("#swipe-feedback");
       if (fb) {
         fb.className = "swipe-feedback";
         fb.textContent = "";
@@ -1463,7 +1792,7 @@
       const absY = Math.abs(dy);
       const threshold = 70;
 
-      if (absY > absX && dy < -threshold && gameId !== "timesup") {
+      if (absY > absX && dy < -threshold && gameId !== "timesup" && gameId !== "fastfriends") {
         removeCurrent(gameId);
       } else if (absX > threshold) {
         // INVERTED: left = next, right = prev
@@ -1489,7 +1818,11 @@
         e.preventDefault();
         const t = e.touches[0];
         const target =
-          gameIdGetter() === "wavelength" ? $("#wl-card") : $("#card-face");
+          gameIdGetter() === "wavelength"
+            ? $("#wl-card")
+            : gameIdGetter() === "fastfriends"
+              ? $("#ff-card")
+              : $("#card-face");
         onMove(t.clientX, t.clientY, target);
       },
       { passive: false }
@@ -1499,7 +1832,11 @@
       (e) => {
         const t = e.changedTouches[0];
         const target =
-          gameIdGetter() === "wavelength" ? $("#wl-card") : $("#card-face");
+          gameIdGetter() === "wavelength"
+            ? $("#wl-card")
+            : gameIdGetter() === "fastfriends"
+              ? $("#ff-card")
+              : $("#card-face");
         onEnd(t.clientX, t.clientY, target);
       },
       { passive: true }
@@ -1511,7 +1848,11 @@
     window.addEventListener("mousemove", (e) => {
       if (!dragging) return;
       const target =
-        gameIdGetter() === "wavelength" ? $("#wl-card") : $("#card-face");
+        gameIdGetter() === "wavelength"
+            ? $("#wl-card")
+            : gameIdGetter() === "fastfriends"
+              ? $("#ff-card")
+              : $("#card-face");
       if (
         !views.play.classList.contains("active") &&
         !views.wavelength.classList.contains("active")
@@ -1522,7 +1863,11 @@
     window.addEventListener("mouseup", (e) => {
       if (!dragging) return;
       const target =
-        gameIdGetter() === "wavelength" ? $("#wl-card") : $("#card-face");
+        gameIdGetter() === "wavelength"
+            ? $("#wl-card")
+            : gameIdGetter() === "fastfriends"
+              ? $("#ff-card")
+              : $("#card-face");
       onEnd(e.clientX, e.clientY, target);
     });
   }
@@ -1637,6 +1982,22 @@
     $("#btn-deck-play").addEventListener("click", startPreparedTimesup);
     $("#btn-deck-new").addEventListener("click", resetTimesupSetup);
 
+    // fast friends
+    $("#btn-ff-back").addEventListener("click", () => {
+      clearTimer();
+      currentGameId = null;
+      showView("home");
+    });
+    window.addEventListener("resize", () => {
+      if (views.fastfriends.classList.contains("active")) fitFastFriendsText();
+    });
+    $("#btn-ff-shuffle").addEventListener("click", () => shuffleDeck("fastfriends"));
+    $("#btn-ff-reset").addEventListener("click", resetFastFriends);
+    $("#btn-ff-timer").addEventListener("click", toggleTimer);
+    $("#btn-ff-score").addEventListener("click", () => openScoreSheet("fastfriends"));
+    $("#ff-red").addEventListener("click", () => ffVote("up"));
+    $("#ff-green").addEventListener("click", () => ffVote("down"));
+
     bindGestures($("#deck-stage"), () => currentGameId);
     bindGestures($("#wl-stage"), () => "wavelength");
 
@@ -1673,6 +2034,10 @@
         if (e.key.toLowerCase() === "r" && currentGameId !== "timesup") openRemovedSheet(currentGameId);
         if (e.key.toLowerCase() === "t") toggleTimer();
       }
+      if (views.fastfriends.classList.contains("active")) {
+        if (e.key.toLowerCase() === "t") toggleTimer();
+        if (e.key.toLowerCase() === "s") shuffleDeck("fastfriends");
+      }
       if (views.wavelength.classList.contains("active")) {
         if (e.key === "ArrowLeft") goNext("wavelength");
         if (e.key === "ArrowRight") goPrev("wavelength");
@@ -1702,6 +2067,9 @@
     wire();
 
     const saved = loadState();
+    if (saved && Number.isFinite(saved.fastfriendsLives)) {
+      fastfriendsLives = saved.fastfriendsLives;
+    }
     if (saved && (saved.timesupDeckSize === 40 || saved.timesupDeckSize === 20)) {
       timesupDeckSize = saved.timesupDeckSize;
     }
@@ -1733,6 +2101,14 @@
       }
     }
     saveState();
+
+    try {
+      const res = await fetch("assets/fast-friends-frases.json");
+      fastfriendsFrases = (await res.json()).frases || [];
+    } catch (err) {
+      console.error(err);
+      fastfriendsFrases = [];
+    }
 
     try {
       const res = await fetch("assets/wavelength-parejas.json");

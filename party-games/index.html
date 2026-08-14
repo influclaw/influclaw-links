@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -7,7 +7,10 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="theme-color" content="#0f0f14" />
   <title>Juegos de Mesa</title>
-  <link rel="stylesheet" href="css/styles.css?v=35" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=48" />
 </head>
 <body>
   <div id="app">
@@ -23,7 +26,7 @@
 
     <!-- RULES -->
     <section id="view-rules" class="view">
-      <header class="topbar">
+      <header class="topbar rules-topbar">
         <button class="btn-icon" id="btn-rules-back" aria-label="Volver">&larr;</button>
         <h2 id="rules-title">Reglas</h2>
         <span class="topbar-spacer"></span>
@@ -105,6 +108,42 @@
         <button class="btn-secondary btn-arrow" id="btn-next">Siguiente &rarr;</button>
       </footer>
     </section>
+
+    <!-- PLAY: Fast Friends -->
+    <section id="view-fastfriends" class="view">
+      <header class="topbar play-topbar">
+        <button class="btn-icon" id="btn-ff-back" aria-label="Volver">&larr;</button>
+        <div class="play-meta">
+          <h2>Fast Friends</h2>
+          <span id="ff-counter" class="counter">0 / 0</span>
+        </div>
+        <div class="header-actions">
+          <button class="btn-icon btn-score-toggle" id="btn-ff-score" title="Marcador" aria-label="Marcador" hidden>
+            <svg class="profile-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M4.5 20c.7-3.4 3.2-5.5 7.5-5.5s6.8 2.1 7.5 5.5"></path></svg>
+          </button>
+          <button class="btn-chip btn-timer" id="btn-ff-timer" title="Temporizador (tiempo oculto)">&#9202;</button>
+          <button class="btn-icon" id="btn-ff-shuffle" aria-label="Barajar" title="Barajar">&#128256;</button>
+        </div>
+      </header>
+
+      <div class="ff-stage" id="ff-stage">
+        <div class="ff-card" id="ff-card">
+          <button class="ff-zone ff-zone-red" id="ff-red" aria-label="No coincidimos, repetir la carta"></button>
+          <span class="ff-phrase" id="ff-left"></span>
+          <button class="ff-zone ff-zone-green" id="ff-green" aria-label="Coincidimos, siguiente carta"></button>
+          <div class="card-empty" id="ff-empty" hidden>
+            <p>No quedan cartas</p>
+            <button class="btn-secondary" id="btn-ff-reset">Restaurar mazo</button>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+
+
+
 
     <!-- PLAY: Wavelength -->
     <section id="view-wavelength" class="view">
@@ -326,6 +365,6 @@
   </div>
 
   <div id="toast" class="toast" hidden></div>
-  <script src="js/app.js?v=35"></script>
+  <script src="js/app.js?v=48"></script>
 </body>
 </html>
