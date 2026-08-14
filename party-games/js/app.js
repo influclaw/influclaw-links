@@ -190,7 +190,7 @@
         <li>La pareja activa pulsa el <strong>temporizador</strong> ⏱. La duración queda oculta y se elige al azar entre 25 y 120 segundos.</li>
         <li>Leed la pista de la carta. A la cuenta de <strong>tres</strong>, cada persona dice en voz alta una palabra asociada, <strong>sin copiar a la otra</strong>.</li>
         <li>Si decís la <strong>misma palabra</strong>, tocad la zona verde 🟢. La carta se supera y pasa el turno a la siguiente pareja.</li>
-        <li>Si las palabras son distintas, tocad la zona roja 🔴. La carta <strong>no cambia</strong>: repetid la cuenta y probad otra vez.</li>
+        <li>Si las palabras son distintas, tocad la zona roja 🔴: la carta cambia y pasa el turno (ajustable en ⚙).</li>
         <li>Seguid intentándolo hasta coincidir o hasta que suene la bomba.</li>
       </ol>
 
@@ -198,15 +198,15 @@
       <ul>
         <li>La bomba marca el final de la ronda. La pareja activa pierde <strong>una ficha de vida</strong> y deja paso a la siguiente pareja.</li>
         <li>El confeti es solo una señal visual del móvil; no cambia el resultado.</li>
-        <li>La pareja que acaba de fallar conserva la carta para que la siguiente ronda pueda continuar con el mazo.</li>
       </ul>
 
       <h4>📱 Controles del móvil</h4>
       <ul>
         <li>⏱ <strong>Temporizador</strong>: inicia o detiene una ronda; la cuenta no se muestra.</li>
         <li>🟢 <strong>Verde abajo</strong>: hemos coincidido y pasamos de carta.</li>
-        <li>🔴 <strong>Rojo arriba</strong>: no hemos coincidido y repetimos la misma carta.</li>
+        <li>🔴 <strong>Rojo arriba</strong>: no hemos coincidido; la carta cambia y pasa el turno (ajustable en ⚙).</li>
         <li>👤 <strong>Marcador</strong>: puntuación opcional de la casa; las fichas de vida se llevan aparte.</li>
+        <li>⚙ <strong>Ajustes</strong>: cambiar de tarjeta al fallar y velocidad del temporizador (rápido, normal, lento o personalizado).</li>
         <li>🔀 <strong>Barajar</strong>: mezcla el mazo. No hay swipe para cambiar de carta.</li>
       </ul>
 
@@ -230,6 +230,7 @@
   let timesupTeams = { red: [], blue: [] };
   let fastfriendsFrases = [];
   let fastfriendsLives = 3;
+  let ffSettings = { failAdvances: true, speedMode: "normal", customMin: 25, customMax: 90 };
   let timesupDeckSize = 40;
   let timesupHistory = [];
   let cardRotation = { amigos: false, mente: false, timesup: false };
@@ -326,6 +327,7 @@
       timesupSetup,
       cardRotation,
       fastfriendsLives,
+      ffSettings,
       timesupTeams,
       timesupDeckSize,
       updatedAt: Date.now(),
@@ -1004,11 +1006,21 @@
 
     if (direction === "up") {
       playWrongSound();
-      card.classList.remove("ff-miss");
-      void card.offsetWidth;
-      card.classList.add("ff-miss");
-      setTimeout(() => card.classList.remove("ff-miss"), 380);
-      toast("No coincidís: repetid la misma carta");
+      if (ffSettings.failAdvances) {
+        ffSliding = true;
+        card.style.transition = "transform 0.35s ease, opacity 0.35s ease";
+        card.style.transform = "translateY(-120%)";
+        card.style.opacity = "0";
+        setTimeout(() => {
+          goNext("fastfriends");
+        }, 380);
+      } else {
+        card.classList.remove("ff-miss");
+        void card.offsetWidth;
+        card.classList.add("ff-miss");
+        setTimeout(() => card.classList.remove("ff-miss"), 380);
+        toast("No coincidís: probad otra vez");
+      }
       return;
     }
 
@@ -1118,6 +1130,32 @@
         renderScoreboard(scoreGameId);
       });
     });
+  }
+
+  function openFfSettings() {
+    const s = ffSettings;
+    $("#ff-setting-fail").checked = s.failAdvances;
+    document.querySelectorAll('input[name="ff-speed"]').forEach((r) => {
+      r.checked = r.value === s.speedMode;
+    });
+    $("#ff-custom-min").value = s.customMin;
+    $("#ff-custom-max").value = s.customMax;
+    $("#ff-custom-speed").hidden = s.speedMode !== "custom";
+    $("#ff-settings-sheet").hidden = false;
+  }
+
+  function closeFfSettings() {
+    const s = ffSettings;
+    s.failAdvances = $("#ff-setting-fail").checked;
+    const checked = document.querySelector('input[name="ff-speed"]:checked');
+    if (checked) s.speedMode = checked.value;
+    const min = parseInt($("#ff-custom-min").value, 10);
+    const max = parseInt($("#ff-custom-max").value, 10);
+    if (Number.isFinite(min)) s.customMin = Math.max(1, Math.min(300, min));
+    if (Number.isFinite(max)) s.customMax = Math.max(1, Math.min(300, max));
+    if (s.customMax < s.customMin) s.customMax = s.customMin;
+    $("#ff-settings-sheet").hidden = true;
+    saveState();
   }
 
   function openScoreSheet(gameId = currentGameId) {
@@ -1303,6 +1341,26 @@
 
   const ROUND_SECONDS = 30;
 
+  function ffRandomSeconds() {
+    const s = ffSettings;
+    let min;
+    let max;
+    if (s.speedMode === "rapido") {
+      min = 10;
+      max = 60;
+    } else if (s.speedMode === "lento") {
+      min = 45;
+      max = 120;
+    } else if (s.speedMode === "custom") {
+      min = Math.max(1, Math.min(s.customMin || 10, 300));
+      max = Math.max(min, Math.min(s.customMax || 60, 300));
+    } else {
+      min = 25;
+      max = 90;
+    }
+    return min + Math.floor(Math.random() * (max - min + 1));
+  }
+
   function timerEl() {
     return views.fastfriends.classList.contains("active")
       ? $("#btn-ff-timer")
@@ -1345,7 +1403,7 @@
       try { ctx.resume(); } catch (_) {}
     }
     timerLeft = views.fastfriends.classList.contains("active")
-      ? 25 + Math.floor(Math.random() * 96)
+      ? ffRandomSeconds()
       : ROUND_SECONDS;
     timerHandle = setInterval(() => {
       timerLeft -= 1;
@@ -1995,6 +2053,14 @@
     $("#btn-ff-reset").addEventListener("click", resetFastFriends);
     $("#btn-ff-timer").addEventListener("click", toggleTimer);
     $("#btn-ff-score").addEventListener("click", () => openScoreSheet("fastfriends"));
+    $("#btn-ff-settings").addEventListener("click", openFfSettings);
+    $("#btn-ff-settings-close").addEventListener("click", closeFfSettings);
+    $("#ff-settings-backdrop").addEventListener("click", closeFfSettings);
+    document.querySelectorAll('input[name="ff-speed"]').forEach((r) => {
+      r.addEventListener("change", () => {
+        $("#ff-custom-speed").hidden = r.value !== "custom";
+      });
+    });
     $("#ff-red").addEventListener("click", () => ffVote("up"));
     $("#ff-green").addEventListener("click", () => ffVote("down"));
 
@@ -2020,6 +2086,10 @@
       }
       if (!$("#removed-sheet").hidden) {
         if (e.key === "Escape") closeRemovedSheet();
+        return;
+      }
+      if (!$("#ff-settings-sheet").hidden) {
+        if (e.key === "Escape") closeFfSettings();
         return;
       }
       if (views.play.classList.contains("active")) {
@@ -2069,6 +2139,22 @@
     const saved = loadState();
     if (saved && Number.isFinite(saved.fastfriendsLives)) {
       fastfriendsLives = saved.fastfriendsLives;
+    }
+    if (saved && saved.ffSettings && typeof saved.ffSettings === "object") {
+      const s = saved.ffSettings;
+      if (typeof s.failAdvances === "boolean") ffSettings.failAdvances = s.failAdvances;
+      if (["rapido", "normal", "lento", "custom"].includes(s.speedMode)) {
+        ffSettings.speedMode = s.speedMode;
+      }
+      if (Number.isFinite(s.customMin)) {
+        ffSettings.customMin = Math.max(1, Math.min(300, s.customMin));
+      }
+      if (Number.isFinite(s.customMax)) {
+        ffSettings.customMax = Math.max(1, Math.min(300, s.customMax));
+      }
+      if (ffSettings.customMax < ffSettings.customMin) {
+        ffSettings.customMax = ffSettings.customMin;
+      }
     }
     if (saved && (saved.timesupDeckSize === 40 || saved.timesupDeckSize === 20)) {
       timesupDeckSize = saved.timesupDeckSize;

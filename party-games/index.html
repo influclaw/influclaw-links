@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=48" />
+  <link rel="stylesheet" href="css/styles.css?v=51" />
 </head>
 <body>
   <div id="app">
@@ -118,9 +118,12 @@
           <span id="ff-counter" class="counter">0 / 0</span>
         </div>
         <div class="header-actions">
-          <button class="btn-icon btn-score-toggle" id="btn-ff-score" title="Marcador" aria-label="Marcador" hidden>
-            <svg class="profile-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M4.5 20c.7-3.4 3.2-5.5 7.5-5.5s6.8 2.1 7.5 5.5"></path></svg>
-          </button>
+          <div class="ff-side-actions">
+            <button class="btn-icon btn-score-toggle" id="btn-ff-settings" title="Ajustes" aria-label="Ajustes">&#9881;</button>
+            <button class="btn-icon btn-score-toggle" id="btn-ff-score" title="Marcador" aria-label="Marcador" hidden>
+              <svg class="profile-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M4.5 20c.7-3.4 3.2-5.5 7.5-5.5s6.8 2.1 7.5 5.5"></path></svg>
+            </button>
+          </div>
           <button class="btn-chip btn-timer" id="btn-ff-timer" title="Temporizador (tiempo oculto)">&#9202;</button>
           <button class="btn-icon" id="btn-ff-shuffle" aria-label="Barajar" title="Barajar">&#128256;</button>
         </div>
@@ -316,6 +319,61 @@
     </div>
   </div>
 
+  <!-- FAST FRIENDS SETTINGS SHEET -->
+  <div id="ff-settings-sheet" class="sheet" hidden>
+    <div class="sheet-backdrop" id="ff-settings-backdrop"></div>
+    <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="ff-settings-title">
+      <header class="sheet-header">
+        <div>
+          <h2 id="ff-settings-title">Ajustes - Fast Friends</h2>
+          <p class="sheet-sub">C&oacute;mo se comporta el juego</p>
+        </div>
+        <button class="btn-icon" id="btn-ff-settings-close" aria-label="Cerrar">&times;</button>
+      </header>
+
+      <div class="ff-settings-body">
+        <h4 class="ff-settings-heading">Al fallar</h4>
+        <label class="ff-setting-row">
+          <span>Cambiar de tarjeta al fallar</span>
+          <input type="checkbox" id="ff-setting-fail" />
+        </label>
+
+        <h4 class="ff-settings-heading">Velocidad del juego</h4>
+        <div class="ff-speed-options">
+          <label class="ff-setting-row">
+            <input type="radio" name="ff-speed" value="rapido" />
+            <span>R&aacute;pido <em>(10&ndash;60 s)</em></span>
+          </label>
+          <label class="ff-setting-row">
+            <input type="radio" name="ff-speed" value="normal" />
+            <span>Normal <em>(25&ndash;90 s)</em></span>
+          </label>
+          <label class="ff-setting-row">
+            <input type="radio" name="ff-speed" value="lento" />
+            <span>Lento <em>(45&ndash;120 s)</em></span>
+          </label>
+          <label class="ff-setting-row">
+            <input type="radio" name="ff-speed" value="custom" />
+            <span>Personalizado</span>
+          </label>
+        </div>
+
+        <div class="ff-custom-speed" id="ff-custom-speed" hidden>
+          <label class="ff-custom-field">
+            <span>M&iacute;nimo (s)</span>
+            <input type="number" id="ff-custom-min" min="1" max="300" inputmode="numeric" />
+          </label>
+          <label class="ff-custom-field">
+            <span>M&aacute;ximo (s)</span>
+            <input type="number" id="ff-custom-max" min="1" max="300" inputmode="numeric" />
+          </label>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
   <!-- REMOVED CARDS SHEET -->
   <div id="removed-sheet" class="sheet" hidden>
     <div class="sheet-backdrop" id="removed-backdrop"></div>
@@ -365,6 +423,6 @@
   </div>
 
   <div id="toast" class="toast" hidden></div>
-  <script src="js/app.js?v=48"></script>
+  <script src="js/app.js?v=52"></script>
 </body>
 </html>
