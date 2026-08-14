@@ -11,7 +11,7 @@
       id: "amigos",
       name: "Amigos de mierda",
       short: "Vota quién es el más… de la mesa",
-      icon: "assets/icon-amigos.png?v=2",
+      icon: "assets/icon-amigos.webp?v=2",
       className: "amigos",
       count: 111,
       path: "amigos",
@@ -21,7 +21,7 @@
       id: "mente",
       name: "Mente vacuna",
       short: "Adivina lo que pensará la mayoría",
-      icon: "assets/icon-mente.png",
+      icon: "assets/icon-mente.webp",
       className: "mente",
       count: 252,
       path: "mente",
@@ -31,7 +31,7 @@
       id: "wavelength",
       name: "Wavelength",
       short: "Pistas en un espectro de opuestos",
-      icon: "assets/icon-wavelength.png?v=2",
+      icon: "assets/icon-wavelength.webp?v=2",
       className: "wavelength",
       count: 250,
       path: "wavelength",
@@ -41,7 +41,7 @@
       id: "fastfriends",
       name: "Fast Friends",
       short: "Coincidid en la misma palabra antes de que suene el tiempo",
-      icon: "assets/icon-fastfriends.png",
+      icon: "assets/icon-fastfriends.webp",
       className: "fastfriends",
       count: 360,
       path: "fastfriends",
@@ -51,7 +51,7 @@
       id: "timesup",
       name: "Time's Up",
       short: "Adivina personajes en 3 fases",
-      icon: "assets/icon-timesup.png",
+      icon: "assets/icon-timesup.webp",
       className: "timesup",
       count: 354,
       path: "timesup",
@@ -115,7 +115,7 @@
         <li>Gana quien llega a <strong>8 puntos</strong> sin tener la vaca rosa 👑.</li>
         <li>Tener la vaca rosa te impide ganar, hasta que otro jugador se la quede.</li>
       </ul>
-      <p><img class="rules-img" src="assets/mente-reglas.png" alt="Reglas Mente vacuna" /></p>
+      <p><img class="rules-img" src="assets/mente-reglas.webp" alt="Reglas Mente vacuna" /></p>
       <h4>En el móvil</h4>
       <ul>
         <li>← siguiente · → anterior · ↑ quitar · 🗑 quitadas · 🔀 barajar.</li>
@@ -463,7 +463,7 @@
   function cardUrl(gameId, id) {
     const g = GAMES[gameId];
     const num = String(id).padStart(g.pad, "0");
-    return `${CARDS_BASE}/${g.path}/${num}.png`;
+    return `${CARDS_BASE}/${g.path}/${num}.webp`;
   }
 
   function currentId(gameId) {
@@ -1828,7 +1828,7 @@
     const id = currentId("wavelength");
     const card = wavelengthCards.find((c) => c.id === id) || {
       id,
-      archivo: `${padId(id)}.png`,
+      archivo: `${padId(id)}.webp`,
       izquierda: "?",
       derecha: "?",
       izquierda_es: "?",
