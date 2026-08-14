@@ -1256,14 +1256,42 @@
     } catch (_) {}
   }
 
-  function playBombSound() {
+  let bombBuffer = null;
+
+  function loadBombSound() {
     try {
-      const audio = new Audio("fastfriends/bomba_www.mp3");
-      audio.volume = 0.9;
-      audio.play().catch(() => playSynthBomb());
-    } catch (_) {
-      playSynthBomb();
+      fetch("fastfriends/bomba_www.mp3")
+        .then((res) => res.arrayBuffer())
+        .then((buf) => {
+          const ctx = getAudioCtx();
+          if (!ctx) return;
+          return ctx.decodeAudioData(buf);
+        })
+        .then((decoded) => {
+          if (decoded) bombBuffer = decoded;
+        })
+        .catch(() => {});
+    } catch (_) {}
+  }
+
+  function playBombSound() {
+    const ctx = getAudioCtx();
+    if (ctx && bombBuffer) {
+      try {
+        const src = ctx.createBufferSource();
+        src.buffer = bombBuffer;
+        const gain = ctx.createGain();
+        gain.gain.setValueAtTime(0.9, ctx.currentTime);
+        gain.gain.linearRampToValueAtTime(
+          0.001,
+          ctx.currentTime + Math.max(0.05, bombBuffer.duration - 0.001)
+        );
+        src.connect(gain).connect(ctx.destination);
+        src.start();
+        return;
+      } catch (_) {}
     }
+    playSynthBomb();
   }
 
   function playBombConfetti() {
@@ -1401,6 +1429,9 @@
     const ctx = getAudioCtx();
     if (ctx && ctx.state === "suspended") {
       try { ctx.resume(); } catch (_) {}
+    }
+    if (views.fastfriends.classList.contains("active")) {
+      loadBombSound();
     }
     timerLeft = views.fastfriends.classList.contains("active")
       ? ffRandomSeconds()
@@ -2195,6 +2226,7 @@
       console.error(err);
       fastfriendsFrases = [];
     }
+    loadBombSound();
 
     try {
       const res = await fetch("assets/wavelength-parejas.json");
