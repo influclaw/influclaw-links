@@ -476,10 +476,31 @@
     return String(id).padStart(3, "0");
   }
 
+  const CARD_PRELOAD = 5;
+
+  function preloadCards(gameId, fromIndex) {
+    if (gameId === "fastfriends") return;
+    const d = decks[gameId];
+    if (!d || !d.order.length) return;
+    const start = fromIndex == null ? d.index + 1 : fromIndex;
+    const current = currentId(gameId);
+    const seen = new Set();
+    let loaded = 0;
+    for (let i = 0; i < d.order.length && loaded < CARD_PRELOAD; i++) {
+      const id = d.order[(start + i) % d.order.length];
+      if (id == null || id === current || seen.has(id)) continue;
+      seen.add(id);
+      loaded++;
+      const img = new Image();
+      img.src = cardUrl(gameId, id);
+    }
+  }
+
   function refreshCurrentView(gameId) {
     if (gameId === "wavelength") renderWavelength();
     else if (gameId === "fastfriends") renderFastFriends();
     else if (gameId === currentGameId) renderPlay();
+    preloadCards(gameId);
   }
 
   function updateRemovedBadges(gameId) {
@@ -1492,6 +1513,7 @@
       showView("play");
       renderPlay();
     }
+    preloadCards(currentGameId);
   }
 
   // ---------- play (amigos / mente) ----------
