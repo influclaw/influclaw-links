@@ -2099,7 +2099,7 @@
       $("#imp-counter").textContent = "jugadores";
       const info = $("#imp-deck-info");
       info.hidden = false;
-      info.textContent = `${impostorWords.length} palabras en el mazo · ${s.playerCount || getImpostorPlayerCount()} jugadores`;
+      info.textContent = `${impostorWords.length} palabras en el mazo`;
       return;
     }
 
