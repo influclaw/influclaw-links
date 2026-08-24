@@ -2072,6 +2072,7 @@
       word: "",
       impostorIndex: 0,
       flipped: false,
+      pending: false,
     };
     showView("impostor");
     renderImpostor();
@@ -2113,7 +2114,8 @@
         : "Sin que miren los demás, toca la carta.";
       const card = $("#imp-card");
       card.classList.toggle("is-flipped", !!s.flipped);
-      card.disabled = !!s.flipped;
+      card.classList.toggle("imp-unflipping", !!s.pending);
+      card.disabled = s.flipped || !!s.pending;
       $("#btn-imp-next").hidden = !s.flipped;
       $("#btn-imp-next").textContent =
         s.currentPlayer >= n - 1 ? "Listo · terminar" : "Listo · pasar al siguiente";
@@ -2133,15 +2135,18 @@
         $("#imp-front-badge").textContent = "💬";
       }
 
-      // progress dots
+      // progress dots (seen = ya miró, current = le toca ahora; sin spoilers:
+      // el punto rojo solo se marca en la carta del propio impostor)
       const dots = $("#imp-progress");
       dots.innerHTML = "";
       for (let p = 0; p < n; p++) {
         const dot = document.createElement("span");
         dot.className = "imp-dot";
-        if (p < i) dot.classList.add("is-seen");
-        if (p === i && !s.flipped) dot.classList.add("is-current");
-        if (p === s.impostorIndex && p < i) dot.classList.add("is-impostor");
+        if (p < s.currentPlayer) dot.classList.add("is-seen");
+        if (p === s.currentPlayer && !s.flipped) dot.classList.add("is-current");
+        if (p === s.impostorIndex && p === s.currentPlayer && s.flipped) {
+          dot.classList.add("is-impostor");
+        }
         dots.appendChild(dot);
       }
       return;
@@ -2169,13 +2174,14 @@
       word,
       impostorIndex,
       flipped: false,
+      pending: false,
     };
     renderImpostor();
   }
 
   function flipImpostorCard() {
     const s = impostorSession;
-    if (!s || s.phase !== "deal" || s.flipped) return;
+    if (!s || s.phase !== "deal" || s.flipped || s.pending) return;
     s.flipped = true;
     renderImpostor();
   }
@@ -2186,12 +2192,25 @@
     if (s.currentPlayer >= s.playerCount - 1) {
       s.phase = "done";
       s.flipped = false;
+      s.pending = false;
       renderImpostor();
       return;
     }
-    s.currentPlayer += 1;
+    // ocultamos el frente mientras gira: el siguiente rol no se renderiza
+    // hasta que la carta esté boca abajo del todo
+    const next = s.currentPlayer + 1;
+    s.currentPlayer = next;
     s.flipped = false;
+    s.pending = true;
     renderImpostor();
+    clearTimeout(impostorSession._t);
+    impostorSession._t = setTimeout(() => {
+      const cur = impostorSession;
+      if (cur && cur.phase === "deal" && cur.pending && cur.currentPlayer === next) {
+        cur.pending = false;
+        renderImpostor();
+      }
+    }, 680);
   }
 
   function revealImpostorWord() {
@@ -2211,6 +2230,7 @@
 
     // El Impostor
     $("#btn-imp-back").addEventListener("click", () => {
+      clearTimeout(impostorSession && impostorSession._t);
       currentGameId = null;
       impostorSession = null;
       showView("home");
@@ -2234,6 +2254,7 @@
       openImpostor();
     });
     $("#btn-imp-home").addEventListener("click", () => {
+      clearTimeout(impostorSession && impostorSession._t);
       currentGameId = null;
       impostorSession = null;
       showView("home");
