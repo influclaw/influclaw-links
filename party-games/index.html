@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=59" />
+  <link rel="stylesheet" href="css/styles.css?v=60" />
 </head>
 <body>
   <div id="app">
@@ -153,6 +153,67 @@
 
 
 
+
+    <!-- PLAY: El Impostor -->
+    <section id="view-impostor" class="view">
+      <header class="topbar play-topbar">
+        <button class="btn-icon" id="btn-imp-back" aria-label="Volver">&larr;</button>
+        <div class="play-meta">
+          <h2>El Impostor</h2>
+          <span id="imp-counter" class="counter">—</span>
+        </div>
+        <span class="topbar-spacer"></span>
+      </header>
+
+      <div class="imp-stage" id="imp-stage">
+        <!-- SETUP: player count -->
+        <div class="imp-panel" id="imp-setup">
+          <p class="imp-kicker">Antes de repartir</p>
+          <h3 class="imp-title">&iquest;Cu&aacute;ntos jugadores?</h3>
+          <p class="imp-sub">M&iacute;nimo 3. Uno ser&aacute; el impostor al azar.</p>
+          <div class="deck-player-control imp-player-control">
+            <button class="score-btn" id="btn-imp-minus" type="button" aria-label="Restar jugador">&minus;</button>
+            <input id="imp-player-count" type="number" min="3" max="20" value="5" inputmode="numeric" />
+            <button class="score-btn" id="btn-imp-plus" type="button" aria-label="Sumar jugador">+</button>
+          </div>
+          <button class="btn-primary" id="btn-imp-deal">Repartir roles</button>
+        </div>
+
+        <!-- DEAL: flip cards one by one -->
+        <div class="imp-panel" id="imp-deal" hidden>
+          <p class="imp-kicker" id="imp-deal-kicker">Pasa el m&oacute;vil</p>
+          <h3 class="imp-title" id="imp-deal-title">Jugador 1</h3>
+          <p class="imp-sub" id="imp-deal-hint">Sin que miren los dem&aacute;s, toca la carta.</p>
+
+          <button type="button" class="imp-card" id="imp-card" aria-label="Revelar carta">
+            <div class="imp-card-inner" id="imp-card-inner">
+              <div class="imp-card-face imp-card-back">
+                <span class="imp-back-mark">?</span>
+                <span class="imp-back-label">Toca para revelar</span>
+              </div>
+              <div class="imp-card-face imp-card-front" id="imp-card-front">
+                <span class="imp-role-label" id="imp-role-label">Palabra secreta</span>
+                <span class="imp-role-value" id="imp-role-value">—</span>
+                <span class="imp-role-note" id="imp-role-note"></span>
+              </div>
+            </div>
+          </button>
+
+          <button class="btn-primary" id="btn-imp-next" hidden>Listo · pasar al siguiente</button>
+        </div>
+
+        <!-- DONE -->
+        <div class="imp-panel" id="imp-done" hidden>
+          <p class="imp-kicker">Listo</p>
+          <h3 class="imp-title">Ya pod&eacute;is jugar sin el m&oacute;vil</h3>
+          <p class="imp-sub">Dad pistas por turnos, votad al impostor y, si quer&eacute;is, dejad que intente adivinar la palabra si lo pillan.</p>
+          <button class="btn-secondary" id="btn-imp-show-word" type="button">Revelar palabra (fin de partida)</button>
+          <p class="imp-word-reveal" id="imp-word-reveal" hidden></p>
+          <button class="btn-primary" id="btn-imp-again">Nueva ronda</button>
+          <button class="btn-secondary" id="btn-imp-home">Inicio</button>
+        </div>
+      </div>
+    </section>
 
     <!-- PLAY: Wavelength -->
     <section id="view-wavelength" class="view">
@@ -429,6 +490,6 @@
   </div>
 
   <div id="toast" class="toast" hidden></div>
-  <script src="js/app.js?v=59"></script>
+  <script src="js/app.js?v=60"></script>
 </body>
 </html>

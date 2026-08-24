@@ -57,6 +57,17 @@
       path: "timesup",
       pad: 3,
     },
+    impostor: {
+      id: "impostor",
+      name: "El Impostor",
+      short: "Todos conocen la palabra… menos uno",
+      icon: "assets/icon-impostor.webp",
+      className: "impostor",
+      count: 0,
+      path: "impostor",
+      pad: 3,
+      noCards: true,
+    },
   };
 
   const RULES = {
@@ -213,6 +224,29 @@
       <h4>🏁 Fin de la partida</h4>
       <p>Seguid rotando las parejas y retirando fichas cuando suene la bomba. Terminad cuando se acabe el mazo o cuando vuestra mesa decida que una pareja sin fichas queda eliminada.</p>
     `,
+    impostor: `
+      <p class="meta">3–20 jugadores · social · sin cartas físicas</p>
+      <p><strong>El Impostor</strong> (palabra secreta): casi todos reciben la misma palabra. Uno no la ve y tiene que colarse.</p>
+      <h4>🎯 Objetivo</h4>
+      <ul>
+        <li><strong>Jugadores normales</strong>: descubrir quién es el impostor.</li>
+        <li><strong>Impostor</strong>: averiguar la palabra sin que lo pillen.</li>
+      </ul>
+      <h4>🗣️ Cómo se juega (en la mesa)</h4>
+      <ol>
+        <li>Por turnos, cada persona da <strong>una pista</strong> sobre la palabra: ambigua, ni obvia ni rara de más.</li>
+        <li>El impostor escucha y va tanteando sin delatarse.</li>
+        <li>Tras una o varias rondas, <strong>votáis</strong> quién creéis que es el impostor.</li>
+        <li>Si acertáis, gana el grupo. Si falláis, gana el impostor. Opcional: si lo pillan, puede intentar adivinar la palabra para salvarse.</li>
+      </ol>
+      <h4>📱 En el móvil</h4>
+      <ol>
+        <li>Pulsa <strong>Empezar</strong> y elige cuántos jugadores sois.</li>
+        <li>Pasad el móvil: cada uno toca su carta, ve la palabra o “IMPOSTOR”, y pulsa listo para pasar al siguiente (sin que miren los demás).</li>
+        <li>Cuando todos hayan mirado, dejad el móvil y jugad solo con la voz.</li>
+      </ol>
+      <p class="meta">Consejo: si das pistas muy claras ayudas al impostor; si son muy raras, pareces tú el impostor.</p>
+    `,
   };
 
   // ---------- state ----------
@@ -234,6 +268,8 @@
   let timesupDeckSize = 40;
   let timesupHistory = [];
   let cardRotation = { amigos: false, mente: false, timesup: false };
+  let impostorWords = [];
+  let impostorSession = null; // { phase, playerCount, currentPlayer, word, impostorIndex, flipped }
 
   // removed sheet
   let removedGameId = null;
@@ -252,6 +288,7 @@
     play: $("#view-play"),
     wavelength: $("#view-wavelength"),
     fastfriends: $("#view-fastfriends"),
+    impostor: $("#view-impostor"),
   };
 
   function showView(name) {
@@ -399,6 +436,9 @@
 
   function defaultDeck(gameId) {
     const g = GAMES[gameId];
+    if (g.noCards || !g.count) {
+      return { order: [], index: 0, removed: [] };
+    }
     let ids = rangeIds(g.count);
     if (gameId === "timesup" && timesupSelected && timesupSelected.length) {
       ids = timesupSelected;
@@ -416,6 +456,10 @@
   function ensureDecks(saved) {
     for (const id of Object.keys(GAMES)) {
       const g = GAMES[id];
+      if (g.noCards || !g.count) {
+        decks[id] = { order: [], index: 0, removed: [] };
+        continue;
+      }
       const s = saved && saved.decks && saved.decks[id];
       const valid = new Set(rangeIds(g.count));
 
@@ -479,7 +523,8 @@
   const CARD_PRELOAD = 5;
 
   function preloadCards(gameId, fromIndex) {
-    if (gameId === "fastfriends") return;
+    if (gameId === "fastfriends" || gameId === "impostor") return;
+    if (GAMES[gameId] && GAMES[gameId].noCards) return;
     const d = decks[gameId];
     if (!d || !d.order.length) return;
     const start = fromIndex == null ? d.index + 1 : fromIndex;
@@ -1510,6 +1555,8 @@
     } else if (currentGameId === "fastfriends") {
       showView("fastfriends");
       renderFastFriends();
+    } else if (currentGameId === "impostor") {
+      openImpostor();
     } else {
       showView("play");
       renderPlay();
@@ -2008,11 +2055,172 @@
     });
   }
 
+
+  // ---------- El Impostor ----------
+  function getImpostorPlayerCount() {
+    const input = $("#imp-player-count");
+    const value = Number(input && input.value);
+    return Math.min(20, Math.max(3, Number.isFinite(value) ? Math.round(value) : 5));
+  }
+
+  function openImpostor() {
+    currentGameId = "impostor";
+    impostorSession = {
+      phase: "setup",
+      playerCount: getImpostorPlayerCount(),
+      currentPlayer: 0,
+      word: "",
+      impostorIndex: 0,
+      flipped: false,
+    };
+    showView("impostor");
+    renderImpostor();
+  }
+
+  function renderImpostor() {
+    const s = impostorSession;
+    const setup = $("#imp-setup");
+    const deal = $("#imp-deal");
+    const done = $("#imp-done");
+    if (!s) {
+      setup.hidden = false;
+      deal.hidden = true;
+      done.hidden = true;
+      $("#imp-counter").textContent = "—";
+      return;
+    }
+    setup.hidden = s.phase !== "setup";
+    deal.hidden = s.phase !== "deal";
+    done.hidden = s.phase !== "done";
+
+    if (s.phase === "setup") {
+      $("#imp-player-count").value = String(s.playerCount || getImpostorPlayerCount());
+      $("#imp-counter").textContent = "jugadores";
+      return;
+    }
+
+    if (s.phase === "deal") {
+      const n = s.playerCount;
+      const i = s.currentPlayer + 1;
+      $("#imp-counter").textContent = `${i} / ${n}`;
+      $("#imp-deal-title").textContent = `Jugador ${i}`;
+      $("#imp-deal-kicker").textContent = s.flipped ? "Míralo solo tú" : "Pasa el móvil";
+      $("#imp-deal-hint").textContent = s.flipped
+        ? "Memoriza tu rol y pulsa listo antes de pasar el móvil."
+        : "Sin que miren los demás, toca la carta.";
+      const card = $("#imp-card");
+      card.classList.toggle("is-flipped", !!s.flipped);
+      card.disabled = !!s.flipped;
+      $("#btn-imp-next").hidden = !s.flipped;
+      $("#btn-imp-next").textContent =
+        s.currentPlayer >= n - 1 ? "Listo · terminar" : "Listo · pasar al siguiente";
+
+      const isImp = s.currentPlayer === s.impostorIndex;
+      const front = $("#imp-card-front");
+      front.classList.toggle("is-impostor", isImp);
+      if (isImp) {
+        $("#imp-role-label").textContent = "Tu rol";
+        $("#imp-role-value").textContent = "IMPOSTOR";
+        $("#imp-role-note").textContent = "No conoces la palabra. Escucha y finge.";
+      } else {
+        $("#imp-role-label").textContent = "Palabra secreta";
+        $("#imp-role-value").textContent = s.word;
+        $("#imp-role-note").textContent = "No se la digas a nadie en voz alta.";
+      }
+      return;
+    }
+
+    // done
+    $("#imp-counter").textContent = "listo";
+    $("#imp-word-reveal").hidden = true;
+    $("#imp-word-reveal").textContent = "";
+    $("#btn-imp-show-word").hidden = false;
+  }
+
+  function beginImpostorDeal() {
+    if (!impostorWords.length) {
+      toast("No hay palabras cargadas");
+      return;
+    }
+    const playerCount = getImpostorPlayerCount();
+    const word = impostorWords[Math.floor(Math.random() * impostorWords.length)];
+    const impostorIndex = Math.floor(Math.random() * playerCount);
+    impostorSession = {
+      phase: "deal",
+      playerCount,
+      currentPlayer: 0,
+      word,
+      impostorIndex,
+      flipped: false,
+    };
+    renderImpostor();
+  }
+
+  function flipImpostorCard() {
+    const s = impostorSession;
+    if (!s || s.phase !== "deal" || s.flipped) return;
+    s.flipped = true;
+    renderImpostor();
+  }
+
+  function advanceImpostorPlayer() {
+    const s = impostorSession;
+    if (!s || s.phase !== "deal" || !s.flipped) return;
+    if (s.currentPlayer >= s.playerCount - 1) {
+      s.phase = "done";
+      s.flipped = false;
+      renderImpostor();
+      return;
+    }
+    s.currentPlayer += 1;
+    s.flipped = false;
+    renderImpostor();
+  }
+
+  function revealImpostorWord() {
+    const s = impostorSession;
+    if (!s || !s.word) return;
+    const el = $("#imp-word-reveal");
+    el.hidden = false;
+    el.textContent = `La palabra era: ${s.word}`;
+    $("#btn-imp-show-word").hidden = true;
+  }
+
   // ---------- wire UI ----------
   function wire() {
     $("#btn-rules-back").addEventListener("click", () => showView("home"));
     $("#btn-start").addEventListener("click", startGame);
     $("#btn-prepare-deck").addEventListener("click", openDeckSheet);
+
+    // El Impostor
+    $("#btn-imp-back").addEventListener("click", () => {
+      currentGameId = null;
+      impostorSession = null;
+      showView("home");
+    });
+    $("#btn-imp-minus").addEventListener("click", () => {
+      const input = $("#imp-player-count");
+      input.value = String(Math.max(3, getImpostorPlayerCount() - 1));
+    });
+    $("#btn-imp-plus").addEventListener("click", () => {
+      const input = $("#imp-player-count");
+      input.value = String(Math.min(20, getImpostorPlayerCount() + 1));
+    });
+    $("#imp-player-count").addEventListener("change", () => {
+      $("#imp-player-count").value = String(getImpostorPlayerCount());
+    });
+    $("#btn-imp-deal").addEventListener("click", beginImpostorDeal);
+    $("#imp-card").addEventListener("click", flipImpostorCard);
+    $("#btn-imp-next").addEventListener("click", advanceImpostorPlayer);
+    $("#btn-imp-show-word").addEventListener("click", revealImpostorWord);
+    $("#btn-imp-again").addEventListener("click", () => {
+      openImpostor();
+    });
+    $("#btn-imp-home").addEventListener("click", () => {
+      currentGameId = null;
+      impostorSession = null;
+      showView("home");
+    });
 
     $("#btn-play-back").addEventListener("click", () => {
       clearTimer();
@@ -2285,6 +2493,15 @@
       console.error(err);
       toast("No se pudo cargar el JSON de Wavelength");
       wavelengthCards = [];
+    }
+
+    try {
+      const res = await fetch("assets/impostor-palabras.json");
+      const data = await res.json();
+      impostorWords = Array.isArray(data.palabras) ? data.palabras.filter((w) => typeof w === "string" && w.trim()) : [];
+    } catch (err) {
+      console.error(err);
+      impostorWords = [];
     }
 
     showView("home");
