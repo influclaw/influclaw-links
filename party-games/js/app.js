@@ -2140,9 +2140,15 @@
       // el punto rojo solo se marca en la carta del propio impostor)
       const dots = $("#imp-progress");
       dots.innerHTML = "";
+      const gap = 6;
+      const wrapW = Math.max(120, dots.clientWidth || 300);
+      // encoger los puntos si no caben (partidas con muchos jugadores)
+      const size = Math.max(5, Math.min(10, Math.floor((wrapW - gap * (n - 1)) / n)));
       for (let p = 0; p < n; p++) {
         const dot = document.createElement("span");
         dot.className = "imp-dot";
+        dot.style.width = size + "px";
+        dot.style.height = size + "px";
         if (p < s.currentPlayer) dot.classList.add("is-seen");
         if (p === s.currentPlayer && !s.flipped) dot.classList.add("is-current");
         if (p === s.impostorIndex && p === s.currentPlayer && s.flipped) {

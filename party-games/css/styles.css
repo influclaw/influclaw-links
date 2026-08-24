@@ -376,7 +376,8 @@ html, body {
   flex-shrink: 0;
   margin: 2px 0;
   max-width: 100%;
-  overflow: hidden;
+  padding: 0 6px;
+  box-sizing: border-box;
 }
 .imp-dot {
   width: 10px;
@@ -385,7 +386,7 @@ html, body {
   background: #2c2c3e;
   border: 1px solid rgba(255, 255, 255, 0.12);
   flex-shrink: 0;
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition: background 0.2s ease;
 }
 .imp-dot.is-seen {
   background: #7c5cff;
@@ -394,8 +395,7 @@ html, body {
 .imp-dot.is-current {
   background: #ffd166;
   border-color: #ffe08a;
-  transform: scale(1.25);
-  box-shadow: 0 0 10px rgba(255, 209, 102, 0.5);
+  box-shadow: 0 0 0 3px rgba(255, 209, 102, 0.35);
 }
 .imp-dot.is-impostor {
   background: #ff5c7a;
