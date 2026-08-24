@@ -206,18 +206,19 @@ html, body {
 .imp-card-slot {
   flex: 1 1 auto;
   width: 100%;
-  min-height: 180px;
-  max-height: min(58dvh, 440px);
+  min-height: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 4px 0;
+  padding: 2px 0;
 }
 .imp-card {
-  /* Prefer height-driven size so short phones keep the flip button visible */
-  height: 100%;
-  width: auto;
-  max-width: min(100%, 300px);
+  /* Big card like the other games: width-driven, 3:4, capped by viewport */
+  width: min(88vw, 460px);
+  height: auto;
+  max-width: min(88vw, 460px);
+  max-height: 100%;
   aspect-ratio: 3 / 4;
   border: none;
   padding: 0;
@@ -299,13 +300,14 @@ html, body {
   color: rgba(255, 255, 255, 0.65);
 }
 .imp-role-value {
-  font-size: clamp(1.35rem, 6.5vw, 2.2rem);
+  font-size: clamp(1.6rem, 8vw, 2.6rem);
   font-weight: 900;
   letter-spacing: -0.02em;
-  line-height: 1.15;
-  word-break: break-word;
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+  word-break: normal;
   max-width: 100%;
-  padding: 0 4px;
+  padding: 0 6px;
 }
 .imp-role-note {
   font-size: 0.85rem;
@@ -421,8 +423,11 @@ html, body {
     min-height: 0;
   }
   .imp-card-slot {
-    min-height: 150px;
-    max-height: min(48dvh, 340px);
+    min-height: 0;
+  }
+  .imp-card {
+    width: min(74vw, 380px);
+    max-width: min(74vw, 380px);
   }
   .imp-title {
     font-size: 1.2rem;
@@ -431,7 +436,7 @@ html, body {
     font-size: 0.85rem;
   }
   .imp-back-mark {
-    font-size: 2.8rem;
+    font-size: 3.2rem;
   }
 }
 
@@ -446,7 +451,8 @@ html, body {
     min-height: 68px;
   }
   .imp-card {
-    max-width: min(100%, 260px);
+    width: min(80vw, 400px);
+    max-width: min(80vw, 400px);
   }
 }
 

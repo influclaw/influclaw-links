@@ -2134,6 +2134,7 @@
         $("#imp-role-note").textContent = "No se la digas a nadie en voz alta.";
         $("#imp-front-badge").textContent = "💬";
       }
+      fitImpostorWord();
 
       // progress dots (seen = ya miró, current = le toca ahora; sin spoilers:
       // el punto rojo solo se marca en la carta del propio impostor)
@@ -2211,6 +2212,18 @@
         renderImpostor();
       }
     }, 680);
+  }
+
+  function fitImpostorWord() {
+    const el = $("#imp-role-value");
+    if (!el) return;
+    const len = (el.textContent || "").length;
+    let size = "2.4rem";
+    if (len > 20) size = "1.15rem";
+    else if (len > 16) size = "1.4rem";
+    else if (len > 12) size = "1.7rem";
+    else if (len > 8) size = "2rem";
+    el.style.fontSize = size;
   }
 
   function revealImpostorWord() {
