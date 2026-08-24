@@ -2096,6 +2096,9 @@
     if (s.phase === "setup") {
       $("#imp-player-count").value = String(s.playerCount || getImpostorPlayerCount());
       $("#imp-counter").textContent = "jugadores";
+      const info = $("#imp-deck-info");
+      info.hidden = false;
+      info.textContent = `${impostorWords.length} palabras en el mazo · ${s.playerCount || getImpostorPlayerCount()} jugadores`;
       return;
     }
 
@@ -2122,10 +2125,24 @@
         $("#imp-role-label").textContent = "Tu rol";
         $("#imp-role-value").textContent = "IMPOSTOR";
         $("#imp-role-note").textContent = "No conoces la palabra. Escucha y finge.";
+        $("#imp-front-badge").textContent = "🕵️";
       } else {
         $("#imp-role-label").textContent = "Palabra secreta";
         $("#imp-role-value").textContent = s.word;
         $("#imp-role-note").textContent = "No se la digas a nadie en voz alta.";
+        $("#imp-front-badge").textContent = "💬";
+      }
+
+      // progress dots
+      const dots = $("#imp-progress");
+      dots.innerHTML = "";
+      for (let p = 0; p < n; p++) {
+        const dot = document.createElement("span");
+        dot.className = "imp-dot";
+        if (p < i) dot.classList.add("is-seen");
+        if (p === i && !s.flipped) dot.classList.add("is-current");
+        if (p === s.impostorIndex && p < i) dot.classList.add("is-impostor");
+        dots.appendChild(dot);
       }
       return;
     }
