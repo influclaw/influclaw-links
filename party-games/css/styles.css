@@ -408,11 +408,57 @@ html, body {
   flex-shrink: 0;
 }
 .imp-word-reveal {
-  margin: 0;
-  font-size: clamp(1.1rem, 5vw, 1.35rem);
-  font-weight: 800;
-  color: #c4b5fd;
-  word-break: break-word;
+  margin: 8px 0 0;
+  font-size: clamp(2.2rem, 11vw, 4rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+  padding: 4px 10px;
+  background: linear-gradient(135deg, #c4b5fd 0%, #99f6e4 50%, #ffd166 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 18px rgba(196, 181, 253, 0.45));
+  opacity: 0;
+  transform: scale(0.7);
+  transition: none;
+  flex-shrink: 0;
+}
+.imp-word-reveal.show {
+  opacity: 1;
+  transform: scale(1);
+  animation: imp-word-pop 0.55s cubic-bezier(0.2, 1.4, 0.4, 1) forwards;
+}
+@keyframes imp-word-pop {
+  0% { opacity: 0; transform: scale(0.6) rotate(-4deg); }
+  60% { opacity: 1; transform: scale(1.08) rotate(1deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+/* Pantalla final: contenido centrado, botones abajo */
+.imp-done-panel {
+  flex: 1 1 auto;
+  margin: 0 auto;
+}
+.imp-done-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.imp-done-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: auto;
+  padding-bottom: 8px;
   flex-shrink: 0;
 }
 

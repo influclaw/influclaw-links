@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=65" />
+  <link rel="stylesheet" href="css/styles.css?v=66" />
 </head>
 <body>
   <div id="app">
@@ -213,18 +213,21 @@
         </div>
 
         <!-- DONE -->
-        <div class="imp-panel" id="imp-done" hidden>
-          <div class="imp-hero">
-            <span class="imp-hero-emoji">🎭</span>
-            <span class="imp-hero-emoji imp-hero-emoji--alt">🎉</span>
+        <div class="imp-panel imp-done-panel" id="imp-done" hidden>
+          <div class="imp-done-body">
+            <div class="imp-hero">
+              <span class="imp-hero-emoji">🎭</span>
+              <span class="imp-hero-emoji imp-hero-emoji--alt">🎉</span>
+            </div>
+            <p class="imp-kicker">Listo</p>
+            <h3 class="imp-title">Ya pod&eacute;is jugar sin el m&oacute;vil</h3>
+            <p class="imp-sub">Dad pistas por turnos, votad al impostor y, si quer&eacute;is, dejad que intente adivinar la palabra si lo pillan.</p>
+            <p class="imp-word-reveal" id="imp-word-reveal" hidden></p>
           </div>
-          <p class="imp-kicker">Listo</p>
-          <h3 class="imp-title">Ya pod&eacute;is jugar sin el m&oacute;vil</h3>
-          <p class="imp-sub">Dad pistas por turnos, votad al impostor y, si quer&eacute;is, dejad que intente adivinar la palabra si lo pillan.</p>
-          <button class="btn-secondary" id="btn-imp-show-word" type="button">Revelar palabra (fin de partida)</button>
-          <p class="imp-word-reveal" id="imp-word-reveal" hidden></p>
-          <button class="btn-primary" id="btn-imp-again">Nueva ronda</button>
-          <button class="btn-secondary" id="btn-imp-home">Inicio</button>
+          <div class="imp-done-actions">
+            <button class="btn-secondary" id="btn-imp-show-word" type="button">Revelar palabra (fin de partida)</button>
+            <button class="btn-primary" id="btn-imp-again">Nueva ronda</button>
+          </div>
         </div>
       </div>
     </section>
@@ -504,6 +507,6 @@
   </div>
 
   <div id="toast" class="toast" hidden></div>
-  <script src="js/app.js?v=65"></script>
+  <script src="js/app.js?v=66"></script>
 </body>
 </html>

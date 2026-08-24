@@ -2237,7 +2237,11 @@
     if (!s || !s.word) return;
     const el = $("#imp-word-reveal");
     el.hidden = false;
-    el.textContent = `La palabra era: ${s.word}`;
+    el.classList.remove("show");
+    // fuerza reflow para reiniciar la animación
+    void el.offsetWidth;
+    el.textContent = `«${s.word}»`;
+    el.classList.add("show");
     $("#btn-imp-show-word").hidden = true;
   }
 
@@ -2271,12 +2275,6 @@
     $("#btn-imp-show-word").addEventListener("click", revealImpostorWord);
     $("#btn-imp-again").addEventListener("click", () => {
       openImpostor();
-    });
-    $("#btn-imp-home").addEventListener("click", () => {
-      clearTimeout(impostorSession && impostorSession._t);
-      currentGameId = null;
-      impostorSession = null;
-      showView("home");
     });
 
     $("#btn-play-back").addEventListener("click", () => {
