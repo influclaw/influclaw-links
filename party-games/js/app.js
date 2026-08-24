@@ -2150,7 +2150,8 @@
         dot.style.width = size + "px";
         dot.style.height = size + "px";
         if (p < s.currentPlayer) dot.classList.add("is-seen");
-        if (p === s.currentPlayer && !s.flipped) dot.classList.add("is-current");
+        // el punto actual sigue iluminado aunque la carta esté girada
+        if (p === s.currentPlayer) dot.classList.add("is-current");
         if (p === s.impostorIndex && p === s.currentPlayer && s.flipped) {
           dot.classList.add("is-impostor");
         }
